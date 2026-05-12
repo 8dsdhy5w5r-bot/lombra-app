@@ -1,5 +1,5 @@
-const CACHE = "lombra-v5";
-const URLS = ["/lombra-app/", "/lombra-app/index.html", "/lombra-app/manifest.json", "/lombra-app/icons/icon-192.png", "/lombra-app/icons/icon-512.png"];
+const CACHE = "lombra-v6";
+const URLS = ["/", "/index.html", "/manifest.json", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(URLS)));
