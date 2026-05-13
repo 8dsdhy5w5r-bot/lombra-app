@@ -1,4 +1,4 @@
-const CACHE = "lombra-v6";
+const CACHE = "lombra-v10";
 const URLS = ["/", "/index.html", "/manifest.json", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", e => {
