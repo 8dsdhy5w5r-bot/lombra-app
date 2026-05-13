@@ -6,37 +6,63 @@
 <title>L'Ombra</title>
 <script src="chapters.js?v=2"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Georgia,serif;background:#0a0a0a;color:#e8e0d4;-webkit-font-smoothing:antialiased}button{font-family:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}::-webkit-scrollbar{display:none}
-.w{max-width:460px;margin:0 auto;min-height:100vh;padding-bottom:60px}
-.hd{padding:14px 16px 10px;text-align:center;background:linear-gradient(135deg,#0a0a0a,#1a1a2e)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,serif;background:#0a0a0a;color:#e8e0d4;-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.6}
+button{font-family:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}
+::-webkit-scrollbar{display:none}
+.w{max-width:500px;margin:0 auto;min-height:100vh;padding-bottom:70px}
+.hd{padding:18px 16px 14px;text-align:center;background:linear-gradient(135deg,#0a0a0a,#1a1a2e)}
 .nv{display:flex;background:#111;border-bottom:1px solid #222;position:sticky;top:0;z-index:9;overflow-x:auto}
-.nv button{flex:1;min-width:42px;padding:6px 2px 4px;border:none;background:none;color:#555;font-size:11px}
+.nv button{flex:1;min-width:44px;padding:8px 2px 6px;border:none;background:none;color:#555;font-size:12px}
 .nv button.a{color:#B8860B;border-bottom:2px solid #B8860B}
-.ct{padding:12px}
-.sc{font-size:10px;color:#B8860B;letter-spacing:2px;margin-bottom:8px}
-.cd{background:#151518;border:1px solid #222;border-radius:10px;margin-bottom:8px;overflow:hidden}
-.ch{padding:8px 12px;background:linear-gradient(135deg,#1a1a2e,#0f0f1a);color:#B8860B;font-size:12px;font-weight:600}
-.cb{padding:10px 12px}
-.rw{padding:7px 12px;border-bottom:1px solid #1a1a1a;font-size:12px;display:flex;gap:8px;align-items:center}
+.ct{padding:14px}
+.sc{font-size:11px;color:#B8860B;letter-spacing:2px;margin-bottom:10px;font-weight:700}
+.cd{background:#151518;border:1px solid #222;border-radius:10px;margin-bottom:10px;overflow:hidden}
+.ch{padding:10px 14px;background:linear-gradient(135deg,#1a1a2e,#0f0f1a);color:#B8860B;font-size:14px;font-weight:600}
+.cb{padding:12px 14px}
+.rw{padding:8px 14px;border-bottom:1px solid #1a1a1a;font-size:14px;display:flex;gap:10px;align-items:center}
 .rw:last-child{border:none}
-.nm{width:20px;height:20px;border-radius:50%;border:1.5px solid #8B0F0F;display:flex;align-items:center;justify-content:center;font-size:9px;color:#8B0F0F;flex-shrink:0}
-.pl{padding:5px 12px;border-radius:16px;border:1px solid #333;background:#111;color:#888;font-size:11px;cursor:pointer;display:inline-block}
+.nm{width:22px;height:22px;border-radius:50%;border:1.5px solid #8B0F0F;display:flex;align-items:center;justify-content:center;font-size:10px;color:#8B0F0F;flex-shrink:0}
+.pl{padding:7px 14px;border-radius:16px;border:1px solid #333;background:#111;color:#888;font-size:13px;cursor:pointer;display:inline-block}
 .pl.a{background:#8B0F0F;color:#fff;border-color:#8B0F0F}
-.ex{cursor:pointer;padding:10px 12px;background:#151518;border:1px solid #222;border-radius:8px;margin-bottom:5px}
+.ex{cursor:pointer;padding:12px 14px;background:#151518;border:1px solid #222;border-radius:8px;margin-bottom:6px}
 .ex:active{background:#1a1a20}
-.yt{display:inline-block;font-size:9px;color:#ff4444;text-decoration:none;margin-left:6px;vertical-align:middle}
+.yt{display:inline-block;font-size:11px;color:#ff4444;text-decoration:none;margin-left:6px;vertical-align:middle}
 .yt:hover{text-decoration:underline}
-.breath-circle{width:120px;height:120px;border-radius:50%;border:3px solid #B8860B;margin:16px auto;display:flex;align-items:center;justify-content:center;font-size:24px;color:#B8860B;transition:transform 4s ease-in-out}
+.breath-circle{width:130px;height:130px;border-radius:50%;border:3px solid #B8860B;margin:16px auto;display:flex;align-items:center;justify-content:center;font-size:28px;color:#B8860B;transition:transform 4s ease-in-out}
 .breath-circle.expand{transform:scale(1.4)}
 .breath-circle.hold{transform:scale(1.4);border-color:#8B0F0F}
-.rest-bar{height:6px;background:#222;border-radius:3px;margin:8px 0;overflow:hidden}
-.rest-fill{height:100%;background:#B8860B;border-radius:3px;transition:width 1s linear}
-.star{cursor:pointer;font-size:20px;display:inline-block;padding:2px}
+.rest-bar{height:8px;background:#222;border-radius:4px;margin:8px 0;overflow:hidden}
+.rest-fill{height:100%;background:#B8860B;border-radius:4px;transition:width 1s linear}
+.star{cursor:pointer;font-size:22px;display:inline-block;padding:4px}
+.chk{width:22px;height:22px;border-radius:5px;border:2px solid #333;background:none;color:transparent;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;cursor:pointer;transition:all .2s}
+.chk.done{border-color:#4ade80;background:#4ade8030;color:#4ade80}
+.exname{flex:1;font-size:14px;line-height:1.5}
+.exname.dk{opacity:.5;text-decoration:line-through}
+.detail{font-size:12px;color:#888;margin-top:2px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+.tbl th{background:#1a1a2e;color:#B8860B;padding:8px;text-align:left;font-size:12px;border:1px solid #222}
+.tbl td{padding:8px;border:1px solid #222;color:#bbb}
+.tbl tr:nth-child(even) td{background:#111}
+.badge{display:inline-block;padding:3px 8px;border-radius:10px;font-size:10px;font-weight:700;margin-right:4px}
+.sect{margin-top:16px;padding-top:10px;border-top:1px solid #222}
 </style></head><body><div class="w" id="app"></div>
 <script>
 // ─── QUOTES ───
-var QT=["Le shinobi qui ne s'entraîne pas pour le dōjō s'entraîne pour la mission.","L'infiltration parfaite ne laisse aucune trace.","L'arme n'ajoute rien à un homme vide. Elle ajoute tout à un homme plein.","Le meilleur déguisement n'est pas celui qui cache. C'est celui qui montre quelqu'un d'autre.","La stratégie du shinobi est de rendre la victoire inutile — pour l'ennemi.","Celui qui n'est pas vu n'existe pas. Et celui qui n'existe pas ne peut pas être vaincu.","Le shinobi est sa propre armée, sa propre logistique, son propre hôpital.","Le fudōshin n'est pas l'absence d'émotion. C'est l'absence de perturbation.","Le bâton est l'arme la plus honnête du monde.","Le shuriken ne tue pas. Il distrait. Et la demi-seconde suffit.","La sortie se planifie avant l'entrée.","Les gens voient ce qu'ils s'attendent à voir.","Un renseignement qui n'arrive pas est un renseignement qui n'existe pas.","Le poison est la seule arme qui tue sans que le tueur soit présent.","Le shinobi qui marche ne fait pas de bruit. Il ne laisse pas de trace. Va.","L'homme qui voit une arme dans chaque objet est dangereux partout, tout le temps.","Le corps du shinobi est le premier et le dernier de ses outils.","Ton dōjō est chez toi. Ton maître est cette Bible. Ton adversaire est ta propre paresse.","Le masque parfait est celui que tout le monde voit sans le reconnaître comme masque.","Le shinobi d'Iga n'avait pas de code pénal. Tu en as un. Connais-le."];
-var FT=[{nm:"Setsubun 節分",dt:"02-03",d:"Chasser les oni. « Oni wa soto ! Fuku wa uchi ! »",ic:"👹"},{nm:"Festival Ninja d'Iga",dt:"04-15",d:"Commémoration shinobi à Iga-Ueno.",ic:"⛩️"},{nm:"Obon お盆",dt:"08-13",d:"Les ancêtres reviennent. Lanternes.",ic:"🏮"},{nm:"Tsukimi 月見",dt:"09-20",d:"Lune d'automne. Méditation fudōshin.",ic:"🌕"},{nm:"Solstice 冬至",dt:"12-21",d:"Nuit du shinobi. Endurcissement.",ic:"❄️"}];
+var QT=["Le shinobi qui ne s'entraîne pas pour le dōjō s'entraîne pour la mission.","L'infiltration parfaite ne laisse aucune trace.","L'arme n'ajoute rien à un homme vide. Elle ajoute tout à un homme plein.","Le meilleur déguisement n'est pas celui qui cache. C'est celui qui montre quelqu'un d'autre.","La stratégie du shinobi est de rendre la victoire inutile — pour l'ennemi.","Celui qui n'est pas vu n'existe pas. Et celui qui n'existe pas ne peut pas être vaincu.","Le shinobi est sa propre armée, sa propre logistique, son propre hôpital.","Le fudōshin n'est pas l'absence d'émotion. C'est l'absence de perturbation.","Le bâton est l'arme la plus honnête du monde.","Le shuriken ne tue pas. Il distrait. Et la demi-seconde suffit.","La sortie se planifie avant l'entrée.","Les gens voient ce qu'ils s'attendent à voir.","Un renseignement qui n'arrive pas est un renseignement qui n'existe pas.","Le poison est la seule arme qui tue sans que le tueur soit présent.","Le shinobi qui marche ne fait pas de bruit. Il ne laisse pas de trace. Va.","L'homme qui voit une arme dans chaque objet est dangereux partout, tout le temps.","Le corps du shinobi est le premier et le dernier de ses outils.","Ton dōjō est chez toi. Ton maître est cette Bible. Ton adversaire est ta propre paresse.","Le masque parfait est celui que tout le monde voit sans le reconnaître comme masque.","La constance bat l'intensité. Un mauvais entraînement fait est supérieur à un entraînement parfait sauté.","L'égo est l'ennemi. Le guerrier de 39 ans qui veut durer est plus dangereux que celui de 25.","Le corps suit l'esprit. La méditation n'est pas un bonus, c'est le fondement."];
+
+// ─── FESTIVALS ───
+var FT=[
+{nm:"Setsubun 節分",dt:"02-03",ic:"👹",why:"Chasser les démons (oni) intérieurs — peur, colère, paresse — pour purifier le guerrier avant le renouveau du printemps. Rituel de mamemaki (lancer de haricots).",where:"Chez toi à Montgiscard/Escalquens. Ouvre la fenêtre côté Lauragais, face au vent d'Autan. Le vent emporte les oni.",how:"Prépare des haricots secs (soja ou haricots du marché de Nailloux). Crie « Oni wa soto ! Fuku wa uchi ! » en lançant les haricots vers l'extérieur. Mange autant de haricots que ton âge. Méditation fudōshin 15 min après."},
+{nm:"Festival Ninja d'Iga 伊賀",dt:"04-15",ic:"⛩️",why:"Commémoration des shinobi d'Iga-Ueno, berceau du ninjutsu. Honorer la lignée, pratiquer les arts. C'est le jour le plus sacré pour un pratiquant shinobi.",where:"Entraînement extérieur dans le Lauragais : colline de Nailloux, chemin de halage du Canal du Midi à Gardouch, ou forêt de Bouconne.",how:"Entraînement spécial Iga : réveil 4h30, marche silencieuse 30 min dans l'obscurité (shinobi-aruki), kata complets au lever du soleil, séance complète de hanbōjutsu, méditation 30 min sous un arbre. Journée sans téléphone."},
+{nm:"Tango no Sekku 端午の節句",dt:"05-05",ic:"🎏",why:"Jour des garçons et des guerriers. Célébration de la force, du courage et de la persévérance. Lié aux samouraïs et à la voie martiale.",where:"Canal du Midi entre Montgiscard et Ayguevives — marche guerrière le long de l'eau.",how:"Entraînement en plein air : shadow boxing au bord du canal, kata avec bâton, 100 frappes au sac. Repas protéiné spécial (chimaki : riz gluant en feuille de bambou, ou adaptation locale avec du riz et des feuilles de vigne)."},
+{nm:"Geshi — Solstice d'été 夏至",dt:"06-21",ic:"☀️",why:"Jour le plus long. Maximum d'énergie yang. Le guerrier pousse ses limites physiques au maximum de la lumière.",where:"En extérieur dès 5h30 — collines du Lauragais entre Escalquens et Labège, face au lever du soleil.",how:"Entraînement à l'aube, le plus long de l'année : 90 min full body + combat + méditation au soleil levant. Hydratation renforcée (3-4L). Repas solaire riche en fruits et légumes du marché de Nailloux."},
+{nm:"Obon お盆",dt:"08-13",ic:"🏮",why:"Les ancêtres reviennent. On honore les morts, les maîtres disparus. Le shinobi n'oublie jamais ceux qui l'ont précédé — les guerriers d'Iga et Kōga.",where:"Chez toi ou jardin. Idéal au crépuscule dans le calme du Lauragais.",how:"Allume une bougie (ou lanterne) pour les ancêtres martiaux. Méditation 30 min dédiée. Récite les noms des maîtres : Hatsumi, Takamatsu, les jonin d'Iga. Offre un bol de riz ou de fruits. Entraînement léger en hommage."},
+{nm:"Tsukimi 月見",dt:"09-20",ic:"🌕",why:"Contemplation de la lune d'automne. Méditation profonde. Fudōshin — l'esprit immobile comme la lune se reflétant dans l'eau calme.",where:"Extérieur nocturne : plaine du Lauragais à Montgiscard ou Escalquens, loin des lumières. Le plateau offre un ciel dégagé parfait.",how:"Sortir à la pleine lune. Installer un zafu ou couverture au sol. Méditation face à la lune, 30-45 min. Respiration 4-4-4 tactique yeux ouverts sur la lune. Préparer des dango (boulettes de riz) ou adaptation locale (gâteau de riz). Thé vert."},
+{nm:"Aki no Matsuri — Équinoxe d'automne",dt:"09-22",ic:"🍂",why:"Transition vers le yin. Le guerrier s'intériorise. Début de la phase de renforcement intérieur, endurance et mental.",where:"Forêt proche : bois entre Escalquens et Labège, ou sentiers autour de Nailloux.",how:"Marche méditative en forêt 60 min — shinobi-aruki (marche silencieuse). Ramasser une pierre, un bâton : symboliser l'ancrage. Séance de visualisation combat 15 min sous les arbres. Journaling : bilan du semestre."},
+{nm:"Tōji — Solstice d'hiver 冬至",dt:"12-21",ic:"❄️",why:"Nuit la plus longue. Nuit du shinobi par excellence. L'obscurité est son élément. Endurcissement au froid, discipline extrême.",where:"Chez toi puis extérieur à Montgiscard/Escalquens. Le froid du Lauragais en décembre (souvent 0-5°C, vent d'Autan) est parfait.",how:"Réveil 4h00 (dans l'obscurité complète). Douche froide intégrale 3 min. Entraînement en extérieur (shadow boxing + corde + mobilité). Respiration Wim Hof 4 rounds. Méditation de 30 min dans l'obscurité. Dîner simple : soupe miso et riz. Coucher tôt — honorer la nuit."},
+{nm:"Ōmisoka — Dernier jour de l'an 大晦日",dt:"12-31",ic:"🔔",why:"Purification de fin d'année. On sonne 108 cloches (joya no kane) pour éliminer les 108 passions. Le guerrier fait le bilan et se prépare au cycle suivant.",where:"Chez toi à Montgiscard — moment de recueillement familial.",how:"Bilan annuel complet : corps, combat, esprit — notes, mesures, photos comparatives. Écrire 3 victoires et 3 objectifs pour l'année prochaine. Méditation longue 45 min. Repas de toshikoshi soba (nouilles longues pour la longévité — des spaghetti complets font l'affaire). Coucher avant minuit."}
+];
 
 // ─── BREATHING ───
 var BR=[
@@ -45,341 +71,709 @@ var BR=[
 {nm:"Wim Hof",d:"Endurcissement. 30 respirations rapides puis rétention max.",ph:[{a:"POWER BREATHE ×30",s:90},{a:"RÉTENTION MAX",s:60},{a:"INSPIRE + HOLD 15s",s:15}],rounds:3,co:"#4A7A5A"}
 ];
 
-// ─── EXERCISES WITH YOUTUBE ───
+// ─── YT HELPERS ───
 function yt(q){return 'https://www.youtube.com/results?search_query='+encodeURIComponent(q);}
-function exLine(name,yt_q){
-  var h='<div style="flex:1">'+name+'</div>';
-  if(yt_q)h+='<a class="yt" href="'+yt(yt_q)+'" target="_blank">▶ vidéo</a>';
-  return h;
-}
 
-// ─── TRAINING DATA ───
+// ════════════════════════════════════════════
+// TRAINING DATA — EXACT FROM DOCX
+// ════════════════════════════════════════════
 var PH=[
-{nm:"RÉVEIL",sub:"Mois 1-3",ic:"🌱",co:"#4ade80",d:"Remise en mouvement. Zéro ego. Charges légères.",
+// ── PHASE 1 : RÉVEIL (Mois 1-3) ──
+{nm:"RÉVEIL",sub:"Mois 1-3",ic:"🌱",co:"#4ade80",
+ obj:"Réactiver le corps sans le casser. Créer l'habitude du 5h00. Mobilité et cardio de base. Tempo modéré — priorité : éviter la blessure.",
+ poids:"110-112 kg",kcal:"2200-2500 kcal (déficit modéré)",
  sem:[
-  {j:"Lundi",t:"FORCE HAUT",du:"50min",ex:[
-    {n:"Assault bike échauff 5min",y:"assault bike warmup"},
-    {n:"Bench press barre→30kg 4×10",y:"bench press barbell form"},
-    {n:"Rowing barre 30kg 4×10",y:"barbell row form"},
-    {n:"OHP haltères léger 3×10",y:"overhead press dumbbell"},
-    {n:"Chaise romaine relevés jambes 3×10",y:"roman chair leg raise"},
-    {n:"Gainage planche 3×30s",y:"plank form tutorial"}]},
-  {j:"Mardi",t:"CARDIO + SHADOW",du:"45min",ex:[
-    {n:"Assault bike 20min zone 2",y:"assault bike zone 2 cardio"},
-    {n:"Shadow boxing léger 3×2min",y:"shadow boxing beginner"},
-    {n:"Corde à sauter 5×1min",y:"jump rope beginner tutorial"},
-    {n:"Mobilité hanches + épaules 10min",y:"hip shoulder mobility routine"}]},
-  {j:"Mercredi",t:"FORCE BAS",du:"50min",ex:[
-    {n:"Goblet squat KB 16kg 4×10",y:"goblet squat kettlebell form"},
-    {n:"Fentes poids de corps 3×10/côté",y:"bodyweight lunge form"},
-    {n:"Romanian deadlift barre 30kg 3×10",y:"romanian deadlift barbell"},
-    {n:"Hyperextensions 3×12",y:"roman chair hyperextension"},
-    {n:"Mollets debout 3×15",y:"standing calf raise"},
-    {n:"Étirements complets 10min",y:"full body stretch routine"}]},
-  {j:"Jeudi",t:"REPOS ACTIF",du:"30min",ex:[
-    {n:"Marche 30min ou mobilité",y:""},
-    {n:"Respiration tactique 4-7-8 × 10",y:"4 7 8 breathing technique"},
-    {n:"Zazen 10min",y:"zazen meditation beginner"}]},
-  {j:"Vendredi",t:"FULL BODY + COMBAT",du:"60min",ex:[
-    {n:"San Shin no Kata 5min",y:"san shin no kata bujinkan"},
-    {n:"KB Swings 16kg 5×12",y:"kettlebell swing form"},
-    {n:"KB Goblet Squat 3×12",y:"goblet squat kettlebell"},
-    {n:"Bench press 3×10",y:"bench press form"},
-    {n:"Sac : jab-cross 3×2min",y:"jab cross heavy bag"},
-    {n:"Corde à sauter 3×2min",y:"jump rope workout"},
-    {n:"Fudōshin méditation 5min",y:""}]},
-  {j:"Samedi",t:"ENDURANCE",du:"50min",ex:[
-    {n:"Assault bike 30-40min zone 2",y:"assault bike endurance"},
-    {n:"Étirements 15min",y:"post workout stretching"}]},
-  {j:"Dimanche",t:"REPOS + MENTAL",du:"30min",ex:[
-    {n:"Repos complet",y:""},
-    {n:"Wim Hof 3 rounds",y:"wim hof breathing tutorial"},
-    {n:"Zazen 15min",y:"zazen sitting meditation"},
-    {n:"Lecture guerrière",y:""}]}
+  {j:"Lundi",t:"FORCE A — Haut du corps",du:"55-60 min",fo:"Poussée/tirage + core",ex:[
+    {n:"Assault bike 3 min tempo modéré",cat:"E",y:"assault bike warmup"},
+    {n:"Cercles d'épaules bande élastique",s:"2×15",cat:"E",y:"shoulder circles resistance band"},
+    {n:"Dislocations d'épaule bande",s:"2×10",cat:"E",y:"band shoulder dislocations"},
+    {n:"Pompes inclinées (mains sur banc)",s:"2×8",cat:"E",y:"incline push up form"},
+    {n:"Pompes au sol (genoux si nécessaire)",s:"4×8-12",r:"90s",cat:"F",y:"push up progression"},
+    {n:"Tractions assistées bande ou australiennes",s:"4×6-10",r:"90s",cat:"F",y:"assisted pull up band"},
+    {n:"Développé haltères assis ou barre",s:"3×10",r:"75s",cat:"F",y:"seated dumbbell press"},
+    {n:"Rowing barre penché",s:"3×10",r:"75s",cat:"F",y:"barbell bent over row form"},
+    {n:"Dips assistés (bande ou partiels)",s:"3×6-8",r:"60s",cat:"F",y:"assisted dips band"},
+    {n:"Planche ventrale",s:"3×30-45s",cat:"C",y:"plank form tutorial"},
+    {n:"Dead bug",s:"3×8/côté",cat:"C",y:"dead bug exercise"},
+    {n:"Relevés de genoux suspendus",s:"3×8-10",cat:"C",y:"hanging knee raise"}
+  ]},
+  {j:"Mardi",t:"CARDIO + MOBILITÉ",du:"55-60 min",fo:"Assault bike + stretching profond",ex:[
+    {n:"Assault bike Zone 2 (FC 120-140)",s:"20 min",cat:"K",y:"assault bike zone 2 cardio"},
+    {n:"Corde à sauter (pieds joints, léger)",s:"5×1min ON / 1min OFF",cat:"K",y:"jump rope beginner tutorial"},
+    {n:"90/90 hip stretch",s:"2×45s/côté",cat:"M",y:"90 90 hip stretch"},
+    {n:"Fente basse (lizard stretch)",s:"2×45s/côté",cat:"M",y:"lizard stretch hip flexor"},
+    {n:"Pigeon pose",s:"2×60s/côté",cat:"M",y:"pigeon pose stretch"},
+    {n:"Squat profond assisté (tenir poteau)",s:"3×30s",cat:"M",y:"deep squat hold assisted"},
+    {n:"Jefferson curl léger (barre vide)",s:"3×8 lent",cat:"M",y:"jefferson curl barbell"},
+    {n:"Ouverture thoracique rotation",s:"2×10/côté",cat:"M",y:"thoracic spine rotation"},
+    {n:"Pancake stretch progressif",s:"3×30s",cat:"M",y:"pancake stretch progression"}
+  ]},
+  {j:"Mercredi",t:"FORCE B — Bas du corps",du:"55-60 min",fo:"Squat, hip hinge, mollets",ex:[
+    {n:"Assault bike 3 min",cat:"E",y:"assault bike warmup"},
+    {n:"Goblet squat bande ou léger",s:"2×10",cat:"E",y:"goblet squat warmup"},
+    {n:"Activation fessiers bande (clam, bridge)",s:"2×15",cat:"E",y:"glute activation band"},
+    {n:"Mobilité cheville",s:"2×10/côté",cat:"E",y:"ankle mobility drill"},
+    {n:"Back squat",s:"4×8-10",r:"120s",cat:"F",y:"barbell back squat form",note:"Commencer barre +20kg, progresser doucement"},
+    {n:"Roumain deadlift (RDL)",s:"3×10",r:"90s",cat:"F",y:"romanian deadlift barbell"},
+    {n:"Fentes marchantes",s:"3×8/jambe",r:"60s",cat:"F",y:"walking lunge form"},
+    {n:"Hip thrust banc",s:"3×12",r:"60s",cat:"F",y:"hip thrust bench"},
+    {n:"Élévations mollets debout",s:"4×15",r:"45s",cat:"F",y:"standing calf raise"},
+    {n:"Pallof press bande",s:"3×10/côté",cat:"C",y:"pallof press band"},
+    {n:"Planche latérale",s:"3×20-30s/côté",cat:"C",y:"side plank form"},
+    {n:"Ab wheel ou roll-out barre",s:"3×8",cat:"C",y:"ab wheel rollout"}
+  ]},
+  {j:"Jeudi",t:"CARDIO + SHADOW",du:"55-60 min",fo:"Corde + shadow boxing léger",ex:[
+    {n:"Corde à sauter continu (objectif : tenir sans pause)",s:"10 min",cat:"K",y:"jump rope 10 minutes"},
+    {n:"Assault bike HIIT",s:"8×20s sprint / 40s récup",cat:"K",y:"assault bike hiit sprint"},
+    {n:"Corde à sauter cool-down",s:"5 min léger",cat:"K",y:"jump rope cooldown"},
+    {n:"Shadow R1 : Garde + déplacements latéraux",s:"3 min",r:"60s",cat:"B",y:"shadow boxing footwork"},
+    {n:"Shadow R2 : Jab-cross léger, focus technique",s:"3 min",r:"60s",cat:"B",y:"shadow boxing jab cross"},
+    {n:"Shadow R3 : Jab-cross-crochet + esquives",s:"3 min",r:"60s",cat:"B",y:"shadow boxing combos hooks"},
+    {n:"Shadow R4 : Intégration low kicks légers",s:"3 min",r:"60s",cat:"B",y:"shadow boxing low kicks",note:"Attention genoux, monter progressivement"},
+    {n:"Mobilité rapide hanches + épaules",s:"10 min",cat:"M",y:"hip shoulder mobility quick"}
+  ]},
+  {j:"Vendredi",t:"FORCE C — Full body",du:"55-60 min",fo:"Mouvements composés + KB",ex:[
+    {n:"Corde 3 min + mobilité dynamique 5 min",cat:"E",y:"dynamic warmup routine"},
+    {n:"Deadlift conventionnel",s:"4×6-8",r:"120s",cat:"F",y:"deadlift conventional form",note:"Commencer 60kg, technique parfaite"},
+    {n:"KB Swing (16 kg)",s:"4×15",r:"60s",cat:"F",y:"kettlebell swing form 16kg"},
+    {n:"Pompes",s:"3× max (noter progression)",cat:"F",y:"push up max reps"},
+    {n:"Tractions",s:"3× max (assistées si besoin)",cat:"F",y:"pull up progression"},
+    {n:"Farmer carry (2 KB ou haltères)",s:"3×30m",r:"60s",cat:"F",y:"farmer carry exercise"},
+    {n:"EMOM 7 min : impaire=5 burpees, paire=10 KB swings",s:"7 min",cat:"H",y:"emom burpees kettlebell swings"}
+  ]},
+  {j:"Samedi",t:"ENDURANCE + MOBILITÉ",du:"60-75 min",fo:"Marche rapide ou vélo + yoga",ex:[
+    {n:"Marche rapide extérieur (sac 5-10kg si possible)",s:"30-45 min",cat:"K",y:"rucking weighted walk",note:"OU assault bike 30 min Zone 2"},
+    {n:"Stretching intégral complet",s:"20-30 min",cat:"M",y:"full body stretch routine",note:"Hanches, épaules, dos, ischio-jambiers, adducteurs"}
+  ]},
+  {j:"Dimanche",t:"RÉCUPÉRATION ACTIVE",du:"30-45 min",fo:"Mobilité profonde + méditation",ex:[
+    {n:"Mobilité douce (animal flow ou yoga)",s:"15-20 min",cat:"M",y:"animal flow mobility routine"},
+    {n:"Rouleau de massage / auto-massage",s:"10 min",cat:"M",y:"foam roller full body"},
+    {n:"Méditation (Wim Hof ou Zazen)",s:"10-15 min",cat:"X",y:"zazen meditation beginner"}
+  ]}
 ]},
-{nm:"FORGE",sub:"Mois 4-6",ic:"⚒️",co:"#facc15",d:"Force réelle. 5×5 progression. Sac + HIIT.",
+// ── PHASE 2 : FORGE (Mois 4-6) ──
+{nm:"FORGE",sub:"Mois 4-6",ic:"⚒️",co:"#facc15",
+ obj:"Construire la force réelle, recomposition agressive, travail au sac, KB lourds. Volume et intensité montent.",
+ poids:"105-108 kg",kcal:"2200-2500 kcal (déficit modéré)",
  sem:[
-  {j:"Lundi",t:"FORCE HAUT",du:"60min",ex:[
-    {n:"Bench press 5×5 R120s",y:"5x5 bench press program"},
-    {n:"Tractions 5×5 R120s",y:"strict pull up form"},
-    {n:"OHP barre 4×6",y:"overhead press barbell"},
-    {n:"Rowing 4×8",y:"barbell row"},
-    {n:"Pompes claquées 3×5",y:"clap push ups"},
-    {n:"KB Clean & Press 3×8/côté",y:"kettlebell clean and press"}]},
-  {j:"Mardi",t:"COMBAT",du:"60min",ex:[
-    {n:"Shadow Muay Boran 3×3min",y:"muay boran shadow boxing"},
-    {n:"Sac combos 5×3min",y:"muay thai heavy bag combos"},
-    {n:"Clinch genoux 3×2min",y:"muay thai clinch knee"},
-    {n:"Assault bike HIIT 6×30s/30s",y:"assault bike hiit"},
-    {n:"Corde 5×2min",y:"jump rope boxing"}]},
-  {j:"Mercredi",t:"FORCE BAS",du:"60min",ex:[
-    {n:"Back squat 5×5 R120s",y:"barbell back squat form"},
-    {n:"Romanian Deadlift 4×8",y:"romanian deadlift"},
-    {n:"Fentes KB 3×10/côté",y:"kettlebell lunge"},
-    {n:"KB Swings 5×15",y:"kettlebell swing heavy"},
-    {n:"L-sit + hyperext 3×max",y:"l sit roman chair"}]},
-  {j:"Jeudi",t:"HIIT",du:"55min",ex:[
-    {n:"Assault bike Tabata 8×20s/10s",y:"assault bike tabata"},
-    {n:"Corde 5×2min",y:"jump rope hiit"},
-    {n:"KB Thruster 4×10",y:"kettlebell thruster"},
-    {n:"Burpees 3×8",y:"burpee form tutorial"},
-    {n:"Mobilité hanches 15min",y:"deep hip mobility"},
-    {n:"Wim Hof 3 rounds",y:"wim hof breathing"}]},
-  {j:"Vendredi",t:"FULL + COMBAT",du:"70min",ex:[
-    {n:"San Shin no Kata 5min",y:"san shin no kata"},
-    {n:"Deadlift 5×5 R120s",y:"deadlift form tutorial"},
-    {n:"Tractions 4×max",y:"pull up max reps"},
-    {n:"Sac Mae Mai 5×3min",y:"muay boran techniques bag"},
-    {n:"KB TGU 3×3/côté",y:"turkish get up kettlebell"},
-    {n:"Kihon Happō 10min",y:"kihon happo bujinkan"},
-    {n:"Fudōshin 5min",y:""}]},
-  {j:"Samedi",t:"ENDURANCE",du:"75min",ex:[
-    {n:"Assault bike 45min zone 2",y:"assault bike endurance"},
-    {n:"Marche lestée 10-15kg",y:"rucking weighted walk"},
-    {n:"Mobilité 20min",y:"full body mobility"}]},
-  {j:"Dimanche",t:"RÉCUP",du:"45min",ex:[
-    {n:"Repos",y:""},{n:"Zazen 20min",y:"zazen meditation"},{n:"Visualisation combat",y:""}]}
+  {j:"Lundi",t:"FORCE Haut + Explosivité",du:"60 min",fo:"Force max haut + medicine ball",ex:[
+    {n:"Assault bike 3 min + mobilité épaules",cat:"E",y:"assault bike shoulder warmup"},
+    {n:"Développé couché barre",s:"5×5",r:"120s",cat:"F",y:"bench press 5x5 stronglifts"},
+    {n:"Tractions lestées ou strict",s:"5×5",r:"120s",cat:"F",y:"weighted pull ups 5x5"},
+    {n:"OHP (overhead press)",s:"4×6",r:"90s",cat:"F",y:"overhead press barbell form"},
+    {n:"Rowing barre",s:"4×8",r:"75s",cat:"F",y:"barbell row form"},
+    {n:"Lancers medicine ball poitrine mur",s:"4×8",cat:"P",y:"medicine ball chest pass wall"},
+    {n:"Lancers medicine ball overhead",s:"4×6",cat:"P",y:"medicine ball overhead throw"},
+    {n:"Pompes claquées (ou explosives sans clap)",s:"4×5",cat:"P",y:"clap push ups explosive"},
+    {n:"Ab wheel",s:"3×10",cat:"C",y:"ab wheel rollout form"},
+    {n:"L-sit chaise romaine",s:"3× max",cat:"C",y:"l sit roman chair"},
+    {n:"Planche dynamique (shoulder taps)",s:"3×10/côté",cat:"C",y:"plank shoulder taps"}
+  ]},
+  {j:"Mardi",t:"COMBAT + CARDIO",du:"60 min",fo:"BOB + sac sol + assault bike",ex:[
+    {n:"Corde 5 min + shadow 3 min",cat:"E",y:"shadow boxing warmup"},
+    {n:"BOB R1 : Jab-cross, vitesse + retour garde",s:"3 min",r:"60s",cat:"B",y:"jab cross heavy bag speed"},
+    {n:"BOB R2 : Combinaisons 3-4 coups + esquive",s:"3 min",r:"60s",cat:"B",y:"boxing combos heavy bag"},
+    {n:"BOB R3 : Low kicks + teeps",s:"3 min",r:"60s",cat:"B",y:"muay thai low kick teep bag",note:"Attention genou, contrôle"},
+    {n:"BOB R4 : Clinch + genoux",s:"3 min",r:"60s",cat:"B",y:"muay thai clinch knee bag"},
+    {n:"BOB R5 : Round libre — tout intégré, max intensité",s:"3 min",r:"60s",cat:"B",y:"heavy bag freestyle round"},
+    {n:"Sac de sol : ground & pound position montée",s:"3×2 min",cat:"B",y:"ground and pound bag drill"},
+    {n:"Assault bike Tabata",s:"8×20s/10s (4 min)",cat:"K",y:"assault bike tabata"},
+    {n:"Corde à sauter continu (double-under si possible)",s:"6 min",cat:"K",y:"jump rope double unders"}
+  ]},
+  {j:"Mercredi",t:"FORCE Bas + Puissance",du:"60 min",fo:"Squat lourd + KB lourd",ex:[
+    {n:"Mobilité hanches + activation fessiers",s:"8 min",cat:"E",y:"hip mobility glute activation"},
+    {n:"Back squat",s:"5×5",r:"120-150s",cat:"F",y:"barbell back squat 5x5",note:"Viser 100kg fin de phase"},
+    {n:"Deadlift roumain",s:"4×8",r:"90s",cat:"F",y:"romanian deadlift"},
+    {n:"Fentes bulgares",s:"3×8/jambe",r:"75s",cat:"F",y:"bulgarian split squat"},
+    {n:"KB Swing 24-32 kg",s:"5×15",r:"60s",cat:"F",y:"kettlebell swing heavy"},
+    {n:"Box jumps (step down)",s:"4×5",r:"60s",cat:"P",y:"box jump step down"},
+    {n:"Broad jumps",s:"4×3",r:"60s",cat:"P",y:"broad jump technique"},
+    {n:"Hanging leg raises",s:"3×10",cat:"C",y:"hanging leg raise form"},
+    {n:"Pallof press",s:"3×10/côté",cat:"C",y:"pallof press band"}
+  ]},
+  {j:"Jeudi",t:"HIIT + MOBILITÉ",du:"60 min",fo:"Intervals intenses + stretching profond",ex:[
+    {n:"HIIT Circuit — 4 tours, 45s travail / 15s transition, 2 min repos entre tours",s:"",cat:"H",y:"hiit circuit training"},
+    {n:"Station 1 : KB Swing",s:"45s",cat:"H",y:"kettlebell swing"},
+    {n:"Station 2 : Burpees",s:"45s",cat:"H",y:"burpee form"},
+    {n:"Station 3 : Assault bike sprint",s:"45s",cat:"H",y:"assault bike sprint"},
+    {n:"Station 4 : Pompes",s:"45s",cat:"H",y:"push ups"},
+    {n:"Station 5 : Corde à sauter rapide",s:"45s",cat:"H",y:"fast jump rope"},
+    {n:"Station 6 : Mountain climbers",s:"45s",cat:"H",y:"mountain climbers"},
+    {n:"Mobilité hanches : 90/90, pigeon, frog, squat profond",s:"2 min/position",cat:"M",y:"deep hip mobility stretches"},
+    {n:"Épaules : sleeper stretch, pec stretch mur, band pull-aparts",s:"",cat:"M",y:"shoulder mobility stretches"},
+    {n:"Colonne : cat-cow, scorpion stretch, Jefferson curls",s:"",cat:"M",y:"spine mobility cat cow jefferson curl"},
+    {n:"Ischio-jambiers : PNF stretching",s:"3× contract-relax",cat:"M",y:"pnf hamstring stretch"}
+  ]},
+  {j:"Vendredi",t:"FORCE Full + Circuit Combat",du:"65-70 min",fo:"Deadlift + circuit combat",ex:[
+    {n:"Deadlift",s:"5×3-5",r:"150s",cat:"F",y:"deadlift heavy triples",note:"Viser 120kg fin de phase"},
+    {n:"Overhead press",s:"4×6",r:"90s",cat:"F",y:"overhead press barbell"},
+    {n:"Tractions",s:"4× max",r:"90s",cat:"F",y:"pull up max reps"},
+    {n:"Turkish Get-Up KB",s:"3×3/côté",r:"60s",cat:"F",y:"turkish get up kettlebell heavy"},
+    {n:"Circuit Combat — 5 rounds, 3 min ON / 1 min OFF",s:"",cat:"B",y:"fight circuit training"},
+    {n:"Min 0-1 : Shadow boxing intensif",s:"1 min",cat:"B",y:"shadow boxing intense"},
+    {n:"Min 1-2 : BOB combinaisons libres",s:"1 min",cat:"B",y:"heavy bag free combos"},
+    {n:"Min 2-3 : Assault bike max",s:"1 min",cat:"K",y:"assault bike max effort"}
+  ]},
+  {j:"Samedi",t:"ENDURANCE LONGUE",du:"75-90 min",fo:"Ruck march ou assault bike long + mobilité",ex:[
+    {n:"Ruck march : sac 10-15kg, terrain varié, 6 km/h",s:"45-60 min",cat:"K",y:"rucking weighted walk endurance",note:"OU assault bike 40 min Zone 2 + 5 min sprint final"},
+    {n:"Mobilité / yoga",s:"20-30 min",cat:"M",y:"yoga for athletes recovery"}
+  ]},
+  {j:"Dimanche",t:"RÉCUP + MENTAL",du:"40-50 min",fo:"Yoga guerrier + méditation + respiration",ex:[
+    {n:"Yoga guerrier (warrior poses, deep stretches)",s:"20 min",cat:"M",y:"yoga warrior poses"},
+    {n:"Respiration tactique (box breathing 4-4-4-4 ou Wim Hof)",s:"10 min",cat:"X",y:"box breathing 4 4 4 4"},
+    {n:"Méditation Zazen",s:"15 min",cat:"X",y:"zazen meditation sitting"},
+    {n:"Journaling : victoires + axes d'amélioration",s:"5 min",cat:"X",y:""}
+  ]}
 ]},
-{nm:"LAME",sub:"Mois 7-9",ic:"🔥",co:"#f97316",d:"Haute intensité. Charges lourdes. Kata Shotokan.",
+// ── PHASE 3 : LAME (Mois 7-9) ──
+{nm:"LAME",sub:"Mois 7-9",ic:"🔥",co:"#f97316",
+ obj:"Affiner le physique, explosivité maximale, combat technique avancé, souplesse. Le corps devient une arme. 70-80 min/jour.",
+ poids:"100-103 kg",kcal:"2600-2800 kcal (maintenance)",
  sem:[
-  {j:"Lundi",t:"FORCE LOURDE HAUT",du:"65min",ex:[
-    {n:"Bench 5×3 lourd R180s",y:"bench press heavy triples"},
-    {n:"Tractions lestées 5×5",y:"weighted pull ups"},
-    {n:"OHP 4×5 lourd",y:"overhead press heavy"},
-    {n:"Rowing 4×6 lourd",y:"heavy barbell row"},
-    {n:"Dips lestés 3×8",y:"weighted dips"}]},
-  {j:"Mardi",t:"COMBAT INTENSIF",du:"65min",ex:[
-    {n:"Shadow Mae Mai 3×3min",y:"muay boran shadow"},
-    {n:"Sac 6×3min thématique",y:"muay thai round heavy bag"},
-    {n:"Kata Heian 1→5",y:"shotokan heian kata"},
-    {n:"Corde 5×2min",y:"jump rope boxing"}]},
-  {j:"Mercredi",t:"FORCE LOURDE BAS",du:"65min",ex:[
-    {n:"Squat 5×3 lourd R180s",y:"heavy barbell squat"},
-    {n:"Deadlift 5×3 lourd",y:"heavy deadlift"},
-    {n:"Fentes KB 4×8/côté",y:"kettlebell walking lunge"},
-    {n:"KB Snatch 4×8/côté",y:"kettlebell snatch"},
-    {n:"Assault bike finisher 5min",y:"assault bike max effort"}]},
-  {j:"Jeudi",t:"CIRCUIT",du:"60min",ex:[
-    {n:"5 rounds : 1min sac + 1min KB + 1min corde + 1min burpees + 1min repos",y:"fight circuit training"},
-    {n:"Shadow 3×3min",y:""},
-    {n:"Respiration tactique 15min",y:"tactical breathing"}]},
-  {j:"Vendredi",t:"FULL + ARMES",du:"75min",ex:[
-    {n:"San Shin no Kata 5min",y:"san shin no kata"},
-    {n:"Squat ou Dead 5×3",y:""},
-    {n:"Hanbōjutsu 5 kata 15min",y:"hanbo jutsu techniques"},
-    {n:"Sac clinch+coudes 5×3min",y:"muay thai elbow clinch"},
-    {n:"KB Complex 3×5",y:"kettlebell complex workout"},
-    {n:"Fudōshin 5min",y:""}]},
-  {j:"Samedi",t:"ENDURANCE TACTIQUE",du:"90min",ex:[
-    {n:"Bike 20min→corde 10min→marche lestée 30min→mobilité 20min",y:"tactical endurance workout"}]},
-  {j:"Dimanche",t:"MENTAL",du:"45min",ex:[
-    {n:"Zazen 25min",y:""},{n:"Wim Hof 4 rounds",y:"wim hof advanced"},{n:"Visualisation 15min",y:""}]}
+  {j:"Lundi",t:"FORCE-VITESSE Haut",du:"65 min",fo:"Contrast training + plyométrie haut",ex:[
+    {n:"Échauffement : bike + mobilité épaules",s:"8 min",cat:"E",y:"warmup shoulders mobility"},
+    {n:"Contrast : Bench press lourd",s:"3×3",r:"",cat:"F",y:"bench press heavy triples"},
+    {n:"→ immédiatement Pompes claquées",s:"3×5",r:"180s après paire",cat:"P",y:"clap push ups"},
+    {n:"Contrast : Tractions lestées",s:"3×3",cat:"F",y:"weighted pull ups heavy"},
+    {n:"→ immédiatement Lancers medicine ball",s:"3×5",r:"180s après paire",cat:"P",y:"medicine ball explosive throw"},
+    {n:"OHP lourd",s:"4×5",r:"90s",cat:"F",y:"overhead press heavy"},
+    {n:"Rowing lourd",s:"4×6",r:"75s",cat:"F",y:"heavy barbell row"},
+    {n:"Dips lestés",s:"3×8",r:"60s",cat:"F",y:"weighted dips"},
+    {n:"Core : Ab wheel + L-sit + shoulder taps",s:"3 sets",cat:"C",y:"advanced core workout"}
+  ]},
+  {j:"Mardi",t:"COMBAT INTÉGRAL",du:"70 min",fo:"Pieds-poings complet + clinch + sol",ex:[
+    {n:"Échauffement : corde 5 min + shadow 5 min",cat:"E",y:"boxing warmup shadow"},
+    {n:"R1-R2 : Shadow technique pure — déplacements, feintes, angles",s:"2×3 min",r:"60s",cat:"B",y:"advanced shadow boxing"},
+    {n:"R3-R4 : BOB pieds-poings complet — low/mid/high kicks, genoux, coudes",s:"2×3 min",r:"60s",cat:"B",y:"muay thai full technique bag"},
+    {n:"R5 : Clinch BOB — genoux, contrôle de tête, sweeps",s:"3 min",r:"60s",cat:"B",y:"muay thai clinch technique"},
+    {n:"R6 : Sac de sol — ground & pound + transitions",s:"3 min",r:"60s",cat:"B",y:"ground and pound transitions"},
+    {n:"R7 : Round chaos — alterner debout/sol toutes les 30s",s:"3 min",r:"60s",cat:"B",y:"mma transition drill"},
+    {n:"R8 : Shadow final — flow libre, récupération active",s:"3 min",cat:"B",y:"shadow boxing flow recovery"}
+  ]},
+  {j:"Mercredi",t:"FORCE-VITESSE Bas",du:"65 min",fo:"Squat + sprints + sauts",ex:[
+    {n:"Mobilité hanches + activation",s:"8 min",cat:"E",y:"hip mobility activation"},
+    {n:"Contrast : Squat lourd",s:"3×3",cat:"F",y:"heavy barbell squat triples"},
+    {n:"→ immédiatement Box jump",s:"3×5",r:"180s après paire",cat:"P",y:"box jump explosive"},
+    {n:"Contrast : Deadlift lourd",s:"3×3",cat:"F",y:"heavy deadlift triples"},
+    {n:"→ immédiatement Broad jump",s:"3×3",r:"180s après paire",cat:"P",y:"broad jump explosive"},
+    {n:"KB Swing 32 kg",s:"5×15",r:"60s",cat:"F",y:"kettlebell swing 32kg"},
+    {n:"KB Snatch",s:"4×8/côté",r:"60s",cat:"F",y:"kettlebell snatch technique"},
+    {n:"Hanging leg raises + Pallof",s:"3 sets chaque",cat:"C",y:"hanging leg raise pallof press"}
+  ]},
+  {j:"Jeudi",t:"CARDIO COMBAT",du:"65 min",fo:"Rounds chronométrés combat-cardio hybride",ex:[
+    {n:"Circuit : 5 rounds, 1min sac + 1min KB + 1min corde + 1min burpees",s:"R60s entre rounds",cat:"H",y:"fight gone bad workout"},
+    {n:"Shadow boxing 3×3 min",s:"R60s",cat:"B",y:"shadow boxing rounds"},
+    {n:"Respiration tactique",s:"10 min",cat:"X",y:"tactical breathing exercise"},
+    {n:"Mobilité profonde",s:"15 min",cat:"M",y:"deep stretching flexibility"}
+  ]},
+  {j:"Vendredi",t:"FORCE MAX + KB Sport",du:"70 min",fo:"PR lifts + KB complexes",ex:[
+    {n:"San Shin no Kata",s:"5 min",cat:"X",y:"san shin no kata bujinkan"},
+    {n:"Deadlift PR",s:"5×3-5 lourd",r:"150s",cat:"F",y:"deadlift heavy singles"},
+    {n:"Overhead press",s:"4×6",r:"90s",cat:"F",y:"overhead press"},
+    {n:"Tractions",s:"4× max",r:"90s",cat:"F",y:"pull up max"},
+    {n:"Turkish Get-Up KB lourd",s:"3×3/côté",r:"60s",cat:"F",y:"turkish get up heavy"},
+    {n:"Hanbōjutsu — 5 kata solo",s:"15 min",cat:"A",y:"hanbo jutsu kata training"},
+    {n:"Sac clinch + coudes",s:"5×3 min",r:"60s",cat:"B",y:"muay thai elbow clinch bag"},
+    {n:"KB Complex (clean+press+squat+row)",s:"3×5",cat:"F",y:"kettlebell complex workout"},
+    {n:"Fudōshin méditation",s:"5 min",cat:"X",y:""}
+  ]},
+  {j:"Samedi",t:"TEST SHINOBI (mensuel) / ENDURANCE",du:"75-90 min",fo:"Parcours intégré",ex:[
+    {n:"Semaine test : Parcours Shinobi chronométré (voir onglet Tests)",s:"~25-35 min",cat:"T",y:"military fitness test circuit"},
+    {n:"Semaines normales : Bike 20min + corde 10min + marche lestée 30min",s:"60 min",cat:"K",y:"tactical endurance workout"},
+    {n:"Mobilité complète",s:"20 min",cat:"M",y:"full body mobility stretching"}
+  ]},
+  {j:"Dimanche",t:"RÉCUP PROFONDE",du:"50 min",fo:"Yoga + bain froid + méditation longue",ex:[
+    {n:"Yoga guerrier",s:"20 min",cat:"M",y:"yoga warrior flow"},
+    {n:"Wim Hof 4 rounds",s:"20 min",cat:"X",y:"wim hof breathing 4 rounds"},
+    {n:"Méditation Zazen ou marche lente",s:"20 min",cat:"X",y:"zazen walking meditation"},
+    {n:"Souplesse : grand écart PNF (contraction 10s/relâchement 30s, 5 cycles)",s:"15 min",cat:"M",y:"pnf splits stretching routine"}
+  ]}
 ]},
-{nm:"SHINOBI",sub:"Mois 10-12",ic:"🐉",co:"#a855f7",d:"Opérationnel. Corps et esprit fusionnent. Combat réel.",
+// ── PHASE 4 : SHINOBI (Mois 10-12) ──
+{nm:"SHINOBI",sub:"Mois 10-12",ic:"🐉",co:"#a855f7",
+ obj:"Intégration finale. Corps et esprit = système unique. Tout combiné, rien isolé. Capacité de combat réelle, adaptation, endurance sous stress.",
+ poids:"95-100 kg",kcal:"2800-3000 kcal (maintenance / léger surplus jours lourds)",
  sem:[
-  {j:"Lundi",t:"HYBRIDE COMBAT/FORCE",du:"70min",ex:[
-    {n:"R1 sac 3min full",y:"heavy bag full power round"},
-    {n:"Deadlift 3×3 lourd",y:"heavy deadlift"},
-    {n:"R2 sac coudes+genoux 3min",y:"muay thai elbow knee bag"},
-    {n:"Tractions lestées 3×5",y:"weighted pull ups"},
-    {n:"R3 sac au sol 3min",y:"ground and pound bag"},
-    {n:"KB TGU 3×2/côté",y:"turkish get up heavy"},
-    {n:"Farmer carry 3×40m",y:"farmer carry exercise"}]},
-  {j:"Mardi",t:"CARDIO TACTIQUE",du:"65min",ex:[
-    {n:"Bike HIIT 10×30s/30s",y:"assault bike intervals"},
-    {n:"Corde 10min continu",y:"jump rope 10 min"},
-    {n:"Shadow flow 3×3min",y:""},
-    {n:"KB Complex 4×5",y:"kettlebell complex"},
-    {n:"Respiration 4-4-4 × 15",y:"box breathing tactical"}]},
-  {j:"Mercredi",t:"FORCE MAX (PR DAY)",du:"65min",ex:[
-    {n:"Back Squat → PR",y:"squat one rep max"},
-    {n:"Bench → PR",y:"bench press max attempt"},
-    {n:"Deadlift → PR",y:"deadlift one rep max"},
-    {n:"OHP → PR",y:"overhead press max"}]},
-  {j:"Jeudi",t:"COMBAT LIBRE",du:"70min",ex:[
-    {n:"Shadow self-défense 5×3min",y:"self defense shadow boxing"},
-    {n:"Sac libre 8 armes 5×3min",y:"muay boran 8 weapons bag"},
-    {n:"Hanbōjutsu défense couteau 10min",y:"hanbo self defense knife"},
-    {n:"Kata Bassai Dai + Kanku Dai",y:"bassai dai kata shotokan"}]},
-  {j:"Vendredi",t:"CIRCUIT SHINOBI",du:"70min",ex:[
-    {n:"San Shin no Kata 5min",y:"san shin no kata"},
-    {n:"5 rounds : 2min sac + 1min KB + 1min corde + 1min burpees + 30s repos",y:"fight gone bad workout"},
-    {n:"Kihon Happō 10min",y:"kihon happo bujinkan"},
-    {n:"Hanbōjutsu 10min",y:"hanbo jutsu"},
-    {n:"Bike max 5min",y:"assault bike max calories"},
-    {n:"Fudōshin 10min",y:""}]},
-  {j:"Samedi",t:"TEST SHINOBI",du:"90min",ex:[
-    {n:"Bike 2km→50 KB swings→25 tractions→sac 5×3min→corde 10min→50 burpees→marche 3km→fudōshin 10min",y:"military fitness test"}]},
-  {j:"Dimanche",t:"GUERRIER",du:"60min",ex:[
-    {n:"Zazen 30min",y:""},{n:"Wim Hof 5 rounds",y:"wim hof 5 rounds"},{n:"Visualisation opérationnelle",y:""}]}
-]}];
+  {j:"Lundi",t:"COMBAT + FORCE (Hybride)",du:"70 min",fo:"Rounds combat intercalés avec force",ex:[
+    {n:"Round 1 BOB : 3 min full intensity",cat:"B",y:"heavy bag full power round"},
+    {n:"Deadlift lourd",s:"3×3",r:"90s",cat:"F",y:"heavy deadlift"},
+    {n:"Round 2 BOB : genoux et coudes uniquement",s:"3 min",cat:"B",y:"muay thai elbow knee bag"},
+    {n:"Tractions lestées",s:"3×5",r:"90s",cat:"F",y:"weighted pull ups"},
+    {n:"Round 3 Sac sol : ground & pound",s:"3 min",cat:"B",y:"ground and pound bag"},
+    {n:"KB TGU lourd",s:"3×2/côté",r:"60s",cat:"F",y:"turkish get up heavy kettlebell"},
+    {n:"Round 4 Shadow : flow récupération active",s:"3 min",cat:"B",y:"shadow boxing recovery flow"},
+    {n:"Farmer carry lourds",s:"3×40m",r:"60s",cat:"F",y:"farmer carry heavy"}
+  ]},
+  {j:"Mardi",t:"CARDIO TACTIQUE",du:"65 min",fo:"Assault bike + corde + ruck lesté",ex:[
+    {n:"Assault bike HIIT",s:"10×30s/30s",cat:"K",y:"assault bike intervals"},
+    {n:"Corde continu",s:"10 min",cat:"K",y:"jump rope 10 minutes continuous"},
+    {n:"Shadow flow",s:"3×3 min",r:"60s",cat:"B",y:"shadow boxing flow"},
+    {n:"KB Complex",s:"4×5",cat:"F",y:"kettlebell complex"},
+    {n:"Respiration 4-4-4 × 15 rounds",s:"5 min",cat:"X",y:"box breathing tactical"},
+    {n:"Ruck march lesté 15-20kg",s:"20 min",cat:"K",y:"weighted rucking walk"}
+  ]},
+  {j:"Mercredi",t:"FORCE MAXIMALE (PR DAY)",du:"65 min",fo:"PRs : squat, deadlift, bench, OHP",ex:[
+    {n:"Échauffement complet progressif",s:"10 min",cat:"E",y:"powerlifting warmup routine"},
+    {n:"Back Squat → PR",s:"5×1-3",r:"180s",cat:"F",y:"squat one rep max attempt"},
+    {n:"Bench Press → PR",s:"5×1-3",r:"180s",cat:"F",y:"bench press max attempt"},
+    {n:"Deadlift → PR",s:"5×1-3",r:"180s",cat:"F",y:"deadlift one rep max"},
+    {n:"OHP → PR",s:"5×1-3",r:"180s",cat:"F",y:"overhead press max attempt"}
+  ]},
+  {j:"Jeudi",t:"COMBAT LIBRE — Scénarios",du:"70 min",fo:"Self-défense + sparring solo",ex:[
+    {n:"Échauffement shadow + mobilité",s:"10 min",cat:"E",y:"shadow boxing warmup"},
+    {n:"Scénario 1 — Agression frontale : explosion 5 coups max + désengagement",s:"3 min",cat:"B",y:"self defense front attack drill"},
+    {n:"Scénario 2 — Encerclement : shadow multi-angles, pivots 360°",s:"3 min",cat:"B",y:"self defense multiple attackers drill"},
+    {n:"Scénario 3 — Sol imposé : chute contrôlée, relevé, ground & pound",s:"3 min",cat:"B",y:"ground and pound self defense"},
+    {n:"Scénario 4 — Protection tiers : positionnement + éloignement menace",s:"3 min",cat:"B",y:"self defense protect others drill"},
+    {n:"Scénario 5 — Fatigue extrême : 2 min burpees PUIS 3 min BOB max",s:"5 min",cat:"B",y:"fight exhausted drill"},
+    {n:"Hanbōjutsu défense couteau",s:"10 min",cat:"A",y:"hanbo self defense knife attack"},
+    {n:"Kata Bassai Dai",s:"5 min",cat:"A",y:"bassai dai kata shotokan slow"},
+    {n:"Kata Kanku Dai",s:"5 min",cat:"A",y:"kanku dai kata shotokan"},
+    {n:"Sac libre 8 armes (poings, coudes, genoux, pieds)",s:"5×3 min",r:"60s",cat:"B",y:"muay boran 8 weapons bag work"}
+  ]},
+  {j:"Vendredi",t:"CIRCUIT OPÉRATIONNEL — Le Crucible",du:"70 min",fo:"Circuit intégré force-combat-cardio",ex:[
+    {n:"San Shin no Kata",s:"5 min",cat:"X",y:"san shin no kata bujinkan"},
+    {n:"Kihon Happō",s:"10 min",cat:"A",y:"kihon happo bujinkan techniques"},
+    {n:"LE CRUCIBLE — 3 tours, 3 min repos entre tours",s:"",cat:"H",y:"military crucible workout"},
+    {n:"10 Deadlifts (70% 1RM)",cat:"F",y:"deadlift workout"},
+    {n:"15 KB Swings 32 kg",cat:"F",y:"kettlebell swing 32kg"},
+    {n:"20 Pompes",cat:"F",y:"push ups"},
+    {n:"BOB 2 min all-out",cat:"B",y:"heavy bag all out 2 minutes"},
+    {n:"15 Tractions",cat:"F",y:"pull ups"},
+    {n:"Assault bike 90s max",cat:"K",y:"assault bike max 90 seconds"},
+    {n:"30 Mountain climbers",cat:"K",y:"mountain climbers fast"},
+    {n:"Farmer carry 50m lourd",cat:"F",y:"farmer carry heavy"},
+    {n:"Hanbōjutsu",s:"10 min",cat:"A",y:"hanbo jutsu training solo"},
+    {n:"Fudōshin méditation",s:"10 min",cat:"X",y:"fudoshin meditation"}
+  ]},
+  {j:"Samedi",t:"TEST SHINOBI FINAL",du:"90 min",fo:"Parcours complet + endurance",ex:[
+    {n:"Test Shinobi Final complet (voir onglet Tests)",s:"Objectif <25 min",cat:"T",y:"military fitness test circuit"},
+    {n:"Mobilité / stretching complet",s:"20 min",cat:"M",y:"full body stretch recovery"},
+    {n:"Méditation post-test",s:"10 min",cat:"X",y:"meditation after workout"}
+  ]},
+  {j:"Dimanche",t:"GUERRIER INTÉRIEUR",du:"60 min",fo:"Méditation longue + mobilité + journal",ex:[
+    {n:"Méditation longue Zazen",s:"30-45 min",cat:"X",y:"zazen meditation long sitting"},
+    {n:"Wim Hof 5 rounds",s:"20 min",cat:"X",y:"wim hof breathing 5 rounds"},
+    {n:"Visualisation opérationnelle",s:"10 min",cat:"X",y:"combat visualization technique"},
+    {n:"Revue hebdo : Corps / Combat / Esprit — note /10",s:"10 min",cat:"X",y:""}
+  ]}
+]}
+];
 
-// ─── OTHER DATA ───
-var SS=[{nm:"Chi",el:"Terre",k:"地",co:"#8B6914",d:"Frappe descendante, enracinement. Poing avant, poussée des hanches. Le corps s'ancre dans le sol comme un pilier."},{nm:"Sui",el:"Eau",k:"水",co:"#2E5E8E",d:"Esquive fluide latérale + uppercut. Le corps coule autour de l'attaque comme l'eau contourne la roche."},{nm:"Ka",el:"Feu",k:"火",co:"#8B1A1A",d:"Explosion avant, blocage-frappe simultané. Énergie directe, agressive, inarrêtable. L'intention brûle."},{nm:"Fū",el:"Vent",k:"風",co:"#4A7A5A",d:"Balayage circulaire, fouetté. Changement de direction imprévisible. On ne saisit pas le vent."},{nm:"Kū",el:"Vide",k:"空",co:"#6B6B6B",d:"Absence de forme. Réponse spontanée, instinct pur. Le vide contient toutes les formes."}];
-var KH=[{nm:"Ichimonji no Kamae",t:"Kosshi Kihon Sanpō",d:"Garde d'une ligne. Boshi ken (pouce) aux yeux. Le corps forme une seule ligne de force vers la cible."},{nm:"Hichō no Kamae",t:"Kosshi Kihon Sanpō",d:"Garde de l'oiseau sur une jambe. Kick frontal + frappe haute. Équilibre et légèreté."},{nm:"Jūmonji no Kamae",t:"Kosshi Kihon Sanpō",d:"Garde en croix. Double shuto simultané aux carotides. Les bras croisés protègent et frappent."},{nm:"Omote Gyaku",t:"Torite Kihon Gohō",d:"Torsion extérieure du poignet → projection au sol. La clé la plus directe du kihon happō. Contrôle sans blesser gravement."},{nm:"Ura Gyaku",t:"Torite Kihon Gohō",d:"Torsion intérieure du poignet → pression vers le bas. Complémentaire de l'omote gyaku. Même saisie, direction opposée."},{nm:"Musha Dori",t:"Torite Kihon Gohō",d:"Saisie du guerrier. Clé de bras par levier au coude. Immobilisation debout puissante."},{nm:"Ganseki Nage",t:"Torite Kihon Gohō",d:"Projection de la roche. Chargement sur l'épaule → projection. Technique spectaculaire et dévastatrice."},{nm:"Oni Kudaki",t:"Torite Kihon Gohō",d:"Briser le démon. Clé d'épaule par rotation externe. Le nom dit tout."}];
-var AR=[{nm:"Hanbōjutsu",ic:"🪵",wp:"Hanbō 90cm / parapluie / canne",kt:["Tsuki direct + retrait","Blocage jodan + contre circulaire","Balayage bas + pique haute","Crochetage cheville + contrôle","Défense couteau (déviation + frappe poignet)"],dr:"20 min : 5 kata solo → 5 frappe cible → 5 transitions hanbō↔mains nues → 5 scénarios",vy:"hanbo jutsu kata"},{nm:"Tantōjutsu",ic:"🗡️",wp:"Couteau entraînement bois/caoutchouc",kt:["Dégainement + coupe horizontale","Pique directe + retrait","Défense vs saisie + coupe dégagement","Changement main + coupe inversée"],dr:"15 min : 5 kata → 5 dégainement rapide (100x) → 5 défense",vy:"tanto jutsu training"},{nm:"Shurikenjutsu",ic:"⭐",wp:"Cartes à lancer / fléchettes",kt:["Lancer direct 3m cible A4","Lancer en mouvement (pas chassé)","Triple rapide 3 en 3 secondes","Distraction + fuite tactique"],dr:"15 min : 5 précision → 5 déplacement → 5 tactique",vy:"shuriken throwing technique"},{nm:"Kusarijutsu",ic:"⛓️",wp:"Ceinture lestée / corde à nœuds",kt:["Rotation horizontale + frappe directe","Enroulement bras (contrôle distance)","Fauchage bas (chevilles)","Lancer lesté + retrait rapide"],dr:"15 min : 5 rotation → 5 cible → 5 transitions",vy:"kusari fundo techniques"}];
-var NT={tot:"~2400 kcal | 185g prot | 200g gluc | 70g lip",
- rp:[
-  {m:"Réveil (6h30)",ic:"🌅",mn:"Grand verre d'eau citronnée + 5min fudōshin",cal:0,p:0,g:0,l:0},
-  {m:"Petit-déjeuner (7h)",ic:"🥚",mn:"4 œufs (2 entiers + 2 blancs) brouillés\nFlocons d'avoine 80g + miel\nBanane\nThé vert",cal:620,p:38,g:75,l:18},
-  {m:"Collation (10h)",ic:"🍎",mn:"Fromage blanc 0% 200g\nPoignée d'amandes 20g",cal:180,p:22,g:8,l:8},
-  {m:"Déjeuner (12h30)",ic:"🍗",mn:"200g blanc de poulet grillé\n150g riz complet (poids cru)\nLégumes verts à volonté (brocoli, haricots)\n1 c.s. huile d'olive",cal:700,p:48,g:65,l:16},
-  {m:"Pré-training (16h)",ic:"🍌",mn:"1 banane + 30g noix/amandes\nOu barre protéinée maison",cal:250,p:8,g:35,l:12},
-  {m:"Post-training (18h)",ic:"💪",mn:"Whey protéine 40g + lait d'amande\nOu 250g fromage blanc + miel",cal:220,p:35,g:12,l:3},
-  {m:"Dîner (20h)",ic:"🐟",mn:"200g saumon ou cabillaud\nPatate douce 150g\nSalade verte + avocat 1/2\n1 c.s. huile olive",cal:650,p:42,g:45,l:22}
-],
-courses:"Poulet 1.5kg, Saumon 500g, Cabillaud 500g, Œufs ×24, Fromage blanc 0% 1kg, Whey 1 sachet, Riz complet 1kg, Flocons avoine 500g, Patates douces 1kg, Bananes ×7, Amandes 200g, Brocoli 1kg, Haricots verts 500g, Salade, Avocat ×4, Huile olive, Miel, Thé vert, Citrons"};
-var EN=[{nm:"Fudō Myōō 不動明王",rl:"Protecteur suprême",d:"Roi de Sagesse Immobile. Sabre de vérité et corde qui lie les passions. Son mudra est la base du fudōshin. Invoqué avant chaque mission.",ic:"🔥",co:"#8B1A1A"},{nm:"Marishi-ten 摩利支天",rl:"Déesse des guerriers",d:"Déesse de l'invisibilité. Patronne des shinobi. Rend invisible celui qui la prie avec sincérité.",ic:"✨",co:"#B8860B"},{nm:"Tengu 天狗",rl:"Maîtres martiaux",d:"Esprits de montagne au long nez. Maîtres légendaires du kenjutsu. Yoshitsune apprit l'escrime d'un tengu du Mont Kurama.",ic:"👺",co:"#6B0F0F"},{nm:"Kitsune 狐",rl:"Archétype hensōjutsu",d:"Renard métamorphe. Transformation totale. Les sanctuaires Inari étaient visités avant les missions de yo-nin.",ic:"🦊",co:"#D4760A"},{nm:"Oni 鬼",rl:"Forces à vaincre",d:"Démons. Obstacles intérieurs (peur, colère, attachement). Le Oni Kudaki du kihon happō = briser le démon intérieur.",ic:"👹",co:"#8B0000"},{nm:"Ryūjin 龍神",rl:"Kami des eaux",d:"Dieu-dragon des rivières et des mers. Protection pour la traversée des douves. Lié au Sui no kata.",ic:"🐉",co:"#2E5E8E"}];
+// ─── SAN SHIN ───
+var SS=[{nm:"Chi",el:"Terre",k:"地",co:"#8B6914",d:"Frappe descendante, enracinement. Poing avant, poussée des hanches. Le corps s'ancre dans le sol comme un pilier."},{nm:"Sui",el:"Eau",k:"水",co:"#2E5E8E",d:"Esquive fluide latérale + uppercut. Le corps coule autour de l'attaque comme l'eau contourne la roche."},{nm:"Ka",el:"Feu",k:"火",co:"#8B1A1A",d:"Explosion avant, blocage-frappe simultané. Énergie directe, agressive, inarrêtable."},{nm:"Fū",el:"Vent",k:"風",co:"#4A7A5A",d:"Balayage circulaire, fouetté. Changement de direction imprévisible. On ne saisit pas le vent."},{nm:"Kū",el:"Vide",k:"空",co:"#6B6B6B",d:"Absence de forme. Réponse spontanée, instinct pur. Le vide contient toutes les formes."}];
+
+// ─── KIHON HAPPO ───
+var KH=[{nm:"Ichimonji no Kamae",t:"Kosshi Kihon Sanpō",d:"Garde d'une ligne. Boshi ken (pouce) aux yeux. Le corps forme une seule ligne de force vers la cible."},{nm:"Hichō no Kamae",t:"Kosshi Kihon Sanpō",d:"Garde de l'oiseau sur une jambe. Kick frontal + frappe haute. Équilibre et légèreté."},{nm:"Jūmonji no Kamae",t:"Kosshi Kihon Sanpō",d:"Garde en croix. Double shuto simultané aux carotides. Les bras croisés protègent et frappent."},{nm:"Omote Gyaku",t:"Torite Kihon Gohō",d:"Torsion extérieure du poignet → projection au sol. Contrôle sans blesser gravement."},{nm:"Ura Gyaku",t:"Torite Kihon Gohō",d:"Torsion intérieure du poignet → pression vers le bas. Complémentaire de l'omote gyaku."},{nm:"Musha Dori",t:"Torite Kihon Gohō",d:"Saisie du guerrier. Clé de bras par levier au coude. Immobilisation debout puissante."},{nm:"Ganseki Nage",t:"Torite Kihon Gohō",d:"Projection de la roche. Chargement épaule → projection spectaculaire."},{nm:"Oni Kudaki",t:"Torite Kihon Gohō",d:"Briser le démon. Clé d'épaule par rotation externe. Le nom dit tout."}];
+
+// ─── ARMES (étendu) ───
+var AR=[
+{nm:"Hanbōjutsu",ic:"🪵",wp:"Hanbō 90cm / parapluie / canne",kt:["Tsuki direct + retrait","Blocage jodan + contre circulaire","Balayage bas + pique haute","Crochetage cheville + contrôle","Défense couteau (déviation + frappe poignet)","Frappe Yokomen (latérale tête)","Blocage gedan + remontée men","Contrôle poignet + projection"],dr:"20 min : 5 kata solo → 5 frappes cible → 5 transitions hanbō↔mains nues → 5 scénarios",vy:"hanbo jutsu kata solo training"},
+{nm:"Tantōjutsu",ic:"🗡️",wp:"Couteau entraînement bois/caoutchouc",kt:["Dégainement + coupe horizontale","Pique directe + retrait","Défense vs saisie + coupe dégagement","Changement main + coupe inversée","Dégainement inversé (icepick) + pique descendante","Défense contre coup de poing + coupe contre-attaque"],dr:"15 min : 5 kata → 5 dégainement rapide (100x) → 5 défense",vy:"tanto jutsu kata training"},
+{nm:"Shurikenjutsu",ic:"⭐",wp:"Cartes à lancer / fléchettes",kt:["Lancer direct 3m cible A4","Lancer en mouvement (pas chassé)","Triple rapide 3 en 3 secondes","Distraction + fuite tactique","Lancer assis/accroupi","Lancer main gauche (non-dominante)"],dr:"15 min : 5 précision → 5 déplacement → 5 tactique",vy:"shuriken throwing technique accuracy"},
+{nm:"Kusarijutsu",ic:"⛓️",wp:"Ceinture lestée / corde à nœuds",kt:["Rotation horizontale + frappe directe","Enroulement bras (contrôle distance)","Fauchage bas (chevilles)","Lancer lesté + retrait rapide","Rotation verticale + changement de plan","Capture poignet + amenée au sol"],dr:"15 min : 5 rotation → 5 cible → 5 transitions",vy:"kusari fundo techniques training"},
+{nm:"Bōjutsu",ic:"🏑",wp:"Bō 180cm / manche à balai renforcé",kt:["Frappe shomen (verticale centre)","Frappe yokomen (latérale tête)","Tsuki (pique directe)","Blocage jodan uke + contre tsuki","Balayage bas gedan barai","Rotation 360° changement de garde","Frappe double bout rapide","Kata bō de base : 8 directions"],dr:"20 min : 8 kata directionnels → 5 enchaînements → 5 défense vs attaquant",vy:"bojutsu kata solo training basics"},
+{nm:"Kata Shotokan",ic:"🥋",wp:"Mains nues — karaté",kt:["Heian Shodan (1er kata de base)","Heian Nidan","Heian Sandan","Heian Yondan","Heian Godan","Tekki Shodan (position kiba-dachi)","Bassai Dai (forcer la forteresse)","Kanku Dai (regarder le ciel)","Jion (temple)","Empi (vol de l'hirondelle)"],dr:"30 min : 5 Heian enchaînés → 1 Tekki → 2 kata avancés lents puis rapides",vy:"shotokan kata all heian bassai dai kanku"}
+];
+
+// ─── TESTS MENSUELS ───
+var TESTS={
+  benchmarks:[
+    {nm:"Tractions max",u:"reps",p1:"3-5",p2:"8-10",p3:"12-15",p4:"15+"},
+    {nm:"Pompes max",u:"reps",p1:"20-25",p2:"35-40",p3:"50+",p4:"60+"},
+    {nm:"Planche",u:"sec",p1:"45-60",p2:"90",p3:"120",p4:"180"},
+    {nm:"Corde continue",u:"min",p1:"5",p2:"10",p3:"15",p4:"20"},
+    {nm:"Squat",u:"kg",p1:"60",p2:"100",p3:"120",p4:"140+"},
+    {nm:"Deadlift",u:"kg",p1:"80",p2:"120",p3:"150",p4:"170+"},
+    {nm:"Bench press",u:"kg",p1:"60",p2:"80",p3:"95",p4:"110+"},
+    {nm:"KB Swing 10 min",u:"reps",p1:"80",p2:"120",p3:"160",p4:"200+"},
+    {nm:"BOB rounds 3min",u:"rounds",p1:"3",p2:"5",p3:"8",p4:"10"},
+    {nm:"Test Shinobi",u:"min",p1:"—",p2:"35-40",p3:"25-30",p4:"<25"}
+  ],
+  parcours3:{
+    title:"Test Shinobi Phase 3",
+    objectif:"Sous 25 min fin de Phase 3",
+    steps:["800m course (ou 3 min assault bike max)","20 KB swings 24 kg","15 tractions","20 pompes","3 rounds de 1 min BOB max / 15s repos","30 burpees","2 min planche","400m course (ou 90s assault bike max)"]
+  },
+  parcours4:{
+    title:"Test Shinobi Final — Phase 4",
+    objectif:"Sous 30 min (idéal <25 min)",
+    steps:["1500m course (ou 5 min assault bike max)","30 KB swings 32 kg","20 tractions","30 pompes","5 rounds de 1 min BOB max / 15s repos","40 burpees","3 min planche","10 TGU (5/côté, 24 kg)","800m course finale (ou 2 min assault bike max)"]
+  }
+};
+
+// ─── NUTRITION COMPLÈTE ───
+var NT={
+  principes:[
+    "Déficit calorique modéré : 300-500 kcal/jour sous maintenance. Pas plus, sinon perte de force.",
+    "Protéines prioritaires : 2g/kg de poids cible = 190-200g/jour. Non négociable.",
+    "Glucides autour de l'entraînement : riz, patate douce, avoine, fruits. Pas de glucides le soir sauf jours très intenses.",
+    "Lipides essentiels : huile olive, avocat, noix, poisson gras. Minimum 70g/jour.",
+    "Légumes à chaque repas : volume, fibres, micronutriments.",
+    "Hydratation : 3-4 litres/jour minimum. Eau + électrolytes les jours intenses."
+  ],
+  repas:[
+    {m:"Pré-training",h:"04h45",ic:"⚡",mn:"Banane + café noir + 10g créatine",p:5,g:25,l:0,cal:120},
+    {m:"Post-training",h:"06h15",ic:"💪",mn:"Shaker : 40g whey + 50g flocons avoine + 1 c.s. beurre de cacahuète",p:50,g:45,l:15,cal:510},
+    {m:"Déjeuner",h:"12h30",ic:"🍗",mn:"200g poulet ou poisson + 150g riz complet (cru) + légumes abondants + 1 c.s. huile olive",p:50,g:50,l:15,cal:540},
+    {m:"Collation",h:"16h00",ic:"🍎",mn:"150g fromage blanc + 30g noix + 1 fruit",p:20,g:20,l:15,cal:295},
+    {m:"Dîner",h:"19h30",ic:"🐟",mn:"200g viande ou poisson + légumes abondants + 1 c.s. huile olive",p:45,g:15,l:15,cal:370},
+    {m:"Optionnel soir",h:"21h00",ic:"🌙",mn:"Caseïne 30g ou 2 œufs si faim",p:25,g:0,l:5,cal:145}
+  ],
+  evolution:[
+    {phase:"Phase 1-2",cal:"2200-2500 kcal",desc:"Déficit modéré. Focus perte de graisse et récupération."},
+    {phase:"Phase 3",cal:"2600-2800 kcal",desc:"Retour à maintenance. Plus de glucides pour supporter l'intensité."},
+    {phase:"Phase 4",cal:"2800-3000 kcal",desc:"Maintenance ou léger surplus jours lourds. Léger déficit jours légers."}
+  ],
+  supplements:[
+    {nm:"Créatine monohydrate",dose:"5g/jour",quand:"Tous les jours, matin",why:"Force, récupération, volume musculaire"},
+    {nm:"Whey protéine",dose:"30-40g",quand:"Post-training",why:"Compléter l'apport protéique"},
+    {nm:"Omega-3 (EPA/DHA)",dose:"2-3g/jour",quand:"Avec repas",why:"Anti-inflammatoire, articulations"},
+    {nm:"Vitamine D3",dose:"4000 UI/jour",quand:"Matin",why:"Essentiel sous nos latitudes (Toulouse)"},
+    {nm:"Magnésium bisglycinate",dose:"400mg/jour",quand:"Soir (21h)",why:"Récupération, sommeil, crampes"},
+    {nm:"Caseïne",dose:"30g",quand:"Soir si besoin",why:"Protéine lente, satiété nocturne"}
+  ],
+  aliments:{
+    proteines:["Blanc de poulet","Cuisse de poulet","Dinde","Saumon","Cabillaud","Thon (boîte, naturel)","Sardines","Œufs entiers","Blancs d'œufs","Fromage blanc 0%","Skyr","Whey protéine","Caseïne","Bœuf haché 5%","Steak de bœuf","Foie de veau","Crevettes","Tofu ferme"],
+    glucides:["Riz complet","Riz basmati","Flocons d'avoine","Patate douce","Pomme de terre","Quinoa","Boulgour","Pâtes complètes","Pain complet","Banane","Pomme","Myrtilles","Fraises","Miel (modération)","Lentilles","Pois chiches","Haricots rouges"],
+    lipides:["Huile d'olive extra vierge","Avocat","Amandes","Noix","Noix de cajou","Beurre de cacahuète naturel","Graines de lin","Graines de chia","Saumon (aussi protéine)","Sardines (aussi protéine)","Huile de coco (cuisson)","Jaune d'œuf"],
+    legumes:["Brocoli","Haricots verts","Épinards","Courgettes","Poivrons","Tomates","Chou-fleur","Chou kale","Concombre","Salade verte","Champignons","Oignons","Ail","Asperges","Aubergine","Carottes"],
+    recettes:[
+      {nm:"Bowl Poulet Guerrier",desc:"200g poulet grillé + 150g riz complet + brocoli vapeur + avocat ½ + sauce soja + sésame. ~600kcal, 48P/55G/18L"},
+      {nm:"Omelette Shinobi",desc:"4 œufs (2 entiers + 2 blancs) + épinards + champignons + fromage râpé léger. Servir avec pain complet grillé. ~450kcal, 35P/20G/22L"},
+      {nm:"Saumon Patate Douce",desc:"200g pavé de saumon + 200g patate douce au four + haricots verts + huile olive. ~650kcal, 42P/50G/25L"},
+      {nm:"Shaker Recovery",desc:"40g whey + 50g flocons avoine + 1 banane + 1 c.s. beurre cacahuète + 300ml lait amande. Mixer. ~580kcal, 48P/55G/16L"},
+      {nm:"Bol Méditerranéen",desc:"Quinoa 150g + pois chiches 100g + poivrons grillés + feta 30g + huile olive + citron. ~550kcal, 25P/60G/20L"},
+      {nm:"Tartine Post-Training",desc:"Pain complet + fromage blanc + saumon fumé + avocat écrasé + graines de chia. ~420kcal, 30P/35G/18L"},
+      {nm:"Soupe Miso du Guerrier",desc:"Miso + tofu ferme 150g + algues wakame + champignons shiitake + riz à côté. Simple, rapide, digeste. ~350kcal, 22P/40G/8L"}
+    ]
+  },
+  courses:"Poulet 1.5kg, Saumon 500g, Cabillaud 500g, Œufs ×30, Fromage blanc 0% 1.5kg, Whey protéine, Caseïne, Riz complet 1kg, Flocons d'avoine 500g, Patates douces 1kg, Bananes ×10, Amandes 250g, Noix 200g, Beurre cacahuète, Brocoli 1kg, Haricots verts 500g, Épinards 500g, Courgettes 1kg, Poivrons ×6, Tomates 1kg, Avocat ×5, Salade, Huile olive, Miel, Thé vert, Citrons ×6, Quinoa 500g, Pois chiches boîte ×3, Lentilles 500g, Pain complet, Saumon fumé, Graines chia/lin, Miso, Tofu ferme"
+};
+
+// ─── ENTITIES ───
+var EN=[{nm:"Fudō Myōō 不動明王",rl:"Protecteur suprême",d:"Roi de Sagesse Immobile. Sabre de vérité et corde qui lie les passions. Son mudra est la base du fudōshin.",ic:"🔥",co:"#8B1A1A"},{nm:"Marishi-ten 摩利支天",rl:"Déesse des guerriers",d:"Déesse de l'invisibilité. Patronne des shinobi. Rend invisible celui qui la prie avec sincérité.",ic:"✨",co:"#B8860B"},{nm:"Tengu 天狗",rl:"Maîtres martiaux",d:"Esprits de montagne au long nez. Maîtres du kenjutsu. Yoshitsune apprit l'escrime d'un tengu du Mont Kurama.",ic:"👺",co:"#6B0F0F"},{nm:"Kitsune 狐",rl:"Archétype hensōjutsu",d:"Renard métamorphe. Les sanctuaires Inari étaient visités avant les missions de yo-nin.",ic:"🦊",co:"#D4760A"},{nm:"Oni 鬼",rl:"Forces à vaincre",d:"Démons — obstacles intérieurs (peur, colère, attachement). Le Oni Kudaki du kihon happō = briser le démon intérieur.",ic:"👹",co:"#8B0000"},{nm:"Ryūjin 龍神",rl:"Kami des eaux",d:"Dieu-dragon des rivières et mers. Protection pour la traversée des douves. Lié au Sui no kata.",ic:"🐉",co:"#2E5E8E"}];
+
+// ─── LIBRARY ───
 var LV=[{n:1,t:"Origines & Histoire",i:"⛩️",c:14,s:1},{n:2,t:"Spiritualité & Cosmologie",i:"🔮",c:17,s:15},{n:3,t:"Philosophie & Éthique",i:"☯️",c:10,s:32},{n:4,t:"Les Écoles (Ryūha)",i:"🏯",c:9,s:42},{n:5,t:"Taijutsu",i:"👊",c:10,s:51},{n:6,t:"Bukijutsu",i:"⚔️",c:8,s:61},{n:7,t:"Shinobi-iri",i:"🌙",c:7,s:69},{n:8,t:"Hensōjutsu",i:"🎭",c:5,s:76},{n:9,t:"Chihō",i:"👁️",c:5,s:81},{n:10,t:"Survie & Médecine",i:"🌿",c:5,s:86},{n:11,t:"Stratégie",i:"♟️",c:4,s:91},{n:12,t:"Cas historiques",i:"📜",c:4,s:95},{n:13,t:"Le Shinobi Européen",i:"🗡️",c:25,s:99}];
 
 // ─── STATE ───
-var S={tab:'home',ph:0,wi:-1,si:0,ki:0,ai:0,bi:0,livSel:null,chSel:null,streak:0,total:0,done:false,restOn:false,restSec:0,bOn:false,bSec:0,bPhase:0,bRound:0,ratings:{}};
-try{var sv=JSON.parse(localStorage.getItem('ov9'));if(sv){S.streak=sv.streak||0;S.total=sv.total||0;S.ph=sv.phase||0;S.ratings=sv.ratings||{};S.done=sv.lastDate===new Date().toISOString().slice(0,10);}}catch(e){}
+var S={tab:'home',ph:0,wi:-1,si:0,ki:0,ai:0,bi:0,livSel:null,chSel:null,streak:0,total:0,done:false,restOn:false,restSec:0,restMax:0,bOn:false,bSec:0,bPhase:0,bRound:0,ratings:{},checks:{},foodTab:'repas',testTab:'bench',spiritTab:'fetes'};
+try{var sv=JSON.parse(localStorage.getItem('ov10'));if(sv){for(var k in sv)if(S.hasOwnProperty(k))S[k]=sv[k];S.done=sv.lastDate===new Date().toISOString().slice(0,10);}}catch(e){}
 
+function save(){localStorage.setItem('ov10',JSON.stringify({streak:S.streak,total:S.total,phase:S.ph,lastDate:todayStr(),ratings:S.ratings,checks:S.checks}));}
 function getCh(n){if(typeof CH==='undefined'||!CH)return null;for(var i=0;i<CH.length;i++){if(CH[i].n===n)return CH[i];}return null;}
 function esc(s){if(!s)return '';return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function todayStr(){return new Date().toISOString().slice(0,10);}
 function weekKey(){var d=new Date();var w=Math.ceil(((d-new Date(d.getFullYear(),0,1))/86400000+1)/7);return d.getFullYear()+'-W'+w;}
+var catColors={E:'#555',F:'#B8860B',K:'#2E5E8E',B:'#8B0F0F',M:'#4A7A5A',C:'#D4760A',P:'#f97316',H:'#facc15',X:'#a855f7',A:'#8B6914',T:'#ff4444'};
+var catNames={E:'Échauff.',F:'Force',K:'Cardio',B:'Combat',M:'Mobilité',C:'Core',P:'Pliomét.',H:'HIIT',X:'Mental',A:'Armes/Kata',T:'Test'};
 
 // ─── REST TIMER ───
 var restInt=null;
-function startRest(sec){S.restSec=sec;S.restOn=true;clearInterval(restInt);restInt=setInterval(function(){S.restSec--;if(S.restSec<=0){S.restOn=false;clearInterval(restInt);try{navigator.vibrate&&navigator.vibrate(300);}catch(e){}}render();},1000);render();}
+function startRest(sec){S.restSec=sec;S.restMax=sec;S.restOn=true;clearInterval(restInt);restInt=setInterval(function(){S.restSec--;if(S.restSec<=0){S.restOn=false;clearInterval(restInt);try{navigator.vibrate&&navigator.vibrate([200,100,200]);}catch(e){}}render();},1000);render();}
 
 // ─── BREATH ENGINE ───
 var bInt=null;
 function startBreath(){var b=BR[S.bi];S.bOn=true;S.bPhase=0;S.bRound=1;S.bSec=b.ph[0].s;clearInterval(bInt);bInt=setInterval(function(){S.bSec--;if(S.bSec<=0){S.bPhase++;if(S.bPhase>=b.ph.length){S.bPhase=0;S.bRound++;if(S.bRound>b.rounds){S.bOn=false;clearInterval(bInt);}}S.bSec=S.bOn?b.ph[S.bPhase].s:0;}render();},1000);render();}
 function stopBreath(){S.bOn=false;clearInterval(bInt);render();}
 
+// ─── CHECK TOGGLE ───
+function toggleCheck(phIdx,dayIdx,exIdx){
+  var key=todayStr()+'_'+phIdx+'_'+dayIdx+'_'+exIdx;
+  if(S.checks[key])delete S.checks[key]; else S.checks[key]=1;
+  save();render();
+}
+function isChecked(phIdx,dayIdx,exIdx){return !!S.checks[todayStr()+'_'+phIdx+'_'+dayIdx+'_'+exIdx];}
+function dayProgress(phIdx,dayIdx){
+  var d=PH[phIdx].sem[dayIdx];var done=0;
+  for(var i=0;i<d.ex.length;i++)if(isChecked(phIdx,dayIdx,i))done++;
+  return {done:done,total:d.ex.length};
+}
+
+// ════════════════════════════════════════════
+// RENDER
+// ════════════════════════════════════════════
 function render(){
   var ph=PH[S.ph];var td=new Date();var dn=["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"][td.getDay()];
-  var mm=(td.getMonth()+1<10?'0':'')+(td.getMonth()+1);var dd=(td.getDate()<10?'0':'')+td.getDate();var todayMD=mm+'-'+dd;
-  var h='<div class="hd"><div style="font-size:9px;letter-spacing:6px;color:#B8860B">L\'OMBRA</div><div style="font-size:16px;color:#fff;font-weight:300;margin-top:2px">Bible du Shinobi</div></div>';
+  var mm=String(td.getMonth()+1).padStart(2,'0');var dd=String(td.getDate()).padStart(2,'0');var todayMD=mm+'-'+dd;
+  var h='<div class="hd"><div style="font-size:10px;letter-spacing:6px;color:#B8860B">L\'OMBRA</div><div style="font-size:18px;color:#fff;font-weight:300;margin-top:3px">Bible du Shinobi</div><div style="font-size:12px;color:#555;margin-top:2px">'+dn+' '+dd+'/'+mm+'/'+td.getFullYear()+' — Phase '+ph.ic+' '+ph.nm+'</div></div>';
+
+  // NAV
   h+='<div class="nv">';
-  [['home','家'],['train','修'],['breath','息'],['kata','型'],['armes','武'],['food','食'],['spirit','神'],['library','書']].forEach(function(x){
-    h+='<button class="'+(S.tab===x[0]?'a':'')+'" onclick="go(\''+x[0]+'\')">'+x[1]+'</button>';});
+  [['home','家','Accueil'],['train','修','Train'],['breath','息','Souffle'],['kata','型','Kata'],['armes','武','Armes'],['food','食','Nutri'],['tests','試','Tests'],['spirit','神','Esprit'],['library','書','Biblio']].forEach(function(x){
+    h+='<button class="'+(S.tab===x[0]?'a':'')+'" onclick="go(\''+x[0]+'\')"><div style="font-size:15px">'+x[1]+'</div><div style="font-size:9px;margin-top:1px">'+x[2]+'</div></button>';});
   h+='</div><div class="ct">';
 
-  // ── HOME ──
+  // ══════ HOME ══════
   if(S.tab==='home'){
     var qi=Math.floor((td.getFullYear()*1000+td.getMonth()*31+td.getDate())%QT.length);
-    h+='<div style="text-align:center;padding:20px 0"><div style="font-size:64px;margin-bottom:8px">忍</div>';
-    h+='<div style="font-size:13px;color:#B8860B">'+dn+' '+dd+'/'+mm+'/'+td.getFullYear()+'</div>';
-    h+='<div style="font-size:12px;color:#888;margin-top:4px">Phase '+ph.ic+' '+ph.nm+' — '+ph.sub+'</div></div>';
-    h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="cb"><div style="font-size:9px;color:#B8860B;margin-bottom:6px">DICTON DU JOUR</div><div style="font-size:13px;color:#e8e0d4;line-height:1.7;font-style:italic">&laquo; '+QT[qi]+' &raquo;</div></div></div>';
+    h+='<div style="text-align:center;padding:24px 0"><div style="font-size:72px;margin-bottom:10px">忍</div>';
+    h+='<div style="font-size:14px;color:#e8e0d4;font-weight:300">Projet Shinobi — Année 1</div>';
+    h+='<div style="font-size:13px;color:#888;margin-top:4px">'+ph.ic+' '+ph.nm+' — '+ph.sub+' — Objectif : '+ph.poids+'</div></div>';
+    h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="cb"><div style="font-size:10px;color:#B8860B;margin-bottom:6px">DICTON DU JOUR</div><div style="font-size:15px;color:#e8e0d4;line-height:1.7;font-style:italic">&laquo; '+QT[qi]+' &raquo;</div></div></div>';
     // Next fete
-    var nextF=null;FT.forEach(function(f){if(f.dt>=todayMD.replace('-',''))nextF=nextF||f;});if(!nextF)nextF=FT[0];
-    h+='<div class="cd"><div class="cb"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:28px">'+nextF.ic+'</span><div><div style="font-size:9px;color:#B8860B">PROCHAINE CÉLÉBRATION</div><div style="font-size:13px;font-weight:600;margin-top:2px">'+nextF.nm+'</div><div style="font-size:11px;color:#888;margin-top:2px">'+nextF.d+'</div></div></div></div></div>';
+    var nextF=null;FT.forEach(function(f){if(!nextF&&f.dt>=todayMD)nextF=f;});if(!nextF)nextF=FT[0];
+    h+='<div class="cd"><div class="cb"><div style="display:flex;align-items:center;gap:12px"><span style="font-size:32px">'+nextF.ic+'</span><div><div style="font-size:10px;color:#B8860B">PROCHAINE CÉLÉBRATION</div><div style="font-size:15px;font-weight:600;margin-top:2px">'+nextF.nm+'</div><div style="font-size:13px;color:#888;margin-top:2px">'+nextF.dt.replace('-','/')+'</div></div></div></div></div>';
     // Stats
     h+='<div style="display:flex;gap:8px;margin-top:4px">';
-    [{l:'Streak',v:S.streak+'j'},{l:'Sessions',v:S.total},{l:'Phase',v:ph.ic}].forEach(function(s){h+='<div class="cd" style="flex:1;text-align:center"><div class="cb"><div style="font-size:20px;color:#8B0F0F">'+s.v+'</div><div style="font-size:9px;color:#888">'+s.l+'</div></div></div>';});
+    [{l:'Streak',v:S.streak+'j'},{l:'Sessions',v:S.total},{l:'Phase',v:(S.ph+1)+'/4'}].forEach(function(s){h+='<div class="cd" style="flex:1;text-align:center"><div class="cb"><div style="font-size:24px;color:#8B0F0F">'+s.v+'</div><div style="font-size:11px;color:#888">'+s.l+'</div></div></div>';});
     h+='</div>';
+    // Phase selector
+    h+='<div class="sc" style="margin-top:12px">CHANGER DE PHASE</div><div style="display:flex;gap:4px">';PH.forEach(function(p,i){h+='<div onclick="setPh('+i+')" style="flex:1;padding:8px 4px;text-align:center;border-radius:8px;border:1px solid '+(i===S.ph?p.co:'#222')+';background:'+(i===S.ph?p.co+'20':'#111')+';cursor:pointer"><div style="font-size:18px">'+p.ic+'</div><div style="font-size:10px;color:'+(i===S.ph?p.co:'#555')+';margin-top:2px">'+p.nm+'</div></div>';});h+='</div>';
     // Week rating
     var wk=weekKey();var wr=S.ratings[wk]||0;
-    h+='<div class="cd" style="margin-top:4px"><div class="cb"><div style="font-size:9px;color:#B8860B;margin-bottom:4px">ÉVALUATION SEMAINE '+wk.split('-W')[1]+'</div><div style="text-align:center">';
+    h+='<div class="cd" style="margin-top:10px"><div class="cb"><div style="font-size:10px;color:#B8860B;margin-bottom:4px">ÉVALUATION SEMAINE '+wk.split('-W')[1]+'</div><div style="text-align:center">';
     for(var i=1;i<=5;i++){h+='<span class="star" onclick="rate('+i+')">'+(i<=wr?'⭐':'☆')+'</span>';}
-    h+='</div><div style="font-size:10px;color:#555;text-align:center;margin-top:4px">'+(wr?wr+'/5 — '+(wr<=2?'Continue, la régularité paie.':wr<=4?'Bonne semaine, pousse plus loin.':'Semaine exceptionnelle. Tu es shinobi.'):'Évalue ta semaine')+'</div></div></div>';
+    h+='</div></div></div>';
   }
 
-  // ── TRAIN ──
+  // ══════ TRAIN ══════
   if(S.tab==='train'){
-    h+='<div class="sc">'+ph.ic+' '+ph.nm+' ('+ph.sub+')</div>';
-    h+='<div style="font-size:11px;color:#666;margin-bottom:10px;font-style:italic">'+ph.d+'</div>';
-    h+='<div style="display:flex;gap:3px;margin-bottom:10px">';PH.forEach(function(p,i){h+='<div onclick="setPh('+i+')" style="flex:1;height:8px;border-radius:4px;background:'+(i===S.ph?p.co:'#222')+';cursor:pointer"></div>';});h+='</div>';
+    h+='<div class="sc">'+ph.ic+' PHASE '+ph.nm+' — '+ph.sub+'</div>';
+    h+='<div style="font-size:14px;color:#bbb;margin-bottom:6px;line-height:1.6">'+ph.obj+'</div>';
+    h+='<div style="font-size:12px;color:#666;margin-bottom:12px">Poids cible : '+ph.poids+' | '+ph.kcal+'</div>';
+    // Phase pills
+    h+='<div style="display:flex;gap:4px;margin-bottom:12px">';PH.forEach(function(p,i){h+='<div onclick="setPh('+i+')" style="flex:1;height:10px;border-radius:5px;background:'+(i===S.ph?p.co:'#222')+';cursor:pointer"></div>';});h+='</div>';
     // Rest timer
-    if(S.restOn){h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="text-align:center"><div style="font-size:10px;color:#B8860B">REPOS</div><div style="font-size:36px;color:#e8e0d4;margin:4px 0">'+S.restSec+'s</div><div class="rest-bar"><div class="rest-fill" style="width:'+((S.restSec/120)*100)+'%"></div></div></div></div>';}
-    ph.sem.forEach(function(d,i){
-      h+='<div class="ex" onclick="S.wi='+(S.wi===i?-1:i)+';render()">';
-      h+='<div style="display:flex;justify-content:space-between"><div><span style="color:'+ph.co+';font-weight:600;font-size:12px">'+d.j+'</span> <span style="color:#555;font-size:11px">'+d.t+'</span></div><span style="color:#555;font-size:10px">'+d.du+' '+(S.wi===i?'▲':'▼')+'</span></div>';
-      if(S.wi===i){h+='<div style="margin-top:8px;border-top:1px solid #222;padding-top:6px">';
-        d.ex.forEach(function(e,j){
-          h+='<div class="rw"><div class="nm">'+(j+1)+'</div>'+exLine(e.n,e.y)+'</div>';});
-        h+='<div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">';
-        [30,60,90,120].forEach(function(s){h+='<button class="pl" onclick="event.stopPropagation();startRest('+s+')">⏱ '+s+'s</button>';});
-        h+='</div></div>';}
-      h+='</div>';});
-    h+='<button onclick="markDone()" style="width:100%;margin-top:10px;padding:11px;border:none;border-radius:10px;font-size:13px;font-weight:600;color:#fff;background:'+(S.done?'#4a7a5a':'linear-gradient(135deg,#8B0F0F,#6B0F0F)')+'">'+(S.done?'✅ Complétée':'Marquer complété')+'</button>';
+    if(S.restOn){h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="text-align:center"><div style="font-size:11px;color:#B8860B">⏱ REPOS</div><div style="font-size:42px;color:#e8e0d4;margin:6px 0">'+S.restSec+'s</div><div class="rest-bar"><div class="rest-fill" style="width:'+((S.restSec/S.restMax)*100)+'%"></div></div><button class="pl" onclick="S.restOn=false;clearInterval(restInt);render()" style="margin-top:6px">✕ Annuler</button></div></div>';}
+    // Days
+    ph.sem.forEach(function(d,di){
+      var prog=dayProgress(S.ph,di);var pct=prog.total?Math.round(prog.done/prog.total*100):0;
+      h+='<div class="ex" onclick="S.wi='+(S.wi===di?-1:di)+';render()">';
+      h+='<div style="display:flex;justify-content:space-between;align-items:center"><div><span style="color:'+ph.co+';font-weight:700;font-size:14px">'+d.j+'</span> <span style="color:#888;font-size:13px">'+d.t+'</span></div><span style="color:#555;font-size:12px">'+d.du+' '+(S.wi===di?'▲':'▼')+'</span></div>';
+      h+='<div style="display:flex;align-items:center;gap:8px;margin-top:4px"><div style="flex:1;height:4px;background:#222;border-radius:2px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+ph.co+';border-radius:2px"></div></div><span style="font-size:11px;color:#555">'+prog.done+'/'+prog.total+'</span></div>';
+      if(d.fo)h+='<div style="font-size:12px;color:#555;margin-top:3px">Focus : '+d.fo+'</div>';
+      if(S.wi===di){
+        h+='<div style="margin-top:10px;border-top:1px solid #222;padding-top:8px">';
+        d.ex.forEach(function(e,ei){
+          var chk=isChecked(S.ph,di,ei);
+          var cc=catColors[e.cat]||'#555';
+          h+='<div class="rw" style="align-items:flex-start">';
+          h+='<div class="chk'+(chk?' done':'')+'" onclick="event.stopPropagation();toggleCheck('+S.ph+','+di+','+ei+')">'+(chk?'✓':'')+'</div>';
+          h+='<div class="exname'+(chk?' dk':'')+'">'+e.n;
+          if(e.s)h+=' <span style="color:'+cc+';font-weight:600">'+e.s+'</span>';
+          if(e.r)h+=' <span style="color:#666;font-size:12px">R'+e.r+'</span>';
+          if(e.note)h+='<div class="detail">ℹ '+e.note+'</div>';
+          h+='</div>';
+          if(e.y)h+='<a class="yt" href="'+yt(e.y)+'" target="_blank" onclick="event.stopPropagation()">▶</a>';
+          h+='</div>';
+        });
+        h+='<div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">';
+        [30,45,60,75,90,120,150,180].forEach(function(s){h+='<button class="pl" onclick="event.stopPropagation();startRest('+s+')">⏱'+s+'s</button>';});
+        h+='</div></div>';
+      }
+      h+='</div>';
+    });
+    h+='<button onclick="markDone()" style="width:100%;margin-top:12px;padding:14px;border:none;border-radius:10px;font-size:15px;font-weight:600;color:#fff;background:'+(S.done?'#4a7a5a':'linear-gradient(135deg,#8B0F0F,#6B0F0F)')+';">'+(S.done?'✅ Session complétée aujourd\'hui':'Marquer session complétée')+'</button>';
   }
 
-  // ── BREATH ──
+  // ══════ BREATH ══════
   if(S.tab==='breath'){
     h+='<div class="sc">RESPIRATIONS GUIDÉES — 息</div>';
-    h+='<div style="display:flex;gap:5px;margin-bottom:12px">';BR.forEach(function(b,i){h+='<button class="pl'+(S.bi===i?' a':'')+'" style="flex:1;'+(S.bi===i?'background:'+b.co+';border-color:'+b.co:'')+'" onclick="S.bi='+i+';stopBreath();render()">'+b.nm.split(' ')[0]+'</button>';});h+='</div>';
+    h+='<div style="display:flex;gap:6px;margin-bottom:14px">';BR.forEach(function(b,i){h+='<button class="pl'+(S.bi===i?' a':'')+'" style="flex:1;font-size:13px;'+(S.bi===i?'background:'+b.co+';border-color:'+b.co:'')+';" onclick="S.bi='+i+';stopBreath();render()">'+b.nm.split(' ')[0]+'</button>';});h+='</div>';
     var b=BR[S.bi];
-    h+='<div class="cd" style="border-left:3px solid '+b.co+'"><div class="cb"><div style="font-size:14px;font-weight:600;color:'+b.co+'">'+b.nm+'</div><div style="font-size:11px;color:#888;margin-top:4px">'+b.d+'</div><div style="font-size:10px;color:#555;margin-top:4px">'+b.rounds+' rounds</div></div></div>';
+    h+='<div class="cd" style="border-left:3px solid '+b.co+'"><div class="cb"><div style="font-size:16px;font-weight:600;color:'+b.co+'">'+b.nm+'</div><div style="font-size:14px;color:#888;margin-top:5px">'+b.d+'</div><div style="font-size:12px;color:#555;margin-top:4px">'+b.rounds+' rounds</div></div></div>';
     if(S.bOn){
       var cp=b.ph[S.bPhase];var isExp=cp.a.indexOf('INSPIRE')>=0;var isHold=cp.a.indexOf('RETIEN')>=0||cp.a.indexOf('HOLD')>=0;
-      h+='<div style="text-align:center;padding:20px"><div class="breath-circle'+(isExp?' expand':'')+(isHold?' hold':'')+'">'+S.bSec+'</div>';
-      h+='<div style="font-size:18px;color:'+b.co+';font-weight:600;margin:8px 0">'+cp.a+'</div>';
-      h+='<div style="font-size:12px;color:#888">Round '+S.bRound+'/'+b.rounds+'</div>';
-      h+='<button class="pl" onclick="stopBreath()" style="margin-top:12px">⏹ Stop</button></div>';
+      h+='<div style="text-align:center;padding:24px"><div class="breath-circle'+(isExp?' expand':'')+(isHold?' hold':'')+'" style="border-color:'+b.co+'">'+S.bSec+'</div>';
+      h+='<div style="font-size:20px;color:'+b.co+';font-weight:600;margin:10px 0">'+cp.a+'</div>';
+      h+='<div style="font-size:14px;color:#888">Round '+S.bRound+'/'+b.rounds+'</div>';
+      h+='<button class="pl" onclick="stopBreath()" style="margin-top:14px;font-size:14px">⏹ Stop</button></div>';
     } else {
-      h+='<div style="text-align:center;padding:20px"><div class="breath-circle">息</div>';
-      h+='<button class="pl a" onclick="startBreath()" style="margin-top:8px;padding:10px 30px;font-size:14px">▶ Commencer</button></div>';
+      h+='<div style="text-align:center;padding:24px"><div class="breath-circle" style="border-color:'+b.co+'">息</div>';
+      h+='<button class="pl a" onclick="startBreath()" style="margin-top:10px;padding:12px 32px;font-size:16px">▶ Commencer</button></div>';
     }
-    // Breathing phases detail
-    h+='<div class="sc" style="margin-top:8px">PHASES</div>';
-    b.ph.forEach(function(p,i){h+='<div class="rw"><div class="nm" style="border-color:'+b.co+';color:'+b.co+'">'+(i+1)+'</div><div style="flex:1">'+p.a+'</div><div style="color:'+b.co+'">'+p.s+'s</div></div>';});
+    h+='<div class="sc" style="margin-top:10px">PHASES</div>';
+    b.ph.forEach(function(p,i){h+='<div class="rw"><div class="nm" style="border-color:'+b.co+';color:'+b.co+'">'+(i+1)+'</div><div style="flex:1;font-size:14px">'+p.a+'</div><div style="color:'+b.co+';font-size:14px">'+p.s+'s</div></div>';});
   }
 
-  // ── KATA ──
+  // ══════ KATA ══════
   if(S.tab==='kata'){
     h+='<div class="sc">SAN SHIN NO KATA — 三心の型</div>';
-    h+='<div style="display:flex;gap:4px;margin-bottom:10px">';SS.forEach(function(s,i){h+='<button style="flex:1;padding:5px;border:'+(S.si===i?'2px solid '+s.co:'1px solid #333')+';border-radius:10px;background:'+(S.si===i?s.co+'15':'#111')+';color:'+s.co+';text-align:center" onclick="S.si='+i+';render()"><div style="font-size:18px">'+s.k+'</div><div style="font-size:7px;font-weight:700">'+s.el+'</div></button>';});h+='</div>';
-    var s=SS[S.si];h+='<div class="cd" style="border-left:3px solid '+s.co+'"><div class="cb"><div style="font-size:14px;font-weight:600;color:'+s.co+'">'+s.nm+' no Kata</div><div style="font-size:11px;color:#888;margin-top:5px;line-height:1.6">'+s.d+'</div><a class="yt" href="'+yt('san shin no kata '+s.nm+' bujinkan')+'" target="_blank" style="display:block;margin-top:8px">▶ Voir sur YouTube</a></div></div>';
-    h+='<div class="sc" style="margin-top:14px">KIHON HAPPŌ — 基本八法</div>';
-    h+='<div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px">';KH.forEach(function(k,i){h+='<button class="pl'+(S.ki===i?' a':'')+'" onclick="S.ki='+i+';render()">'+(i+1)+'</button>';});h+='</div>';
-    var k=KH[S.ki];h+='<div class="cd"><div class="cb"><div style="font-size:9px;color:#B8860B">'+k.t+'</div><div style="font-size:14px;font-weight:600;color:#8B0F0F;margin-top:2px">'+k.nm+'</div><div style="font-size:11px;color:#888;margin-top:5px;line-height:1.6">'+k.d+'</div><a class="yt" href="'+yt(k.nm+' bujinkan technique')+'" target="_blank" style="display:block;margin-top:8px">▶ Voir sur YouTube</a></div></div>';
+    h+='<div style="display:flex;gap:5px;margin-bottom:12px">';SS.forEach(function(s,i){h+='<button style="flex:1;padding:8px;border:'+(S.si===i?'2px solid '+s.co:'1px solid #333')+';border-radius:10px;background:'+(S.si===i?s.co+'15':'#111')+';color:'+s.co+';text-align:center" onclick="S.si='+i+';render()"><div style="font-size:22px">'+s.k+'</div><div style="font-size:9px;font-weight:700;margin-top:2px">'+s.el+'</div></button>';});h+='</div>';
+    var s=SS[S.si];h+='<div class="cd" style="border-left:3px solid '+s.co+'"><div class="cb"><div style="font-size:16px;font-weight:600;color:'+s.co+'">'+s.nm+' no Kata</div><div style="font-size:14px;color:#888;margin-top:6px;line-height:1.7">'+s.d+'</div><a class="yt" href="'+yt('san shin no kata '+s.nm+' bujinkan')+'" target="_blank" style="display:block;margin-top:10px;font-size:13px;color:#ff4444">▶ Voir sur YouTube</a></div></div>';
+    h+='<div class="sc" style="margin-top:16px">KIHON HAPPŌ — 基本八法</div>';
+    h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">';KH.forEach(function(k,i){h+='<button class="pl'+(S.ki===i?' a':'')+'" style="font-size:13px" onclick="S.ki='+i+';render()">'+(i+1)+'</button>';});h+='</div>';
+    var k=KH[S.ki];h+='<div class="cd"><div class="cb"><div style="font-size:11px;color:#B8860B">'+k.t+'</div><div style="font-size:16px;font-weight:600;color:#8B0F0F;margin-top:3px">'+k.nm+'</div><div style="font-size:14px;color:#888;margin-top:6px;line-height:1.7">'+k.d+'</div><a class="yt" href="'+yt(k.nm+' bujinkan technique')+'" target="_blank" style="display:block;margin-top:10px;font-size:13px;color:#ff4444">▶ Voir sur YouTube</a></div></div>';
+    // Shotokan kata links
+    h+='<div class="sc" style="margin-top:16px">KATA SHOTOKAN — 空手の型</div>';
+    var shotoKata=["Heian Shodan","Heian Nidan","Heian Sandan","Heian Yondan","Heian Godan","Tekki Shodan","Bassai Dai","Kanku Dai","Jion","Empi"];
+    shotoKata.forEach(function(k,i){
+      h+='<div class="rw"><div class="nm" style="border-color:#D4760A;color:#D4760A">'+(i+1)+'</div><div style="flex:1;font-size:14px">'+k+'</div><a class="yt" href="'+yt(k+' kata shotokan slow tutorial')+'" target="_blank">▶</a></div>';
+    });
   }
 
-  // ── ARMES ──
+  // ══════ ARMES ══════
   if(S.tab==='armes'){
     h+='<div class="sc">BUKIJUTSU — 武器術</div>';
-    h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px">';AR.forEach(function(a,i){h+='<button class="pl'+(S.ai===i?' a':'')+'" onclick="S.ai='+i+';render()">'+a.ic+' '+a.nm.replace('jutsu','')+'</button>';});h+='</div>';
-    var a=AR[S.ai];h+='<div class="cd"><div class="ch">'+a.ic+' '+a.nm+'</div><div class="cb"><div style="font-size:11px;margin-bottom:8px"><b>Arme :</b> '+a.wp+'</div>';
-    h+='<div class="sc">KATA</div>';a.kt.forEach(function(k,i){h+='<div class="rw"><div class="nm">'+(i+1)+'</div><div>'+k+'</div></div>';});
-    h+='<div class="sc" style="margin-top:10px">DRILL</div><div style="padding:8px;background:#0a0a0a;border-radius:6px;font-size:11px;line-height:1.5;border-left:2px solid #8B0F0F">'+a.dr+'</div>';
-    h+='<a class="yt" href="'+yt(a.vy)+'" target="_blank" style="display:block;margin-top:10px;font-size:11px">▶ Vidéos sur YouTube</a>';
+    h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">';AR.forEach(function(a,i){h+='<button class="pl'+(S.ai===i?' a':'')+'" style="font-size:13px" onclick="S.ai='+i+';render()">'+a.ic+' '+a.nm.replace('jutsu','')+'</button>';});h+='</div>';
+    var a=AR[S.ai];h+='<div class="cd"><div class="ch">'+a.ic+' '+a.nm+'</div><div class="cb"><div style="font-size:14px;margin-bottom:10px"><b>Arme :</b> '+a.wp+'</div>';
+    h+='<div class="sc">KATA & TECHNIQUES</div>';a.kt.forEach(function(k,i){h+='<div class="rw"><div class="nm">'+(i+1)+'</div><div style="flex:1;font-size:14px">'+k+'</div><a class="yt" href="'+yt(a.nm+' '+k)+'" target="_blank">▶</a></div>';});
+    h+='<div class="sc" style="margin-top:12px">DRILL TYPE</div><div style="padding:10px;background:#0a0a0a;border-radius:6px;font-size:14px;line-height:1.7;border-left:2px solid #8B0F0F">'+a.dr+'</div>';
+    h+='<a class="yt" href="'+yt(a.vy)+'" target="_blank" style="display:block;margin-top:12px;font-size:14px">▶ Toutes les vidéos sur YouTube</a>';
     h+='</div></div>';
   }
 
-  // ── FOOD ──
+  // ══════ FOOD ══════
   if(S.tab==='food'){
-    h+='<div class="sc">NUTRITION — REPRISE 110KG</div>';
-    h+='<div class="cd"><div class="cb" style="text-align:center"><div style="font-size:13px;font-weight:600;color:#B8860B">'+NT.tot+'</div><div style="font-size:10px;color:#555;margin-top:4px">Déficit ~500kcal/j → objectif -1kg/semaine</div></div></div>';
-    NT.rp.forEach(function(r){
-      h+='<div class="cd"><div class="cb"><div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:18px;flex-shrink:0">'+r.ic+'</span><div style="flex:1"><div style="font-size:12px;font-weight:600">'+r.m+'</div><div style="font-size:11px;color:#bbb;margin-top:4px;white-space:pre-wrap;line-height:1.5">'+r.mn+'</div>';
-      if(r.cal>0)h+='<div style="display:flex;gap:8px;margin-top:6px;font-size:9px"><span style="color:#B8860B">'+r.cal+'kcal</span><span style="color:#8B0F0F">P:'+r.p+'g</span><span style="color:#4a7a5a">G:'+r.g+'g</span><span style="color:#facc15">L:'+r.l+'g</span></div>';
-      h+='</div></div></div></div>';});
-    h+='<div class="cd"><div class="ch">🛒 LISTE DE COURSES SEMAINE</div><div class="cb"><div style="font-size:11px;color:#bbb;line-height:1.8">'+NT.courses+'</div></div></div>';
+    h+='<div class="sc">NUTRITION DU GUERRIER — 食</div>';
+    h+='<div style="display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap">';
+    ['repas','aliments','recettes','suppl','courses'].forEach(function(t){
+      var lb={repas:'🍽️ Repas',aliments:'🥦 Aliments',recettes:'📖 Recettes',suppl:'💊 Suppléments',courses:'🛒 Courses'}[t];
+      h+='<button class="pl'+(S.foodTab===t?' a':'')+'" onclick="S.foodTab=\''+t+'\';render()" style="font-size:12px">'+lb+'</button>';
+    });h+='</div>';
+
+    if(S.foodTab==='repas'){
+      h+='<div class="cd"><div class="cb" style="text-align:center"><div style="font-size:15px;font-weight:600;color:#B8860B">~2400 kcal | 190g P | 155g G | 65g L</div><div style="font-size:12px;color:#555;margin-top:4px">Déficit ~300-500kcal → recomposition progressive</div></div></div>';
+      // Principes
+      h+='<div class="cd"><div class="ch">📋 Principes fondamentaux</div><div class="cb">';
+      NT.principes.forEach(function(p){h+='<div style="font-size:14px;color:#bbb;padding:4px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+p+'</div>';});
+      h+='</div></div>';
+      // Repas
+      NT.repas.forEach(function(r){
+        h+='<div class="cd"><div class="cb"><div style="display:flex;gap:10px;align-items:flex-start"><span style="font-size:22px;flex-shrink:0">'+r.ic+'</span><div style="flex:1"><div style="font-size:15px;font-weight:600">'+r.m+' <span style="color:#555;font-weight:400">('+r.h+')</span></div><div style="font-size:14px;color:#bbb;margin-top:5px;white-space:pre-wrap;line-height:1.6">'+r.mn+'</div>';
+        if(r.cal>0)h+='<div style="display:flex;gap:10px;margin-top:8px;font-size:11px"><span style="color:#B8860B">'+r.cal+' kcal</span><span style="color:#8B0F0F">P:'+r.p+'g</span><span style="color:#4a7a5a">G:'+r.g+'g</span><span style="color:#facc15">L:'+r.l+'g</span></div>';
+        h+='</div></div></div></div>';
+      });
+      // Evolution
+      h+='<div class="cd"><div class="ch">📈 Évolution par phase</div><div class="cb">';
+      NT.evolution.forEach(function(e){h+='<div style="padding:6px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:14px;font-weight:600;color:#B8860B">'+e.phase+' — '+e.cal+'</div><div style="font-size:13px;color:#888;margin-top:2px">'+e.desc+'</div></div>';});
+      h+='</div></div>';
+    }
+
+    if(S.foodTab==='aliments'){
+      [{t:'🥩 Protéines',l:NT.aliments.proteines},{t:'🍚 Glucides',l:NT.aliments.glucides},{t:'🥑 Lipides',l:NT.aliments.lipides},{t:'🥬 Légumes',l:NT.aliments.legumes}].forEach(function(cat){
+        h+='<div class="cd"><div class="ch">'+cat.t+'</div><div class="cb" style="display:flex;flex-wrap:wrap;gap:6px">';
+        cat.l.forEach(function(a){h+='<span style="display:inline-block;padding:5px 10px;background:#0a0a0a;border:1px solid #222;border-radius:16px;font-size:13px;color:#bbb">'+a+'</span>';});
+        h+='</div></div>';
+      });
+    }
+
+    if(S.foodTab==='recettes'){
+      NT.aliments.recettes.forEach(function(r){
+        h+='<div class="cd"><div class="ch">🍳 '+r.nm+'</div><div class="cb"><div style="font-size:14px;color:#bbb;line-height:1.7">'+r.desc+'</div></div></div>';
+      });
+    }
+
+    if(S.foodTab==='suppl'){
+      h+='<div class="sc">SUPPLÉMENTS RECOMMANDÉS</div>';
+      NT.supplements.forEach(function(s){
+        h+='<div class="cd"><div class="cb"><div style="font-size:15px;font-weight:600;color:#B8860B">'+s.nm+'</div><div style="display:flex;gap:12px;margin-top:6px;font-size:13px"><span style="color:#8B0F0F">'+s.dose+'</span><span style="color:#555">'+s.quand+'</span></div><div style="font-size:13px;color:#888;margin-top:4px">'+s.why+'</div></div></div>';
+      });
+    }
+
+    if(S.foodTab==='courses'){
+      h+='<div class="cd"><div class="ch">🛒 LISTE DE COURSES SEMAINE</div><div class="cb"><div style="font-size:14px;color:#bbb;line-height:2">'+NT.courses.split(', ').join('<br>• ')+'</div></div></div>';
+    }
   }
 
-  // ── SPIRIT ──
+  // ══════ TESTS ══════
+  if(S.tab==='tests'){
+    h+='<div class="sc">SUIVI & TESTS MENSUELS — 試</div>';
+    h+='<div style="display:flex;gap:4px;margin-bottom:12px">';
+    ['bench','parcours','alarme'].forEach(function(t){
+      var lb={bench:'📊 Benchmarks',parcours:'🏃 Parcours',alarme:'⚠️ Signaux'}[t];
+      h+='<button class="pl'+(S.testTab===t?' a':'')+'" onclick="S.testTab=\''+t+'\';render()" style="font-size:12px">'+lb+'</button>';
+    });h+='</div>';
+
+    if(S.testTab==='bench'){
+      h+='<div style="overflow-x:auto"><table class="tbl"><tr><th>Test</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th></tr>';
+      TESTS.benchmarks.forEach(function(b){
+        h+='<tr><td style="font-weight:600;color:#e8e0d4">'+b.nm+' <span style="color:#555;font-size:11px">('+b.u+')</span></td><td style="color:#4ade80">'+b.p1+'</td><td style="color:#facc15">'+b.p2+'</td><td style="color:#f97316">'+b.p3+'</td><td style="color:#a855f7">'+b.p4+'</td></tr>';
+      });h+='</table></div>';
+      h+='<div style="font-size:13px;color:#555;margin-top:6px">Mesures hebdo : poids à jeun, tour de taille, photos mensuelles (front/profil/dos).</div>';
+      h+='<div style="font-size:13px;color:#555;margin-top:4px">Semaines de décharge : toutes les 4 semaines, -40% volume, charges réduites.</div>';
+    }
+
+    if(S.testTab==='parcours'){
+      [TESTS.parcours3,TESTS.parcours4].forEach(function(p){
+        h+='<div class="cd"><div class="ch">🏃 '+p.title+'</div><div class="cb"><div style="font-size:14px;color:#B8860B;margin-bottom:8px">Objectif : '+p.objectif+'</div>';
+        p.steps.forEach(function(s,i){h+='<div class="rw"><div class="nm" style="border-color:#ff4444;color:#ff4444">'+(i+1)+'</div><div style="flex:1;font-size:14px">'+s+'</div></div>';});
+        h+='<div style="font-size:13px;color:#555;margin-top:8px;font-style:italic">Circuit chronométré sans repos — à réaliser 1× par mois.</div></div></div>';
+      });
+    }
+
+    if(S.testTab==='alarme'){
+      h+='<div class="cd" style="border-left:3px solid #ff4444"><div class="ch">⚠️ Signaux d\'alarme — Quand ralentir</div><div class="cb">';
+      [
+        {s:"Douleur articulaire > 3 jours",a:"→ Décharger 50% pendant 1 semaine"},
+        {s:"Sommeil < 6h pendant 3+ nuits",a:"→ Remplacer séance par mobilité + méditation"},
+        {s:"Motivation en chute > 1 semaine",a:"→ Semaine de décharge (volume -40%, intensité -20%)"},
+        {s:"Blessure",a:"→ Arrêt immédiat zone concernée, continuer le reste si possible"}
+      ].forEach(function(x){h+='<div style="padding:8px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:14px;color:#ff6666;font-weight:600">'+x.s+'</div><div style="font-size:14px;color:#888;margin-top:3px">'+x.a+'</div></div>';});
+      h+='</div></div>';
+      h+='<div class="cd"><div class="ch">😴 Protocole sommeil</div><div class="cb">';
+      ["Coucher : 21h30-22h00 ferme, 7j/7","Écrans coupés à 21h00","Chambre : 18-19°C, obscurité totale","Dernier repas : 19h30-20h00 max","Magnésium bisglycinate 400mg à 21h","Si insomnie : respiration 4-7-8 au lit"].forEach(function(s){
+        h+='<div style="font-size:14px;color:#bbb;padding:4px 0;line-height:1.5">• '+s+'</div>';});
+      h+='</div></div>';
+    }
+  }
+
+  // ══════ SPIRIT ══════
   if(S.tab==='spirit'){
-    h+='<div class="sc">FÊTES DU SHINOBI</div>';
-    FT.forEach(function(f){h+='<div class="cd"><div class="cb"><div style="display:flex;gap:8px;align-items:center"><span style="font-size:20px">'+f.ic+'</span><div><div style="font-size:12px;font-weight:600">'+f.nm+'</div><div style="font-size:10px;color:#B8860B">'+f.dt.replace('-','/')+'</div></div></div><div style="font-size:11px;color:#888;margin-top:6px;line-height:1.5">'+f.d+'</div></div></div>';});
-    h+='<div class="sc" style="margin-top:14px">ENTITÉS & DIVINITÉS</div>';
-    EN.forEach(function(e){h+='<div class="cd" style="border-left:3px solid '+e.co+'"><div class="cb"><div style="display:flex;gap:8px;align-items:center"><span style="font-size:20px">'+e.ic+'</span><div><div style="font-size:12px;font-weight:600;color:'+e.co+'">'+e.nm+'</div><div style="font-size:10px;color:#B8860B">'+e.rl+'</div></div></div><div style="font-size:11px;color:#888;margin-top:6px;line-height:1.5">'+e.d+'</div></div></div>';});
+    h+='<div style="display:flex;gap:4px;margin-bottom:12px">';
+    ['fetes','entites','mental'].forEach(function(t){
+      var lb={fetes:'⛩️ Fêtes',entites:'🔥 Entités',mental:'🧠 Forge mentale'}[t];
+      h+='<button class="pl'+(S.spiritTab===t?' a':'')+'" onclick="S.spiritTab=\''+t+'\';render()" style="font-size:12px">'+lb+'</button>';
+    });h+='</div>';
+
+    if(S.spiritTab==='fetes'){
+      h+='<div class="sc">FÊTES DU SHINOBI DANS LE LAURAGAIS</div>';
+      FT.forEach(function(f){
+        h+='<div class="cd"><div class="ch"><span style="font-size:18px;margin-right:8px">'+f.ic+'</span>'+f.nm+' <span style="color:#555;font-weight:400;font-size:12px">'+f.dt.replace('-','/')+'</span></div><div class="cb">';
+        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#8B0F0F30;color:#ff6666">Pourquoi</span><span style="font-size:14px;color:#bbb;line-height:1.6">'+f.why+'</span></div>';
+        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#2E5E8E30;color:#6ba8e0">Où</span><span style="font-size:14px;color:#bbb;line-height:1.6">'+f.where+'</span></div>';
+        h+='<div><span class="badge" style="background:#4A7A5A30;color:#6bbb80">Comment</span><span style="font-size:14px;color:#bbb;line-height:1.6">'+f.how+'</span></div>';
+        h+='</div></div>';
+      });
+    }
+
+    if(S.spiritTab==='entites'){
+      h+='<div class="sc">ENTITÉS & DIVINITÉS SHINOBI</div>';
+      EN.forEach(function(e){h+='<div class="cd" style="border-left:3px solid '+e.co+'"><div class="cb"><div style="display:flex;gap:10px;align-items:center"><span style="font-size:24px">'+e.ic+'</span><div><div style="font-size:15px;font-weight:600;color:'+e.co+'">'+e.nm+'</div><div style="font-size:12px;color:#B8860B">'+e.rl+'</div></div></div><div style="font-size:14px;color:#888;margin-top:8px;line-height:1.7">'+e.d+'</div></div></div>';});
+    }
+
+    if(S.spiritTab==='mental'){
+      h+='<div class="sc">FORGE MENTALE — PROGRESSION</div>';
+      [{ph:"Phase 1 — DISCIPLINE",ic:"🌱",items:["Méditation Zazen : 10 min/jour (dimanche 15-20 min)","Focus : rester assis, observer le souffle. Pas d'objectif.","Journaling : 3×/semaine, 5 min. Écrire ce qui a été dur et pourquoi tu l'as fait.","Règle non négociable : 4h50 CHAQUE JOUR. Le réveil est le premier combat."]},
+       {ph:"Phase 2 — RÉSILIENCE",ic:"⚒️",items:["Douche froide : terminer chaque douche par 1-2 min d'eau froide.","Méditation : 15 min/jour. Trataka (flamme) 1×/semaine.","Respiration Wim Hof : 1 séance/semaine (3 rounds × 30 respi + rétention).","Visualisation combat : 2×/semaine, 5 min — réagir calmement à une agression."]},
+       {ph:"Phase 3 — CLARTÉ",ic:"🔥",items:["Méditation : 20 min/jour. Alterner Zazen et marche méditative.","Fudoshin : pendant HIIT/BOB, non-attachement à la douleur.","Lecture : 15-20 min/jour (Musashi, Marc Aurèle, Sun Tzu, Tsunetomo).","Silence : 1 demi-journée par mois en silence total."]},
+       {ph:"Phase 4 — INTÉGRATION",ic:"🐉",items:["Méditation : 20-30 min/jour. Dimanches : 45-60 min.","Entraînement sous stress : musique forte OU silence total.","Décision rapide : choix en moins de 3 secondes au quotidien.","Revue hebdo : Corps / Combat / Esprit — note /10."]}
+      ].forEach(function(p){
+        h+='<div class="cd"><div class="ch">'+p.ic+' '+p.ph+'</div><div class="cb">';
+        p.items.forEach(function(it){h+='<div style="font-size:14px;color:#bbb;padding:5px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+it+'</div>';});
+        h+='</div></div>';
+      });
+      // Routine quotidienne
+      h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="ch">🧘 Routine mentale quotidienne</div><div class="cb">';
+      h+='<div style="font-size:13px;color:#B8860B;margin-bottom:6px;font-weight:600">AVANT chaque séance (5 min)</div>';
+      ["Respiration tactique : 10 cycles box breathing (4-4-4-4)","Intention : formuler l'objectif en une phrase","Visualisation : 1 min yeux fermés — se voir réussir"].forEach(function(s){h+='<div style="font-size:14px;color:#bbb;padding:3px 0">• '+s+'</div>';});
+      h+='<div style="font-size:13px;color:#B8860B;margin:10px 0 6px;font-weight:600">APRÈS chaque séance (3 min)</div>';
+      ["3 respirations profondes de transition","Gratitude : nommer une chose","Scanner mental : colère, frustration, ego ?"].forEach(function(s){h+='<div style="font-size:14px;color:#bbb;padding:3px 0">• '+s+'</div>';});
+      h+='</div></div>';
+    }
   }
 
-  // ── LIBRARY ──
+  // ══════ LIBRARY ══════
   if(S.tab==='library'){
     if(S.chSel!==null){
       var ch=getCh(S.chSel);
-      h+='<button class="pl" onclick="S.chSel=null;render()">← Retour</button>';
-      if(ch){h+='<div class="sc" style="margin-top:10px">CHAPITRE '+ch.n+'</div><div class="cd"><div class="ch" style="font-size:13px">'+esc(ch.t)+'</div><div class="cb"><div style="font-size:11px;color:#bbb;line-height:1.8;white-space:pre-wrap">'+esc(ch.x)+'</div></div></div>';}
-      else{h+='<div style="color:#888;padding:20px;font-size:12px;text-align:center">Chapitre non trouvé.<br><br>Lance <code style="color:#B8860B">node build-chapters.js</code><br>dans lombra-pwa/ puis git push.</div>';}
+      h+='<button class="pl" onclick="S.chSel=null;render()" style="font-size:14px">← Retour</button>';
+      if(ch){h+='<div class="sc" style="margin-top:12px">CHAPITRE '+ch.n+'</div><div class="cd"><div class="ch" style="font-size:15px">'+esc(ch.t)+'</div><div class="cb"><div style="font-size:14px;color:#bbb;line-height:1.8;white-space:pre-wrap">'+esc(ch.x)+'</div></div></div>';}
+      else{h+='<div style="color:#888;padding:20px;font-size:14px;text-align:center">Chapitre non trouvé.<br><br>Lance <code style="color:#B8860B">node build-chapters.js</code> dans lombra-pwa/ puis git push.</div>';}
     } else if(S.livSel!==null){
       var lv=LV[S.livSel];
-      h+='<button class="pl" onclick="S.livSel=null;render()">← Livres</button>';
-      h+='<div class="sc" style="margin-top:10px">LIVRE '+lv.n+' — '+lv.t.toUpperCase()+'</div>';
+      h+='<button class="pl" onclick="S.livSel=null;render()" style="font-size:14px">← Livres</button>';
+      h+='<div class="sc" style="margin-top:12px">LIVRE '+lv.n+' — '+lv.t.toUpperCase()+'</div>';
       for(var i=0;i<lv.c;i++){var cn=lv.s+i;var ch=getCh(cn);
-        h+='<div class="ex" onclick="S.chSel='+cn+';render();window.scrollTo(0,0)"><span style="color:#8B0F0F;font-weight:600;font-size:11px">Ch.'+cn+'</span>';
-        if(ch)h+=' <span style="color:#666;font-size:10px">— '+esc(ch.t)+'</span>';
+        h+='<div class="ex" onclick="S.chSel='+cn+';render();window.scrollTo(0,0)"><span style="color:#8B0F0F;font-weight:600;font-size:13px">Ch.'+cn+'</span>';
+        if(ch)h+=' <span style="color:#666;font-size:12px">— '+esc(ch.t)+'</span>';
         h+='</div>';}
     } else {
       h+='<div class="sc">XIII LIVRES • 123 CHAPITRES</div>';
-      if(typeof CH==='undefined'||!CH||CH.length===0)h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="font-size:11px;color:#B8860B">⚠️ chapters.js non chargé. Lance <code>node build-chapters.js</code> puis git push.</div></div>';
-      LV.forEach(function(l,idx){h+='<div class="ex" onclick="S.livSel='+idx+';render()"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">'+l.i+'</span><div style="flex:1"><div style="font-size:9px;color:#8B0F0F">LIVRE '+l.n+'</div><div style="font-size:12px;font-weight:600;margin-top:1px">'+l.t+'</div></div><span style="font-size:10px;color:#555">'+l.c+'</span></div></div>';});
+      if(typeof CH==='undefined'||!CH||CH.length===0)h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="font-size:13px;color:#B8860B">⚠️ chapters.js non chargé. Lance <code>node build-chapters.js</code> puis git push.</div></div>';
+      LV.forEach(function(l,idx){h+='<div class="ex" onclick="S.livSel='+idx+';render()"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:22px">'+l.i+'</span><div style="flex:1"><div style="font-size:10px;color:#8B0F0F">LIVRE '+l.n+'</div><div style="font-size:14px;font-weight:600;margin-top:2px">'+l.t+'</div></div><span style="font-size:12px;color:#555">'+l.c+' ch.</span></div></div>';});
     }
   }
 
@@ -387,10 +781,11 @@ function render(){
   document.getElementById('app').innerHTML=h;
 }
 
+// ─── ACTIONS ───
 function go(t){S.tab=t;S.wi=-1;S.livSel=null;S.chSel=null;render();window.scrollTo(0,0);}
-function setPh(i){S.ph=i;S.wi=-1;localStorage.setItem('ov9',JSON.stringify({streak:S.streak,total:S.total,phase:S.ph,lastDate:todayStr(),ratings:S.ratings}));render();}
-function markDone(){if(S.done)return;var d=JSON.parse(localStorage.getItem('ov9')||'{}');var y=new Date(Date.now()-864e5).toISOString().slice(0,10);S.streak=(d.lastDate===y?(d.streak||0)+1:1);S.total=(d.total||0)+1;S.done=true;localStorage.setItem('ov9',JSON.stringify({streak:S.streak,total:S.total,phase:S.ph,lastDate:todayStr(),ratings:S.ratings}));render();}
-function rate(n){var wk=weekKey();S.ratings[wk]=n;localStorage.setItem('ov9',JSON.stringify({streak:S.streak,total:S.total,phase:S.ph,lastDate:todayStr(),ratings:S.ratings}));render();}
+function setPh(i){S.ph=i;S.wi=-1;save();render();}
+function markDone(){if(S.done)return;var d=JSON.parse(localStorage.getItem('ov10')||'{}');var y=new Date(Date.now()-864e5).toISOString().slice(0,10);S.streak=(d.lastDate===y?(d.streak||0)+1:1);S.total=(d.total||0)+1;S.done=true;save();render();}
+function rate(n){var wk=weekKey();S.ratings[wk]=n;save();render();}
 
 render();
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});
