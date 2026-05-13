@@ -7,45 +7,45 @@
 <script src="chapters.js?v=2"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Georgia,serif;background:#0a0a0a;color:#e8e0d4;-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.6}
+body{font-family:Georgia,serif;background:#0a0a0a;color:#e8e0d4;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.75}
 button{font-family:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}
 ::-webkit-scrollbar{display:none}
-.w{max-width:500px;margin:0 auto;min-height:100vh;padding-bottom:70px}
-.hd{padding:18px 16px 14px;text-align:center;background:linear-gradient(135deg,#0a0a0a,#1a1a2e)}
+.w{max-width:540px;margin:0 auto;min-height:100vh;padding-bottom:80px}
+.hd{padding:22px 18px 16px;text-align:center;background:linear-gradient(135deg,#0a0a0a,#1a1a2e)}
 .nv{display:flex;background:#111;border-bottom:1px solid #222;position:sticky;top:0;z-index:9;overflow-x:auto}
-.nv button{flex:1;min-width:44px;padding:8px 2px 6px;border:none;background:none;color:#555;font-size:12px}
+.nv button{flex:1;min-width:48px;padding:10px 3px 8px;border:none;background:none;color:#555;font-size:14px}
 .nv button.a{color:#B8860B;border-bottom:2px solid #B8860B}
-.ct{padding:14px}
-.sc{font-size:11px;color:#B8860B;letter-spacing:2px;margin-bottom:10px;font-weight:700}
-.cd{background:#151518;border:1px solid #222;border-radius:10px;margin-bottom:10px;overflow:hidden}
-.ch{padding:10px 14px;background:linear-gradient(135deg,#1a1a2e,#0f0f1a);color:#B8860B;font-size:14px;font-weight:600}
-.cb{padding:12px 14px}
-.rw{padding:8px 14px;border-bottom:1px solid #1a1a1a;font-size:14px;display:flex;gap:10px;align-items:center}
+.ct{padding:16px}
+.sc{font-size:14px;color:#B8860B;letter-spacing:2px;margin-bottom:12px;font-weight:700}
+.cd{background:#151518;border:1px solid #222;border-radius:12px;margin-bottom:12px;overflow:hidden}
+.ch{padding:14px 16px;background:linear-gradient(135deg,#1a1a2e,#0f0f1a);color:#B8860B;font-size:18px;font-weight:600}
+.cb{padding:14px 16px}
+.rw{padding:10px 16px;border-bottom:1px solid #1a1a1a;font-size:17px;display:flex;gap:12px;align-items:center}
 .rw:last-child{border:none}
-.nm{width:22px;height:22px;border-radius:50%;border:1.5px solid #8B0F0F;display:flex;align-items:center;justify-content:center;font-size:10px;color:#8B0F0F;flex-shrink:0}
-.pl{padding:7px 14px;border-radius:16px;border:1px solid #333;background:#111;color:#888;font-size:13px;cursor:pointer;display:inline-block}
+.nm{width:28px;height:28px;border-radius:50%;border:2px solid #8B0F0F;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8B0F0F;flex-shrink:0}
+.pl{padding:9px 16px;border-radius:18px;border:1px solid #333;background:#111;color:#888;font-size:15px;cursor:pointer;display:inline-block}
 .pl.a{background:#8B0F0F;color:#fff;border-color:#8B0F0F}
-.ex{cursor:pointer;padding:12px 14px;background:#151518;border:1px solid #222;border-radius:8px;margin-bottom:6px}
+.ex{cursor:pointer;padding:14px 16px;background:#151518;border:1px solid #222;border-radius:10px;margin-bottom:8px}
 .ex:active{background:#1a1a20}
-.yt{display:inline-block;font-size:11px;color:#ff4444;text-decoration:none;margin-left:6px;vertical-align:middle}
+.yt{display:inline-block;font-size:16px;color:#ff4444;text-decoration:none;margin-left:8px;vertical-align:middle}
 .yt:hover{text-decoration:underline}
-.breath-circle{width:130px;height:130px;border-radius:50%;border:3px solid #B8860B;margin:16px auto;display:flex;align-items:center;justify-content:center;font-size:28px;color:#B8860B;transition:transform 4s ease-in-out}
+.breath-circle{width:150px;height:150px;border-radius:50%;border:3px solid #B8860B;margin:20px auto;display:flex;align-items:center;justify-content:center;font-size:34px;color:#B8860B;transition:transform 4s ease-in-out}
 .breath-circle.expand{transform:scale(1.4)}
 .breath-circle.hold{transform:scale(1.4);border-color:#8B0F0F}
-.rest-bar{height:8px;background:#222;border-radius:4px;margin:8px 0;overflow:hidden}
-.rest-fill{height:100%;background:#B8860B;border-radius:4px;transition:width 1s linear}
-.star{cursor:pointer;font-size:22px;display:inline-block;padding:4px}
-.chk{width:22px;height:22px;border-radius:5px;border:2px solid #333;background:none;color:transparent;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;cursor:pointer;transition:all .2s}
+.rest-bar{height:10px;background:#222;border-radius:5px;margin:10px 0;overflow:hidden}
+.rest-fill{height:100%;background:#B8860B;border-radius:5px;transition:width 1s linear}
+.star{cursor:pointer;font-size:28px;display:inline-block;padding:5px}
+.chk{width:28px;height:28px;border-radius:6px;border:2px solid #333;background:none;color:transparent;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;cursor:pointer;transition:all .2s}
 .chk.done{border-color:#4ade80;background:#4ade8030;color:#4ade80}
-.exname{flex:1;font-size:14px;line-height:1.5}
+.exname{flex:1;font-size:17px;line-height:1.6}
 .exname.dk{opacity:.5;text-decoration:line-through}
-.detail{font-size:12px;color:#888;margin-top:2px}
-.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
-.tbl th{background:#1a1a2e;color:#B8860B;padding:8px;text-align:left;font-size:12px;border:1px solid #222}
-.tbl td{padding:8px;border:1px solid #222;color:#bbb}
+.detail{font-size:15px;color:#888;margin-top:3px}
+.tbl{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}
+.tbl th{background:#1a1a2e;color:#B8860B;padding:10px;text-align:left;font-size:14px;border:1px solid #222}
+.tbl td{padding:10px;border:1px solid #222;color:#bbb}
 .tbl tr:nth-child(even) td{background:#111}
-.badge{display:inline-block;padding:3px 8px;border-radius:10px;font-size:10px;font-weight:700;margin-right:4px}
-.sect{margin-top:16px;padding-top:10px;border-top:1px solid #222}
+.badge{display:inline-block;padding:4px 10px;border-radius:10px;font-size:13px;font-weight:700;margin-right:6px}
+.sect{margin-top:18px;padding-top:12px;border-top:1px solid #222}
 </style></head><body><div class="w" id="app"></div>
 <script>
 // ─── QUOTES ───
@@ -497,33 +497,33 @@ function dayProgress(phIdx,dayIdx){
 function render(){
   var ph=PH[S.ph];var td=new Date();var dn=["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"][td.getDay()];
   var mm=String(td.getMonth()+1).padStart(2,'0');var dd=String(td.getDate()).padStart(2,'0');var todayMD=mm+'-'+dd;
-  var h='<div class="hd"><div style="font-size:10px;letter-spacing:6px;color:#B8860B">L\'OMBRA</div><div style="font-size:18px;color:#fff;font-weight:300;margin-top:3px">Bible du Shinobi</div><div style="font-size:12px;color:#555;margin-top:2px">'+dn+' '+dd+'/'+mm+'/'+td.getFullYear()+' — Phase '+ph.ic+' '+ph.nm+'</div></div>';
+  var h='<div class="hd"><div style="font-size:19px;letter-spacing:6px;color:#B8860B">L\'OMBRA</div><div style="font-size:17px;color:#fff;font-weight:300;margin-top:3px">Bible du Shinobi</div><div style="font-size:19px;color:#555;margin-top:2px">'+dn+' '+dd+'/'+mm+'/'+td.getFullYear()+' — Phase '+ph.ic+' '+ph.nm+'</div></div>';
 
   // NAV
   h+='<div class="nv">';
   [['home','家','Accueil'],['train','修','Train'],['breath','息','Souffle'],['kata','型','Kata'],['armes','武','Armes'],['food','食','Nutri'],['tests','試','Tests'],['spirit','神','Esprit'],['library','書','Biblio']].forEach(function(x){
-    h+='<button class="'+(S.tab===x[0]?'a':'')+'" onclick="go(\''+x[0]+'\')"><div style="font-size:15px">'+x[1]+'</div><div style="font-size:9px;margin-top:1px">'+x[2]+'</div></button>';});
+    h+='<button class="'+(S.tab===x[0]?'a':'')+'" onclick="go(\''+x[0]+'\')"><div style="font-size:20px">'+x[1]+'</div><div style="font-size:10px;margin-top:2px">'+x[2]+'</div></button>';});
   h+='</div><div class="ct">';
 
   // ══════ HOME ══════
   if(S.tab==='home'){
     var qi=Math.floor((td.getFullYear()*1000+td.getMonth()*31+td.getDate())%QT.length);
     h+='<div style="text-align:center;padding:24px 0"><div style="font-size:72px;margin-bottom:10px">忍</div>';
-    h+='<div style="font-size:14px;color:#e8e0d4;font-weight:300">Projet Shinobi — Année 1</div>';
-    h+='<div style="font-size:13px;color:#888;margin-top:4px">'+ph.ic+' '+ph.nm+' — '+ph.sub+' — Objectif : '+ph.poids+'</div></div>';
-    h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="cb"><div style="font-size:10px;color:#B8860B;margin-bottom:6px">DICTON DU JOUR</div><div style="font-size:15px;color:#e8e0d4;line-height:1.7;font-style:italic">&laquo; '+QT[qi]+' &raquo;</div></div></div>';
+    h+='<div style="font-size:19px;color:#e8e0d4;font-weight:300">Projet Shinobi — Année 1</div>';
+    h+='<div style="font-size:19px;color:#888;margin-top:4px">'+ph.ic+' '+ph.nm+' — '+ph.sub+' — Objectif : '+ph.poids+'</div></div>';
+    h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="cb"><div style="font-size:19px;color:#B8860B;margin-bottom:6px">DICTON DU JOUR</div><div style="font-size:17px;color:#e8e0d4;line-height:1.7;font-style:italic">&laquo; '+QT[qi]+' &raquo;</div></div></div>';
     // Next fete
     var nextF=null;FT.forEach(function(f){if(!nextF&&f.dt>=todayMD)nextF=f;});if(!nextF)nextF=FT[0];
-    h+='<div class="cd"><div class="cb"><div style="display:flex;align-items:center;gap:12px"><span style="font-size:32px">'+nextF.ic+'</span><div><div style="font-size:10px;color:#B8860B">PROCHAINE CÉLÉBRATION</div><div style="font-size:15px;font-weight:600;margin-top:2px">'+nextF.nm+'</div><div style="font-size:13px;color:#888;margin-top:2px">'+nextF.dt.replace('-','/')+'</div></div></div></div></div>';
+    h+='<div class="cd"><div class="cb"><div style="display:flex;align-items:center;gap:12px"><span style="font-size:32px">'+nextF.ic+'</span><div><div style="font-size:19px;color:#B8860B">PROCHAINE CÉLÉBRATION</div><div style="font-size:17px;font-weight:600;margin-top:2px">'+nextF.nm+'</div><div style="font-size:19px;color:#888;margin-top:2px">'+nextF.dt.replace('-','/')+'</div></div></div></div></div>';
     // Stats
     h+='<div style="display:flex;gap:8px;margin-top:4px">';
-    [{l:'Streak',v:S.streak+'j'},{l:'Sessions',v:S.total},{l:'Phase',v:(S.ph+1)+'/4'}].forEach(function(s){h+='<div class="cd" style="flex:1;text-align:center"><div class="cb"><div style="font-size:24px;color:#8B0F0F">'+s.v+'</div><div style="font-size:11px;color:#888">'+s.l+'</div></div></div>';});
+    [{l:'Streak',v:S.streak+'j'},{l:'Sessions',v:S.total},{l:'Phase',v:(S.ph+1)+'/4'}].forEach(function(s){h+='<div class="cd" style="flex:1;text-align:center"><div class="cb"><div style="font-size:22px;color:#8B0F0F">'+s.v+'</div><div style="font-size:17px;color:#888">'+s.l+'</div></div></div>';});
     h+='</div>';
     // Phase selector
-    h+='<div class="sc" style="margin-top:12px">CHANGER DE PHASE</div><div style="display:flex;gap:4px">';PH.forEach(function(p,i){h+='<div onclick="setPh('+i+')" style="flex:1;padding:8px 4px;text-align:center;border-radius:8px;border:1px solid '+(i===S.ph?p.co:'#222')+';background:'+(i===S.ph?p.co+'20':'#111')+';cursor:pointer"><div style="font-size:18px">'+p.ic+'</div><div style="font-size:10px;color:'+(i===S.ph?p.co:'#555')+';margin-top:2px">'+p.nm+'</div></div>';});h+='</div>';
+    h+='<div class="sc" style="margin-top:12px">CHANGER DE PHASE</div><div style="display:flex;gap:4px">';PH.forEach(function(p,i){h+='<div onclick="setPh('+i+')" style="flex:1;padding:8px 4px;text-align:center;border-radius:8px;border:1px solid '+(i===S.ph?p.co:'#222')+';background:'+(i===S.ph?p.co+'20':'#111')+';cursor:pointer"><div style="font-size:17px">'+p.ic+'</div><div style="font-size:19px;color:'+(i===S.ph?p.co:'#555')+';margin-top:2px">'+p.nm+'</div></div>';});h+='</div>';
     // Week rating
     var wk=weekKey();var wr=S.ratings[wk]||0;
-    h+='<div class="cd" style="margin-top:10px"><div class="cb"><div style="font-size:10px;color:#B8860B;margin-bottom:4px">ÉVALUATION SEMAINE '+wk.split('-W')[1]+'</div><div style="text-align:center">';
+    h+='<div class="cd" style="margin-top:10px"><div class="cb"><div style="font-size:19px;color:#B8860B;margin-bottom:4px">ÉVALUATION SEMAINE '+wk.split('-W')[1]+'</div><div style="text-align:center">';
     for(var i=1;i<=5;i++){h+='<span class="star" onclick="rate('+i+')">'+(i<=wr?'⭐':'☆')+'</span>';}
     h+='</div></div></div>';
   }
@@ -531,19 +531,19 @@ function render(){
   // ══════ TRAIN ══════
   if(S.tab==='train'){
     h+='<div class="sc">'+ph.ic+' PHASE '+ph.nm+' — '+ph.sub+'</div>';
-    h+='<div style="font-size:14px;color:#bbb;margin-bottom:6px;line-height:1.6">'+ph.obj+'</div>';
-    h+='<div style="font-size:12px;color:#666;margin-bottom:12px">Poids cible : '+ph.poids+' | '+ph.kcal+'</div>';
+    h+='<div style="font-size:19px;color:#bbb;margin-bottom:6px;line-height:1.6">'+ph.obj+'</div>';
+    h+='<div style="font-size:19px;color:#666;margin-bottom:12px">Poids cible : '+ph.poids+' | '+ph.kcal+'</div>';
     // Phase pills
     h+='<div style="display:flex;gap:4px;margin-bottom:12px">';PH.forEach(function(p,i){h+='<div onclick="setPh('+i+')" style="flex:1;height:10px;border-radius:5px;background:'+(i===S.ph?p.co:'#222')+';cursor:pointer"></div>';});h+='</div>';
     // Rest timer
-    if(S.restOn){h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="text-align:center"><div style="font-size:11px;color:#B8860B">⏱ REPOS</div><div style="font-size:42px;color:#e8e0d4;margin:6px 0">'+S.restSec+'s</div><div class="rest-bar"><div class="rest-fill" style="width:'+((S.restSec/S.restMax)*100)+'%"></div></div><button class="pl" onclick="S.restOn=false;clearInterval(restInt);render()" style="margin-top:6px">✕ Annuler</button></div></div>';}
+    if(S.restOn){h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="text-align:center"><div style="font-size:17px;color:#B8860B">⏱ REPOS</div><div style="font-size:48px;color:#e8e0d4;margin:6px 0">'+S.restSec+'s</div><div class="rest-bar"><div class="rest-fill" style="width:'+((S.restSec/S.restMax)*100)+'%"></div></div><button class="pl" onclick="S.restOn=false;clearInterval(restInt);render()" style="margin-top:6px">✕ Annuler</button></div></div>';}
     // Days
     ph.sem.forEach(function(d,di){
       var prog=dayProgress(S.ph,di);var pct=prog.total?Math.round(prog.done/prog.total*100):0;
       h+='<div class="ex" onclick="S.wi='+(S.wi===di?-1:di)+';render()">';
-      h+='<div style="display:flex;justify-content:space-between;align-items:center"><div><span style="color:'+ph.co+';font-weight:700;font-size:14px">'+d.j+'</span> <span style="color:#888;font-size:13px">'+d.t+'</span></div><span style="color:#555;font-size:12px">'+d.du+' '+(S.wi===di?'▲':'▼')+'</span></div>';
-      h+='<div style="display:flex;align-items:center;gap:8px;margin-top:4px"><div style="flex:1;height:4px;background:#222;border-radius:2px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+ph.co+';border-radius:2px"></div></div><span style="font-size:11px;color:#555">'+prog.done+'/'+prog.total+'</span></div>';
-      if(d.fo)h+='<div style="font-size:12px;color:#555;margin-top:3px">Focus : '+d.fo+'</div>';
+      h+='<div style="display:flex;justify-content:space-between;align-items:center"><div><span style="color:'+ph.co+';font-weight:700;font-size:19px">'+d.j+'</span> <span style="color:#888;font-size:19px">'+d.t+'</span></div><span style="color:#555;font-size:19px">'+d.du+' '+(S.wi===di?'▲':'▼')+'</span></div>';
+      h+='<div style="display:flex;align-items:center;gap:8px;margin-top:4px"><div style="flex:1;height:4px;background:#222;border-radius:2px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+ph.co+';border-radius:2px"></div></div><span style="font-size:17px;color:#555">'+prog.done+'/'+prog.total+'</span></div>';
+      if(d.fo)h+='<div style="font-size:19px;color:#555;margin-top:3px">Focus : '+d.fo+'</div>';
       if(S.wi===di){
         h+='<div style="margin-top:10px;border-top:1px solid #222;padding-top:8px">';
         d.ex.forEach(function(e,ei){
@@ -553,7 +553,7 @@ function render(){
           h+='<div class="chk'+(chk?' done':'')+'" onclick="event.stopPropagation();toggleCheck('+S.ph+','+di+','+ei+')">'+(chk?'✓':'')+'</div>';
           h+='<div class="exname'+(chk?' dk':'')+'">'+e.n;
           if(e.s)h+=' <span style="color:'+cc+';font-weight:600">'+e.s+'</span>';
-          if(e.r)h+=' <span style="color:#666;font-size:12px">R'+e.r+'</span>';
+          if(e.r)h+=' <span style="color:#666;font-size:19px">R'+e.r+'</span>';
           if(e.note)h+='<div class="detail">ℹ '+e.note+'</div>';
           h+='</div>';
           if(e.y)h+='<a class="yt" href="'+yt(e.y)+'" target="_blank" onclick="event.stopPropagation()">▶</a>';
@@ -565,53 +565,53 @@ function render(){
       }
       h+='</div>';
     });
-    h+='<button onclick="markDone()" style="width:100%;margin-top:12px;padding:14px;border:none;border-radius:10px;font-size:15px;font-weight:600;color:#fff;background:'+(S.done?'#4a7a5a':'linear-gradient(135deg,#8B0F0F,#6B0F0F)')+';">'+(S.done?'✅ Session complétée aujourd\'hui':'Marquer session complétée')+'</button>';
+    h+='<button onclick="markDone()" style="width:100%;margin-top:12px;padding:14px;border:none;border-radius:10px;font-size:17px;font-weight:600;color:#fff;background:'+(S.done?'#4a7a5a':'linear-gradient(135deg,#8B0F0F,#6B0F0F)')+';">'+(S.done?'✅ Session complétée aujourd\'hui':'Marquer session complétée')+'</button>';
   }
 
   // ══════ BREATH ══════
   if(S.tab==='breath'){
     h+='<div class="sc">RESPIRATIONS GUIDÉES — 息</div>';
-    h+='<div style="display:flex;gap:6px;margin-bottom:14px">';BR.forEach(function(b,i){h+='<button class="pl'+(S.bi===i?' a':'')+'" style="flex:1;font-size:13px;'+(S.bi===i?'background:'+b.co+';border-color:'+b.co:'')+';" onclick="S.bi='+i+';stopBreath();render()">'+b.nm.split(' ')[0]+'</button>';});h+='</div>';
+    h+='<div style="display:flex;gap:6px;margin-bottom:14px">';BR.forEach(function(b,i){h+='<button class="pl'+(S.bi===i?' a':'')+'" style="flex:1;font-size:19px;'+(S.bi===i?'background:'+b.co+';border-color:'+b.co:'')+';" onclick="S.bi='+i+';stopBreath();render()">'+b.nm.split(' ')[0]+'</button>';});h+='</div>';
     var b=BR[S.bi];
-    h+='<div class="cd" style="border-left:3px solid '+b.co+'"><div class="cb"><div style="font-size:16px;font-weight:600;color:'+b.co+'">'+b.nm+'</div><div style="font-size:14px;color:#888;margin-top:5px">'+b.d+'</div><div style="font-size:12px;color:#555;margin-top:4px">'+b.rounds+' rounds</div></div></div>';
+    h+='<div class="cd" style="border-left:3px solid '+b.co+'"><div class="cb"><div style="font-size:19px;font-weight:600;color:'+b.co+'">'+b.nm+'</div><div style="font-size:19px;color:#888;margin-top:5px">'+b.d+'</div><div style="font-size:19px;color:#555;margin-top:4px">'+b.rounds+' rounds</div></div></div>';
     if(S.bOn){
       var cp=b.ph[S.bPhase];var isExp=cp.a.indexOf('INSPIRE')>=0;var isHold=cp.a.indexOf('RETIEN')>=0||cp.a.indexOf('HOLD')>=0;
       h+='<div style="text-align:center;padding:24px"><div class="breath-circle'+(isExp?' expand':'')+(isHold?' hold':'')+'" style="border-color:'+b.co+'">'+S.bSec+'</div>';
-      h+='<div style="font-size:20px;color:'+b.co+';font-weight:600;margin:10px 0">'+cp.a+'</div>';
-      h+='<div style="font-size:14px;color:#888">Round '+S.bRound+'/'+b.rounds+'</div>';
-      h+='<button class="pl" onclick="stopBreath()" style="margin-top:14px;font-size:14px">⏹ Stop</button></div>';
+      h+='<div style="font-size:19px;color:'+b.co+';font-weight:600;margin:10px 0">'+cp.a+'</div>';
+      h+='<div style="font-size:19px;color:#888">Round '+S.bRound+'/'+b.rounds+'</div>';
+      h+='<button class="pl" onclick="stopBreath()" style="margin-top:14px;font-size:19px">⏹ Stop</button></div>';
     } else {
       h+='<div style="text-align:center;padding:24px"><div class="breath-circle" style="border-color:'+b.co+'">息</div>';
-      h+='<button class="pl a" onclick="startBreath()" style="margin-top:10px;padding:12px 32px;font-size:16px">▶ Commencer</button></div>';
+      h+='<button class="pl a" onclick="startBreath()" style="margin-top:10px;padding:12px 32px;font-size:19px">▶ Commencer</button></div>';
     }
     h+='<div class="sc" style="margin-top:10px">PHASES</div>';
-    b.ph.forEach(function(p,i){h+='<div class="rw"><div class="nm" style="border-color:'+b.co+';color:'+b.co+'">'+(i+1)+'</div><div style="flex:1;font-size:14px">'+p.a+'</div><div style="color:'+b.co+';font-size:14px">'+p.s+'s</div></div>';});
+    b.ph.forEach(function(p,i){h+='<div class="rw"><div class="nm" style="border-color:'+b.co+';color:'+b.co+'">'+(i+1)+'</div><div style="flex:1;font-size:19px">'+p.a+'</div><div style="color:'+b.co+';font-size:19px">'+p.s+'s</div></div>';});
   }
 
   // ══════ KATA ══════
   if(S.tab==='kata'){
     h+='<div class="sc">SAN SHIN NO KATA — 三心の型</div>';
-    h+='<div style="display:flex;gap:5px;margin-bottom:12px">';SS.forEach(function(s,i){h+='<button style="flex:1;padding:8px;border:'+(S.si===i?'2px solid '+s.co:'1px solid #333')+';border-radius:10px;background:'+(S.si===i?s.co+'15':'#111')+';color:'+s.co+';text-align:center" onclick="S.si='+i+';render()"><div style="font-size:22px">'+s.k+'</div><div style="font-size:9px;font-weight:700;margin-top:2px">'+s.el+'</div></button>';});h+='</div>';
-    var s=SS[S.si];h+='<div class="cd" style="border-left:3px solid '+s.co+'"><div class="cb"><div style="font-size:16px;font-weight:600;color:'+s.co+'">'+s.nm+' no Kata</div><div style="font-size:14px;color:#888;margin-top:6px;line-height:1.7">'+s.d+'</div><a class="yt" href="'+yt('san shin no kata '+s.nm+' bujinkan')+'" target="_blank" style="display:block;margin-top:10px;font-size:13px;color:#ff4444">▶ Voir sur YouTube</a></div></div>';
+    h+='<div style="display:flex;gap:5px;margin-bottom:12px">';SS.forEach(function(s,i){h+='<button style="flex:1;padding:8px;border:'+(S.si===i?'2px solid '+s.co:'1px solid #333')+';border-radius:10px;background:'+(S.si===i?s.co+'15':'#111')+';color:'+s.co+';text-align:center" onclick="S.si='+i+';render()"><div style="font-size:20px">'+s.k+'</div><div style="font-size:19px;font-weight:700;margin-top:2px">'+s.el+'</div></button>';});h+='</div>';
+    var s=SS[S.si];h+='<div class="cd" style="border-left:3px solid '+s.co+'"><div class="cb"><div style="font-size:19px;font-weight:600;color:'+s.co+'">'+s.nm+' no Kata</div><div style="font-size:19px;color:#888;margin-top:6px;line-height:1.7">'+s.d+'</div><a class="yt" href="'+yt('san shin no kata '+s.nm+' bujinkan')+'" target="_blank" style="display:block;margin-top:10px;font-size:19px;color:#ff4444">▶ Voir sur YouTube</a></div></div>';
     h+='<div class="sc" style="margin-top:16px">KIHON HAPPŌ — 基本八法</div>';
-    h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">';KH.forEach(function(k,i){h+='<button class="pl'+(S.ki===i?' a':'')+'" style="font-size:13px" onclick="S.ki='+i+';render()">'+(i+1)+'</button>';});h+='</div>';
-    var k=KH[S.ki];h+='<div class="cd"><div class="cb"><div style="font-size:11px;color:#B8860B">'+k.t+'</div><div style="font-size:16px;font-weight:600;color:#8B0F0F;margin-top:3px">'+k.nm+'</div><div style="font-size:14px;color:#888;margin-top:6px;line-height:1.7">'+k.d+'</div><a class="yt" href="'+yt(k.nm+' bujinkan technique')+'" target="_blank" style="display:block;margin-top:10px;font-size:13px;color:#ff4444">▶ Voir sur YouTube</a></div></div>';
+    h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">';KH.forEach(function(k,i){h+='<button class="pl'+(S.ki===i?' a':'')+'" style="font-size:19px" onclick="S.ki='+i+';render()">'+(i+1)+'</button>';});h+='</div>';
+    var k=KH[S.ki];h+='<div class="cd"><div class="cb"><div style="font-size:17px;color:#B8860B">'+k.t+'</div><div style="font-size:19px;font-weight:600;color:#8B0F0F;margin-top:3px">'+k.nm+'</div><div style="font-size:19px;color:#888;margin-top:6px;line-height:1.7">'+k.d+'</div><a class="yt" href="'+yt(k.nm+' bujinkan technique')+'" target="_blank" style="display:block;margin-top:10px;font-size:19px;color:#ff4444">▶ Voir sur YouTube</a></div></div>';
     // Shotokan kata links
     h+='<div class="sc" style="margin-top:16px">KATA SHOTOKAN — 空手の型</div>';
     var shotoKata=["Heian Shodan","Heian Nidan","Heian Sandan","Heian Yondan","Heian Godan","Tekki Shodan","Bassai Dai","Kanku Dai","Jion","Empi"];
     shotoKata.forEach(function(k,i){
-      h+='<div class="rw"><div class="nm" style="border-color:#D4760A;color:#D4760A">'+(i+1)+'</div><div style="flex:1;font-size:14px">'+k+'</div><a class="yt" href="'+yt(k+' kata shotokan slow tutorial')+'" target="_blank">▶</a></div>';
+      h+='<div class="rw"><div class="nm" style="border-color:#D4760A;color:#D4760A">'+(i+1)+'</div><div style="flex:1;font-size:19px">'+k+'</div><a class="yt" href="'+yt(k+' kata shotokan slow tutorial')+'" target="_blank">▶</a></div>';
     });
   }
 
   // ══════ ARMES ══════
   if(S.tab==='armes'){
     h+='<div class="sc">BUKIJUTSU — 武器術</div>';
-    h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">';AR.forEach(function(a,i){h+='<button class="pl'+(S.ai===i?' a':'')+'" style="font-size:13px" onclick="S.ai='+i+';render()">'+a.ic+' '+a.nm.replace('jutsu','')+'</button>';});h+='</div>';
-    var a=AR[S.ai];h+='<div class="cd"><div class="ch">'+a.ic+' '+a.nm+'</div><div class="cb"><div style="font-size:14px;margin-bottom:10px"><b>Arme :</b> '+a.wp+'</div>';
-    h+='<div class="sc">KATA & TECHNIQUES</div>';a.kt.forEach(function(k,i){h+='<div class="rw"><div class="nm">'+(i+1)+'</div><div style="flex:1;font-size:14px">'+k+'</div><a class="yt" href="'+yt(a.nm+' '+k)+'" target="_blank">▶</a></div>';});
-    h+='<div class="sc" style="margin-top:12px">DRILL TYPE</div><div style="padding:10px;background:#0a0a0a;border-radius:6px;font-size:14px;line-height:1.7;border-left:2px solid #8B0F0F">'+a.dr+'</div>';
-    h+='<a class="yt" href="'+yt(a.vy)+'" target="_blank" style="display:block;margin-top:12px;font-size:14px">▶ Toutes les vidéos sur YouTube</a>';
+    h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">';AR.forEach(function(a,i){h+='<button class="pl'+(S.ai===i?' a':'')+'" style="font-size:19px" onclick="S.ai='+i+';render()">'+a.ic+' '+a.nm.replace('jutsu','')+'</button>';});h+='</div>';
+    var a=AR[S.ai];h+='<div class="cd"><div class="ch">'+a.ic+' '+a.nm+'</div><div class="cb"><div style="font-size:19px;margin-bottom:10px"><b>Arme :</b> '+a.wp+'</div>';
+    h+='<div class="sc">KATA & TECHNIQUES</div>';a.kt.forEach(function(k,i){h+='<div class="rw"><div class="nm">'+(i+1)+'</div><div style="flex:1;font-size:19px">'+k+'</div><a class="yt" href="'+yt(a.nm+' '+k)+'" target="_blank">▶</a></div>';});
+    h+='<div class="sc" style="margin-top:12px">DRILL TYPE</div><div style="padding:10px;background:#0a0a0a;border-radius:6px;font-size:19px;line-height:1.7;border-left:2px solid #8B0F0F">'+a.dr+'</div>';
+    h+='<a class="yt" href="'+yt(a.vy)+'" target="_blank" style="display:block;margin-top:12px;font-size:19px">▶ Toutes les vidéos sur YouTube</a>';
     h+='</div></div>';
   }
 
@@ -621,50 +621,50 @@ function render(){
     h+='<div style="display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap">';
     ['repas','aliments','recettes','suppl','courses'].forEach(function(t){
       var lb={repas:'🍽️ Repas',aliments:'🥦 Aliments',recettes:'📖 Recettes',suppl:'💊 Suppléments',courses:'🛒 Courses'}[t];
-      h+='<button class="pl'+(S.foodTab===t?' a':'')+'" onclick="S.foodTab=\''+t+'\';render()" style="font-size:12px">'+lb+'</button>';
+      h+='<button class="pl'+(S.foodTab===t?' a':'')+'" onclick="S.foodTab=\''+t+'\';render()" style="font-size:19px">'+lb+'</button>';
     });h+='</div>';
 
     if(S.foodTab==='repas'){
-      h+='<div class="cd"><div class="cb" style="text-align:center"><div style="font-size:15px;font-weight:600;color:#B8860B">~2400 kcal | 190g P | 155g G | 65g L</div><div style="font-size:12px;color:#555;margin-top:4px">Déficit ~300-500kcal → recomposition progressive</div></div></div>';
+      h+='<div class="cd"><div class="cb" style="text-align:center"><div style="font-size:17px;font-weight:600;color:#B8860B">~2400 kcal | 190g P | 155g G | 65g L</div><div style="font-size:19px;color:#555;margin-top:4px">Déficit ~300-500kcal → recomposition progressive</div></div></div>';
       // Principes
       h+='<div class="cd"><div class="ch">📋 Principes fondamentaux</div><div class="cb">';
-      NT.principes.forEach(function(p){h+='<div style="font-size:14px;color:#bbb;padding:4px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+p+'</div>';});
+      NT.principes.forEach(function(p){h+='<div style="font-size:19px;color:#bbb;padding:4px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+p+'</div>';});
       h+='</div></div>';
       // Repas
       NT.repas.forEach(function(r){
-        h+='<div class="cd"><div class="cb"><div style="display:flex;gap:10px;align-items:flex-start"><span style="font-size:22px;flex-shrink:0">'+r.ic+'</span><div style="flex:1"><div style="font-size:15px;font-weight:600">'+r.m+' <span style="color:#555;font-weight:400">('+r.h+')</span></div><div style="font-size:14px;color:#bbb;margin-top:5px;white-space:pre-wrap;line-height:1.6">'+r.mn+'</div>';
-        if(r.cal>0)h+='<div style="display:flex;gap:10px;margin-top:8px;font-size:11px"><span style="color:#B8860B">'+r.cal+' kcal</span><span style="color:#8B0F0F">P:'+r.p+'g</span><span style="color:#4a7a5a">G:'+r.g+'g</span><span style="color:#facc15">L:'+r.l+'g</span></div>';
+        h+='<div class="cd"><div class="cb"><div style="display:flex;gap:10px;align-items:flex-start"><span style="font-size:20px;flex-shrink:0">'+r.ic+'</span><div style="flex:1"><div style="font-size:17px;font-weight:600">'+r.m+' <span style="color:#555;font-weight:400">('+r.h+')</span></div><div style="font-size:19px;color:#bbb;margin-top:5px;white-space:pre-wrap;line-height:1.6">'+r.mn+'</div>';
+        if(r.cal>0)h+='<div style="display:flex;gap:10px;margin-top:8px;font-size:17px"><span style="color:#B8860B">'+r.cal+' kcal</span><span style="color:#8B0F0F">P:'+r.p+'g</span><span style="color:#4a7a5a">G:'+r.g+'g</span><span style="color:#facc15">L:'+r.l+'g</span></div>';
         h+='</div></div></div></div>';
       });
       // Evolution
       h+='<div class="cd"><div class="ch">📈 Évolution par phase</div><div class="cb">';
-      NT.evolution.forEach(function(e){h+='<div style="padding:6px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:14px;font-weight:600;color:#B8860B">'+e.phase+' — '+e.cal+'</div><div style="font-size:13px;color:#888;margin-top:2px">'+e.desc+'</div></div>';});
+      NT.evolution.forEach(function(e){h+='<div style="padding:6px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:19px;font-weight:600;color:#B8860B">'+e.phase+' — '+e.cal+'</div><div style="font-size:19px;color:#888;margin-top:2px">'+e.desc+'</div></div>';});
       h+='</div></div>';
     }
 
     if(S.foodTab==='aliments'){
       [{t:'🥩 Protéines',l:NT.aliments.proteines},{t:'🍚 Glucides',l:NT.aliments.glucides},{t:'🥑 Lipides',l:NT.aliments.lipides},{t:'🥬 Légumes',l:NT.aliments.legumes}].forEach(function(cat){
         h+='<div class="cd"><div class="ch">'+cat.t+'</div><div class="cb" style="display:flex;flex-wrap:wrap;gap:6px">';
-        cat.l.forEach(function(a){h+='<span style="display:inline-block;padding:5px 10px;background:#0a0a0a;border:1px solid #222;border-radius:16px;font-size:13px;color:#bbb">'+a+'</span>';});
+        cat.l.forEach(function(a){h+='<span style="display:inline-block;padding:5px 10px;background:#0a0a0a;border:1px solid #222;border-radius:16px;font-size:19px;color:#bbb">'+a+'</span>';});
         h+='</div></div>';
       });
     }
 
     if(S.foodTab==='recettes'){
       NT.aliments.recettes.forEach(function(r){
-        h+='<div class="cd"><div class="ch">🍳 '+r.nm+'</div><div class="cb"><div style="font-size:14px;color:#bbb;line-height:1.7">'+r.desc+'</div></div></div>';
+        h+='<div class="cd"><div class="ch">🍳 '+r.nm+'</div><div class="cb"><div style="font-size:19px;color:#bbb;line-height:1.7">'+r.desc+'</div></div></div>';
       });
     }
 
     if(S.foodTab==='suppl'){
       h+='<div class="sc">SUPPLÉMENTS RECOMMANDÉS</div>';
       NT.supplements.forEach(function(s){
-        h+='<div class="cd"><div class="cb"><div style="font-size:15px;font-weight:600;color:#B8860B">'+s.nm+'</div><div style="display:flex;gap:12px;margin-top:6px;font-size:13px"><span style="color:#8B0F0F">'+s.dose+'</span><span style="color:#555">'+s.quand+'</span></div><div style="font-size:13px;color:#888;margin-top:4px">'+s.why+'</div></div></div>';
+        h+='<div class="cd"><div class="cb"><div style="font-size:17px;font-weight:600;color:#B8860B">'+s.nm+'</div><div style="display:flex;gap:12px;margin-top:6px;font-size:19px"><span style="color:#8B0F0F">'+s.dose+'</span><span style="color:#555">'+s.quand+'</span></div><div style="font-size:19px;color:#888;margin-top:4px">'+s.why+'</div></div></div>';
       });
     }
 
     if(S.foodTab==='courses'){
-      h+='<div class="cd"><div class="ch">🛒 LISTE DE COURSES SEMAINE</div><div class="cb"><div style="font-size:14px;color:#bbb;line-height:2">'+NT.courses.split(', ').join('<br>• ')+'</div></div></div>';
+      h+='<div class="cd"><div class="ch">🛒 LISTE DE COURSES SEMAINE</div><div class="cb"><div style="font-size:19px;color:#bbb;line-height:2">'+NT.courses.split(', ').join('<br>• ')+'</div></div></div>';
     }
   }
 
@@ -674,23 +674,23 @@ function render(){
     h+='<div style="display:flex;gap:4px;margin-bottom:12px">';
     ['bench','parcours','alarme'].forEach(function(t){
       var lb={bench:'📊 Benchmarks',parcours:'🏃 Parcours',alarme:'⚠️ Signaux'}[t];
-      h+='<button class="pl'+(S.testTab===t?' a':'')+'" onclick="S.testTab=\''+t+'\';render()" style="font-size:12px">'+lb+'</button>';
+      h+='<button class="pl'+(S.testTab===t?' a':'')+'" onclick="S.testTab=\''+t+'\';render()" style="font-size:19px">'+lb+'</button>';
     });h+='</div>';
 
     if(S.testTab==='bench'){
       h+='<div style="overflow-x:auto"><table class="tbl"><tr><th>Test</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th></tr>';
       TESTS.benchmarks.forEach(function(b){
-        h+='<tr><td style="font-weight:600;color:#e8e0d4">'+b.nm+' <span style="color:#555;font-size:11px">('+b.u+')</span></td><td style="color:#4ade80">'+b.p1+'</td><td style="color:#facc15">'+b.p2+'</td><td style="color:#f97316">'+b.p3+'</td><td style="color:#a855f7">'+b.p4+'</td></tr>';
+        h+='<tr><td style="font-weight:600;color:#e8e0d4">'+b.nm+' <span style="color:#555;font-size:17px">('+b.u+')</span></td><td style="color:#4ade80">'+b.p1+'</td><td style="color:#facc15">'+b.p2+'</td><td style="color:#f97316">'+b.p3+'</td><td style="color:#a855f7">'+b.p4+'</td></tr>';
       });h+='</table></div>';
-      h+='<div style="font-size:13px;color:#555;margin-top:6px">Mesures hebdo : poids à jeun, tour de taille, photos mensuelles (front/profil/dos).</div>';
-      h+='<div style="font-size:13px;color:#555;margin-top:4px">Semaines de décharge : toutes les 4 semaines, -40% volume, charges réduites.</div>';
+      h+='<div style="font-size:19px;color:#555;margin-top:6px">Mesures hebdo : poids à jeun, tour de taille, photos mensuelles (front/profil/dos).</div>';
+      h+='<div style="font-size:19px;color:#555;margin-top:4px">Semaines de décharge : toutes les 4 semaines, -40% volume, charges réduites.</div>';
     }
 
     if(S.testTab==='parcours'){
       [TESTS.parcours3,TESTS.parcours4].forEach(function(p){
-        h+='<div class="cd"><div class="ch">🏃 '+p.title+'</div><div class="cb"><div style="font-size:14px;color:#B8860B;margin-bottom:8px">Objectif : '+p.objectif+'</div>';
-        p.steps.forEach(function(s,i){h+='<div class="rw"><div class="nm" style="border-color:#ff4444;color:#ff4444">'+(i+1)+'</div><div style="flex:1;font-size:14px">'+s+'</div></div>';});
-        h+='<div style="font-size:13px;color:#555;margin-top:8px;font-style:italic">Circuit chronométré sans repos — à réaliser 1× par mois.</div></div></div>';
+        h+='<div class="cd"><div class="ch">🏃 '+p.title+'</div><div class="cb"><div style="font-size:19px;color:#B8860B;margin-bottom:8px">Objectif : '+p.objectif+'</div>';
+        p.steps.forEach(function(s,i){h+='<div class="rw"><div class="nm" style="border-color:#ff4444;color:#ff4444">'+(i+1)+'</div><div style="flex:1;font-size:19px">'+s+'</div></div>';});
+        h+='<div style="font-size:19px;color:#555;margin-top:8px;font-style:italic">Circuit chronométré sans repos — à réaliser 1× par mois.</div></div></div>';
       });
     }
 
@@ -701,11 +701,11 @@ function render(){
         {s:"Sommeil < 6h pendant 3+ nuits",a:"→ Remplacer séance par mobilité + méditation"},
         {s:"Motivation en chute > 1 semaine",a:"→ Semaine de décharge (volume -40%, intensité -20%)"},
         {s:"Blessure",a:"→ Arrêt immédiat zone concernée, continuer le reste si possible"}
-      ].forEach(function(x){h+='<div style="padding:8px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:14px;color:#ff6666;font-weight:600">'+x.s+'</div><div style="font-size:14px;color:#888;margin-top:3px">'+x.a+'</div></div>';});
+      ].forEach(function(x){h+='<div style="padding:8px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:19px;color:#ff6666;font-weight:600">'+x.s+'</div><div style="font-size:19px;color:#888;margin-top:3px">'+x.a+'</div></div>';});
       h+='</div></div>';
       h+='<div class="cd"><div class="ch">😴 Protocole sommeil</div><div class="cb">';
       ["Coucher : 21h30-22h00 ferme, 7j/7","Écrans coupés à 21h00","Chambre : 18-19°C, obscurité totale","Dernier repas : 19h30-20h00 max","Magnésium bisglycinate 400mg à 21h","Si insomnie : respiration 4-7-8 au lit"].forEach(function(s){
-        h+='<div style="font-size:14px;color:#bbb;padding:4px 0;line-height:1.5">• '+s+'</div>';});
+        h+='<div style="font-size:19px;color:#bbb;padding:4px 0;line-height:1.5">• '+s+'</div>';});
       h+='</div></div>';
     }
   }
@@ -715,23 +715,23 @@ function render(){
     h+='<div style="display:flex;gap:4px;margin-bottom:12px">';
     ['fetes','entites','mental'].forEach(function(t){
       var lb={fetes:'⛩️ Fêtes',entites:'🔥 Entités',mental:'🧠 Forge mentale'}[t];
-      h+='<button class="pl'+(S.spiritTab===t?' a':'')+'" onclick="S.spiritTab=\''+t+'\';render()" style="font-size:12px">'+lb+'</button>';
+      h+='<button class="pl'+(S.spiritTab===t?' a':'')+'" onclick="S.spiritTab=\''+t+'\';render()" style="font-size:19px">'+lb+'</button>';
     });h+='</div>';
 
     if(S.spiritTab==='fetes'){
       h+='<div class="sc">FÊTES DU SHINOBI DANS LE LAURAGAIS</div>';
       FT.forEach(function(f){
-        h+='<div class="cd"><div class="ch"><span style="font-size:18px;margin-right:8px">'+f.ic+'</span>'+f.nm+' <span style="color:#555;font-weight:400;font-size:12px">'+f.dt.replace('-','/')+'</span></div><div class="cb">';
-        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#8B0F0F30;color:#ff6666">Pourquoi</span><span style="font-size:14px;color:#bbb;line-height:1.6">'+f.why+'</span></div>';
-        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#2E5E8E30;color:#6ba8e0">Où</span><span style="font-size:14px;color:#bbb;line-height:1.6">'+f.where+'</span></div>';
-        h+='<div><span class="badge" style="background:#4A7A5A30;color:#6bbb80">Comment</span><span style="font-size:14px;color:#bbb;line-height:1.6">'+f.how+'</span></div>';
+        h+='<div class="cd"><div class="ch"><span style="font-size:17px;margin-right:8px">'+f.ic+'</span>'+f.nm+' <span style="color:#555;font-weight:400;font-size:19px">'+f.dt.replace('-','/')+'</span></div><div class="cb">';
+        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#8B0F0F30;color:#ff6666">Pourquoi</span><span style="font-size:19px;color:#bbb;line-height:1.6">'+f.why+'</span></div>';
+        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#2E5E8E30;color:#6ba8e0">Où</span><span style="font-size:19px;color:#bbb;line-height:1.6">'+f.where+'</span></div>';
+        h+='<div><span class="badge" style="background:#4A7A5A30;color:#6bbb80">Comment</span><span style="font-size:19px;color:#bbb;line-height:1.6">'+f.how+'</span></div>';
         h+='</div></div>';
       });
     }
 
     if(S.spiritTab==='entites'){
       h+='<div class="sc">ENTITÉS & DIVINITÉS SHINOBI</div>';
-      EN.forEach(function(e){h+='<div class="cd" style="border-left:3px solid '+e.co+'"><div class="cb"><div style="display:flex;gap:10px;align-items:center"><span style="font-size:24px">'+e.ic+'</span><div><div style="font-size:15px;font-weight:600;color:'+e.co+'">'+e.nm+'</div><div style="font-size:12px;color:#B8860B">'+e.rl+'</div></div></div><div style="font-size:14px;color:#888;margin-top:8px;line-height:1.7">'+e.d+'</div></div></div>';});
+      EN.forEach(function(e){h+='<div class="cd" style="border-left:3px solid '+e.co+'"><div class="cb"><div style="display:flex;gap:10px;align-items:center"><span style="font-size:22px">'+e.ic+'</span><div><div style="font-size:17px;font-weight:600;color:'+e.co+'">'+e.nm+'</div><div style="font-size:19px;color:#B8860B">'+e.rl+'</div></div></div><div style="font-size:19px;color:#888;margin-top:8px;line-height:1.7">'+e.d+'</div></div></div>';});
     }
 
     if(S.spiritTab==='mental'){
@@ -742,15 +742,15 @@ function render(){
        {ph:"Phase 4 — INTÉGRATION",ic:"🐉",items:["Méditation : 20-30 min/jour. Dimanches : 45-60 min.","Entraînement sous stress : musique forte OU silence total.","Décision rapide : choix en moins de 3 secondes au quotidien.","Revue hebdo : Corps / Combat / Esprit — note /10."]}
       ].forEach(function(p){
         h+='<div class="cd"><div class="ch">'+p.ic+' '+p.ph+'</div><div class="cb">';
-        p.items.forEach(function(it){h+='<div style="font-size:14px;color:#bbb;padding:5px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+it+'</div>';});
+        p.items.forEach(function(it){h+='<div style="font-size:19px;color:#bbb;padding:5px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+it+'</div>';});
         h+='</div></div>';
       });
       // Routine quotidienne
       h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="ch">🧘 Routine mentale quotidienne</div><div class="cb">';
-      h+='<div style="font-size:13px;color:#B8860B;margin-bottom:6px;font-weight:600">AVANT chaque séance (5 min)</div>';
-      ["Respiration tactique : 10 cycles box breathing (4-4-4-4)","Intention : formuler l'objectif en une phrase","Visualisation : 1 min yeux fermés — se voir réussir"].forEach(function(s){h+='<div style="font-size:14px;color:#bbb;padding:3px 0">• '+s+'</div>';});
-      h+='<div style="font-size:13px;color:#B8860B;margin:10px 0 6px;font-weight:600">APRÈS chaque séance (3 min)</div>';
-      ["3 respirations profondes de transition","Gratitude : nommer une chose","Scanner mental : colère, frustration, ego ?"].forEach(function(s){h+='<div style="font-size:14px;color:#bbb;padding:3px 0">• '+s+'</div>';});
+      h+='<div style="font-size:19px;color:#B8860B;margin-bottom:6px;font-weight:600">AVANT chaque séance (5 min)</div>';
+      ["Respiration tactique : 10 cycles box breathing (4-4-4-4)","Intention : formuler l'objectif en une phrase","Visualisation : 1 min yeux fermés — se voir réussir"].forEach(function(s){h+='<div style="font-size:19px;color:#bbb;padding:3px 0">• '+s+'</div>';});
+      h+='<div style="font-size:19px;color:#B8860B;margin:10px 0 6px;font-weight:600">APRÈS chaque séance (3 min)</div>';
+      ["3 respirations profondes de transition","Gratitude : nommer une chose","Scanner mental : colère, frustration, ego ?"].forEach(function(s){h+='<div style="font-size:19px;color:#bbb;padding:3px 0">• '+s+'</div>';});
       h+='</div></div>';
     }
   }
@@ -759,21 +759,21 @@ function render(){
   if(S.tab==='library'){
     if(S.chSel!==null){
       var ch=getCh(S.chSel);
-      h+='<button class="pl" onclick="S.chSel=null;render()" style="font-size:14px">← Retour</button>';
-      if(ch){h+='<div class="sc" style="margin-top:12px">CHAPITRE '+ch.n+'</div><div class="cd"><div class="ch" style="font-size:15px">'+esc(ch.t)+'</div><div class="cb"><div style="font-size:14px;color:#bbb;line-height:1.8;white-space:pre-wrap">'+esc(ch.x)+'</div></div></div>';}
-      else{h+='<div style="color:#888;padding:20px;font-size:14px;text-align:center">Chapitre non trouvé.<br><br>Lance <code style="color:#B8860B">node build-chapters.js</code> dans lombra-pwa/ puis git push.</div>';}
+      h+='<button class="pl" onclick="S.chSel=null;render()" style="font-size:19px">← Retour</button>';
+      if(ch){h+='<div class="sc" style="margin-top:12px">CHAPITRE '+ch.n+'</div><div class="cd"><div class="ch" style="font-size:20px">'+esc(ch.t)+'</div><div class="cb"><div style="font-size:18px;color:#bbb;line-height:1.85;white-space:pre-wrap">'+esc(ch.x)+'</div></div></div>';}
+      else{h+='<div style="color:#888;padding:20px;font-size:19px;text-align:center">Chapitre non trouvé.<br><br>Lance <code style="color:#B8860B">node build-chapters.js</code> dans lombra-pwa/ puis git push.</div>';}
     } else if(S.livSel!==null){
       var lv=LV[S.livSel];
-      h+='<button class="pl" onclick="S.livSel=null;render()" style="font-size:14px">← Livres</button>';
+      h+='<button class="pl" onclick="S.livSel=null;render()" style="font-size:19px">← Livres</button>';
       h+='<div class="sc" style="margin-top:12px">LIVRE '+lv.n+' — '+lv.t.toUpperCase()+'</div>';
       for(var i=0;i<lv.c;i++){var cn=lv.s+i;var ch=getCh(cn);
-        h+='<div class="ex" onclick="S.chSel='+cn+';render();window.scrollTo(0,0)"><span style="color:#8B0F0F;font-weight:600;font-size:13px">Ch.'+cn+'</span>';
-        if(ch)h+=' <span style="color:#666;font-size:12px">— '+esc(ch.t)+'</span>';
+        h+='<div class="ex" onclick="S.chSel='+cn+';render();window.scrollTo(0,0)"><span style="color:#8B0F0F;font-weight:600;font-size:19px">Ch.'+cn+'</span>';
+        if(ch)h+=' <span style="color:#666;font-size:19px">— '+esc(ch.t)+'</span>';
         h+='</div>';}
     } else {
       h+='<div class="sc">XIII LIVRES • 123 CHAPITRES</div>';
-      if(typeof CH==='undefined'||!CH||CH.length===0)h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="font-size:13px;color:#B8860B">⚠️ chapters.js non chargé. Lance <code>node build-chapters.js</code> puis git push.</div></div>';
-      LV.forEach(function(l,idx){h+='<div class="ex" onclick="S.livSel='+idx+';render()"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:22px">'+l.i+'</span><div style="flex:1"><div style="font-size:10px;color:#8B0F0F">LIVRE '+l.n+'</div><div style="font-size:14px;font-weight:600;margin-top:2px">'+l.t+'</div></div><span style="font-size:12px;color:#555">'+l.c+' ch.</span></div></div>';});
+      if(typeof CH==='undefined'||!CH||CH.length===0)h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="font-size:19px;color:#B8860B">⚠️ chapters.js non chargé. Lance <code>node build-chapters.js</code> puis git push.</div></div>';
+      LV.forEach(function(l,idx){h+='<div class="ex" onclick="S.livSel='+idx+';render()"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">'+l.i+'</span><div style="flex:1"><div style="font-size:19px;color:#8B0F0F">LIVRE '+l.n+'</div><div style="font-size:19px;font-weight:600;margin-top:2px">'+l.t+'</div></div><span style="font-size:19px;color:#555">'+l.c+' ch.</span></div></div>';});
     }
   }
 
