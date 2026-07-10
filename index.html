@@ -460,62 +460,110 @@ var NT={
 // ─── ENTITIES ───
 var EN=[{nm:"Fudō Myōō 不動明王",rl:"Protecteur suprême",d:"Roi de Sagesse Immobile. Sabre de vérité et corde qui lie les passions. Son mudra est la base du fudōshin.",ic:"🔥",co:"#8B1A1A"},{nm:"Marishi-ten 摩利支天",rl:"Déesse des guerriers",d:"Déesse de l'invisibilité. Patronne des shinobi. Rend invisible celui qui la prie avec sincérité.",ic:"✨",co:"#B8860B"},{nm:"Tengu 天狗",rl:"Maîtres martiaux",d:"Esprits de montagne au long nez. Maîtres du kenjutsu. Yoshitsune apprit l'escrime d'un tengu du Mont Kurama.",ic:"👺",co:"#6B0F0F"},{nm:"Kitsune 狐",rl:"Archétype hensōjutsu",d:"Renard métamorphe. Les sanctuaires Inari étaient visités avant les missions de yo-nin.",ic:"🦊",co:"#D4760A"},{nm:"Oni 鬼",rl:"Forces à vaincre",d:"Démons — obstacles intérieurs (peur, colère, attachement). Le Oni Kudaki du kihon happō = briser le démon intérieur.",ic:"👹",co:"#8B0000"},{nm:"Ryūjin 龍神",rl:"Kami des eaux",d:"Dieu-dragon des rivières et mers. Protection pour la traversée des douves. Lié au Sui no kata.",ic:"🐉",co:"#2E5E8E"}];
 
-// ─── MASQUES OCCITANS ───
+// ─── LOS CAMINANTS — Les Marcheurs du Lauragais ───
 var LW=[
 {nm:"L'Esclusièr",oc:"Lo Esclusièr",ic:"🔑",co:"#8B0F0F",dom:"Gardien des passages — rien ne s'ouvre sans lui",
  masque:"Visage de vieil homme buriné, peau tannée par le soleil du canal. Chapeau de paille usé, yeux vifs sous les rides. Une clé rouillée au cou. Il boite légèrement — sa canne est une manivelle d'écluse.",
- histoire:"On dit que les anciens éclusiers du Canal du Midi connaissaient les secrets de l'eau. Au carrefour des écluses, là où les eaux se séparent et se rejoignent, un vieil homme apparaissait à l'aube pour guider les voyageurs. Personne ne passait sans lui rendre ses respects. Il parlait peu mais chaque mot ouvrait un chemin.",
- lieu:"Écluse de Gardouch ou écluse de Castanet, Canal du Midi",
- jour:"Lundi",
- couleurs:"Rouge et noir",
- offrande:"Café noir versé dans l'eau du canal + pain frais posé au bord + bougie rouge",
- fete:"17 février",
- salut:"L'Esclusièr,òbri lo camin — ouvre les chemins devant moi."},
+ histoire:"On dit que les anciens éclusiers du Canal du Midi connaissaient les secrets de l'eau. Au carrefour des écluses, là où les eaux se séparent et se rejoignent, un vieil homme apparaissait à l'aube pour guider les voyageurs. Personne ne passait sans lui rendre ses respects.",
+ personnalite:"Vieux, sage, patient, avec un humour sec. Il boite mais ne tombe jamais. Il parle en énigmes et en proverbes. Il adore les enfants — il les appelle 'mainatge'. Il teste ta patience avant de t'aider. Si tu passes son test, la porte s'ouvre grand.",
+ lieu:"Écluse de Gardouch ou Castanet, Canal du Midi. Tout carrefour de chemins.",
+ jour:"Lundi",nombre:"3",element:"Eau (canal)",couleurs:"Rouge et noir",
+ outils:"Clé rouillée, canne (manivelle d'écluse), chapeau de paille, pipe",
+ offrande:"Café noir sans sucre + pain frais + une pincée de tabac à pipe. Le lundi : ajouter un bonbon.",
+ aime:"Le café noir à l'aube, le tabac, les bonbons, le pain frais, les gens qui saluent en arrivant, la patience, les prières du matin, les devinettes, les enfants, le bruit de l'eau qui coule",
+ deteste:"L'impatience, les gens qui ne saluent pas, ceux qui commencent sans demander la permission, le manque de respect envers les anciens, qu'on l'oublie — il est TOUJOURS le premier",
+ signes:"Porte qui s'ouvre toute seule. Bruit d'eau inattendu. Vieil homme croisé qui te sourit. Clés retrouvées après les avoir cherchées. Chemin qui se débloque soudainement.",
+ approche:"PREMIER que tu appelles, TOUJOURS. Avant tout rituel. Le matin : allume la bougie, verse le café, pose le pain. Dis son salut. Attends 30 secondes en silence. Puis tu peux appeler les autres.",
+ aide:"Ouvrir les chemins bloqués (emploi, projets, relations). Trouver la bonne direction. Débloquer une situation stagnante. Protéger les déplacements. Communication avec les autres Caminants.",
+ quand_fort:"Le lundi. À l'aube. Aux carrefours. Au bord du Canal du Midi. Le 17 février.",
+ tabou:"JAMAIS commencer un rituel sans l'appeler d'abord. Jamais fermer une porte en demandant d'en ouvrir une. Ne jamais l'invoquer en courant — respecter son rythme. Ne jamais oublier de le remercier APRÈS.",
+ priere:"L'Esclusièr, òbri lo camin.\nVièlh del canal, tu que saps las aiguas,\nòbri la pòrta, mostra-me lo camin.\nJo te saludi lo primièr, coma es just.\nCafè per tu, pan per tu, fuòc per tu.\nGràcias, Esclusièr. Passa-me.\n\n(L'Esclusièr, ouvre le chemin. Vieux du canal, toi qui connais les eaux, ouvre la porte, montre-moi le chemin. Je te salue le premier, comme il se doit. Café pour toi, pain pour toi, feu pour toi. Merci, Esclusièr. Laisse-moi passer.)",
+ fete:"17 février",salut:"L'Esclusièr, òbri lo camin — ouvre les chemins devant moi."},
 {nm:"Lo Forgèir",oc:"Lo Forgèir",ic:"⚔️",co:"#cc2200",dom:"Guerrier, fer, combat — protecteur par la force",
  masque:"Visage large aux traits durs, mâchoire carrée, regard de braise. Peau noircie par la fumée de la forge. Bras nus, marqués de brûlures anciennes. Tablier de cuir, marteau à la ceinture. Il ne sourit pas — il protège.",
- histoire:"Dans chaque village du Lauragais, le forgeron était le dernier à fuir et le premier à se battre. Il forgeait les socs de charrue et les lames de défense. Pendant la Croisade des Albigeois, les forgerons cathares cachaient des armes dans les fondations de leurs ateliers. Lo Forgèir est leur mémoire — celui qui transforme le fer brut en lame et l'homme brut en guerrier.",
- lieu:"Ton dōjō. Ou tout lieu où tu t'entraînes au combat.",
- jour:"Mardi",
- couleurs:"Rouge et bleu acier",
- offrande:"Vin rouge de Fronton + un clou en fer planté dans la terre + bougie rouge",
- fete:"24 juin (Sant Joan — nuit des feux)",
- salut:"Forgèir, dona-me lo fèrre — donne-moi le fer, forge ma lame."},
+ histoire:"Dans chaque village du Lauragais, le forgeron était le dernier à fuir et le premier à se battre. Pendant la Croisade des Albigeois, les forgerons cathares cachaient des armes dans les fondations de leurs ateliers. Lo Forgèir est leur mémoire — celui qui transforme le fer brut en lame et l'homme brut en guerrier.",
+ personnalite:"Direct, féroce, loyal jusqu'à la mort. Ne ment jamais — la vérité est son marteau. Il boit du vin rouge, il fume. Il se bat pour ce qui est juste. Ne console pas — il forge. Si tu viens pleurer, il te mettra au travail. Si tu viens te battre, il sera à tes côtés. Patron des soldats, gendarmes, policiers, forgerons — tous ceux qui portent du fer pour protéger.",
+ lieu:"Ton dōjō. Tout lieu où tu t'entraînes au combat. Devant le sac de frappe.",
+ jour:"Mardi (jour de Mars)",nombre:"7",element:"Feu",couleurs:"Rouge et bleu acier",
+ outils:"Marteau, lame, enclume, tablier de cuir, un clou en fer",
+ offrande:"Vin rouge de Fronton + un clou en fer planté dans la terre + bougie rouge. Jours de combat : ajouter un cigare allumé posé au bord.",
+ aime:"Le fer, le vin rouge, les cigares, la viande rouge grillée, la discipline, l'entraînement dur, le courage, la loyauté, les gens qui tiennent parole, le feu",
+ deteste:"La lâcheté, la trahison, le mensonge, la paresse au combat, les gens qui fuient au lieu de protéger, les armes non entretenues, la faiblesse choisie",
+ signes:"Surge d'énergie soudaine. Envie irrésistible de t'entraîner. Colère juste face à l'injustice. Objet en métal trouvé sur ton chemin. Rêves de feu, de forge, de combat.",
+ approche:"Pas de supplications. Viens avec dignité. Tiens-toi droit, regarde la flamme. Parle-lui comme un soldat à son commandant. Offre le vin, plante le clou, allume la rouge. Dis-lui ce que tu VAS faire, pas ce que tu veux qu'il fasse.",
+ aide:"Protection physique de la famille. Force au combat. Courage pour un conflit. Justice. Vaincre un ennemi ou un obstacle. Discipline et constance. Tout ce qui touche au fer, aux armes, à la force.",
+ quand_fort:"Le mardi. Nuit de Sant Joan (24 juin). Pendant l'entraînement combat. Quand le vent d'Autan souffle fort.",
+ tabou:"JAMAIS le supplier — demander avec dignité. Jamais l'invoquer pour attaquer un innocent. Jamais fuir après l'avoir appelé. Jamais laisser une arme sale ou mal rangée.",
+ priere:"Forgèir, dona-me lo fèrre.\nTu que fas las lamas e los escuds,\nfòrja mon còrs, fòrja mon esperit.\nJo non ai paur. Jo soi lo gardian de ma familha.\nVin per tu, fuòc per tu, fèrre per tu.\nDona-me la fòrça justa. Forgèir, gràcias.\n\n(Forgèir, donne-moi le fer. Toi qui fais les lames et les boucliers, forge mon corps, forge mon esprit. Je n'ai pas peur. Je suis le gardien de ma famille. Vin pour toi, feu pour toi, fer pour toi. Donne-moi la force juste. Forgèir, merci.)",
+ fete:"24 juin (Sant Joan — nuit des feux)",salut:"Forgèir, dona-me lo fèrre — donne-moi le fer, forge ma lame."},
 {nm:"Lo Sèrp Blanc",oc:"Lo Sèrp Blanc",ic:"🐍",co:"#f0f0f0",dom:"Sagesse, paternité, pureté — le père cosmique",
  masque:"Pas de visage humain. Un grand serpent blanc immaculé, lent, silencieux, enroulé autour d'une source. Ses yeux sont deux pierres de lune. Il ne parle pas — il transmet par le silence et la présence.",
- histoire:"Les fontaines du Lauragais racontent qu'un serpent blanc vit au fond des sources les plus anciennes. Il ne sort qu'à l'équinoxe de printemps, quand la terre se réveille. Ceux qui le voient reçoivent la sagesse des anciens. C'est l'esprit du père qui veille sans bruit, qui tient la famille sans la serrer.",
- lieu:"Source ou fontaine : fontaine de Baziège, source du Lac de Thésauque, ou toute eau vive",
- jour:"Jeudi",
- couleurs:"Blanc et vert pâle",
- offrande:"Un œuf blanc posé sur la terre + lait versé à la source. Porter du blanc.",
- fete:"21 mars (équinoxe de printemps)",
- salut:"Sèrp Blanc, dona-me la sabièrça — donne-moi la sagesse silencieuse."},
+ histoire:"Les fontaines du Lauragais racontent qu'un serpent blanc vit au fond des sources les plus anciennes. Il ne sort qu'à l'équinoxe de printemps. Ceux qui le voient reçoivent la sagesse des anciens. C'est l'esprit du père qui veille sans bruit, qui tient la famille sans la serrer.",
+ personnalite:"Le plus ancien de tous. Au-delà des mots humains. Il ne parle PAS — il communique par le silence, les sensations, les visions. Sa présence est une paix profonde, totale. Il est le père de tout. Quand il est là, le monde ralentit. Les pensées se clarifient. La vérité apparaît sans effort. La sagesse qui ne s'explique pas — elle se vit.",
+ lieu:"Source ou fontaine : fontaine de Baziège, source du Lac de Thésauque, toute eau vive claire. Le matin très tôt dans le silence total.",
+ jour:"Jeudi",nombre:"1",element:"Eau (pure, source — l'eau originelle)",couleurs:"Blanc et vert pâle",
+ outils:"Rien de visible. Sa présence suffit. Un œuf blanc et un verre de lait sur le coin.",
+ offrande:"Un œuf blanc + lait frais + farine blanche saupoudrée en cercle. Porter du blanc. Tout doit être PROPRE — mains lavées, espace rangé, silence.",
+ aime:"Le blanc sous toutes ses formes, le silence, la propreté absolue, la patience, les prières à voix basse ou en pensée, l'eau claire, le lait, les œufs, la lune, les serpents (ne JAMAIS tuer un serpent), la méditation profonde",
+ deteste:"Le bruit, la saleté, la vulgarité, les prières pressées, le sang, la violence gratuite, l'impureté, les mensonges (il voit tout), le manque de respect envers l'eau",
+ signes:"Paix profonde et soudaine. Animal blanc qui apparaît (oiseau, papillon, chat). Eau qui brille inhabituellement. Rêves de serpents protecteurs. Sensation d'être observé avec bienveillance. Clarté mentale soudaine. Ralentissement du temps.",
+ approche:"En silence. Mains lavées. Espace propre. Bougie blanche uniquement. Lait et œuf posés doucement. NE PAS parler à voix haute — il entend les pensées. Méditation yeux fermés. Attendre. Il vient quand il décide. La patience EST le rituel.",
+ aide:"Sagesse pour les grandes décisions. Paternité — être un meilleur père, plus patient. Guérison profonde. Paix intérieure quand tout est chaos. Clarté quand tu ne sais plus. Connexion avec les ancêtres les plus anciens. Bénédiction de la famille.",
+ quand_fort:"Le jeudi. Équinoxe de printemps (21 mars). Pleine lune. Le silence du matin (4h50). Au bord de l'eau claire.",
+ tabou:"JAMAIS l'invoquer mains sales. Jamais en criant ou en colère. Jamais tuer un serpent après l'avoir appelé. Jamais verser de sang en sa présence (pas de viande, pas de vin rouge — lait et œuf seulement). Jamais polluer une source d'eau. Ne pas mélanger avec Lo Forgèir — ils sont complémentaires mais ne se croisent pas.",
+ priere:"(En silence, yeux fermés, paumes vers le ciel)\n\nSèrp Blanc, dona-me la sabiòrça.\nTu que saps tot e dises res,\nmostra-me dins lo silenci.\nJo soi lo pilòt de ma familha.\nLach per tu, blancor per tu, silenci per tu.\nFai-me lo paire que devi èsser.\n\n(Serpent Blanc, donne-moi la sagesse. Toi qui sais tout et ne dis rien, montre-moi dans le silence. Je suis le pilier de ma famille. Lait pour toi, blancheur pour toi, silence pour toi. Fais de moi le père que je dois être.)",
+ fete:"21 mars (équinoxe de printemps)",salut:"Sèrp Blanc, dona-me la sabiòrça — donne-moi la sagesse silencieuse."},
 {nm:"La Bòna Dama",oc:"La Bòna Dama",ic:"💜",co:"#9333ea",dom:"Protection des enfants, amour féroce, force maternelle",
- masque:"Visage de femme jeune mais grave. Robe sombre, capuche relevée. Un poignard caché dans la ceinture, un chapelet dans l'autre main. Ses yeux sont doux avec les enfants et terrifiants pour quiconque les menace. Cicatrice sur la joue gauche — elle s'est battue.",
- histoire:"Les Bonnes Dames — les Parfaites cathares — marchaient à travers le Lauragais pour protéger les familles pendant la Croisade. Elles cachaient les enfants dans les fermes, nourrissaient les réfugiés, soignaient les blessés. Le 16 mars 1244, 225 d'entre elles montèrent au bûcher de Montségur plutôt que de renier leur foi. La Bòna Dama est leur mémoire vivante — la mère qui tue pour ses enfants.",
- lieu:"Chez toi, en famille. Ou Montségur si tu peux y aller.",
- jour:"Samedi",
- couleurs:"Violet et or",
- offrande:"Lait et miel + bougie violette. Nommer tes filles et ta femme à voix haute.",
- fete:"16 mars (bûcher de Montségur 1244)",
- salut:"Bòna Dama, garda los mainatges — garde les enfants sous ton manteau."},
-{nm:"L'Òme del Bòsc",oc:"L'Òme del Bòsc",ic:"🌳",co:"#2d5a27",dom:"Nature sauvage, forêt, plantes, instinct animal",
+ masque:"Visage de femme jeune mais grave. Robe sombre, capuche relevée. Un poignard caché dans la ceinture, un chapelet dans l'autre main. Yeux doux avec les enfants, terrifiants pour quiconque les menace. Cicatrice sur la joue gauche — elle s'est battue.",
+ histoire:"Les Bonnes Dames — les Parfaites cathares — marchaient à travers le Lauragais pour protéger les familles pendant la Croisade. Le 16 mars 1244, 225 d'entre elles montèrent au bûcher de Montségur plutôt que de renier leur foi. La Bòna Dama est leur mémoire vivante — la mère qui tue pour ses enfants.",
+ personnalite:"FÉROCE. Ne joue pas. Parle peu — agit. Sa cicatrice raconte qu'elle s'est battue et qu'elle a survécu. Douce avec les enfants — mortelle avec ceux qui les menacent. Jalouse de la protection de TA famille — elle ne te partage pas avec les distractions. Mère qui fait TOUT seule. Elle comprend la fatigue, le sacrifice, le fait de porter le monde sur ses épaules.",
+ lieu:"Chez toi, dans la chambre des filles ou l'espace familial. Ou Montségur.",
+ jour:"Samedi",nombre:"5",element:"Feu et Terre",couleurs:"Violet et or",
+ outils:"Poignard (ou couteau d'entraînement), chapelet, bougie violette",
+ offrande:"Viande grillée (porc, poulet rôti) + vin rouge ou rhum + une cigarette allumée + bougie violette. Pour les filles : ajouter un jouet ou un dessin d'elles.",
+ aime:"Ses enfants (les TIENS — elle les adopte), la viande grillée, le rhum, les cigarettes, les poignards, le violet, l'or, les hommes qui protègent leur famille, la loyauté conjugale, les gens qui tiennent debout malgré la douleur",
+ deteste:"Les hommes qui abandonnent leurs enfants — affront ULTIME. La faiblesse face à une menace. Les loyautés divisées. Le parfum (elle est guerrière, pas coquette). Les excuses pour ne pas être présent.",
+ signes:"Instinct protecteur soudain et violent — tu SAIS qu'un danger menace tes filles avant de le voir. Rêves d'une femme en capuche sombre qui veille. Présence protectrice la nuit dans la chambre des filles. Colère froide quand quelqu'un s'approche mal de ta famille.",
+ approche:"Avec respect et humilité mais sans peur. Nomme tes filles et ta femme à voix haute — elle a besoin de connaître ceux qu'elle protège. Offre la viande, le vin, allume la violette. Parle-lui comme un père parle à la mère de ses enfants — avec reconnaissance pour le sacrifice partagé.",
+ aide:"Protection des enfants — SPÉCIALITÉ absolue. Protection femme et foyer. Guérir les maladies des enfants. Force quand tu es épuisé par les responsabilités. Courage face à l'adversité. Justice quand un enfant est en danger.",
+ quand_fort:"Le samedi. Le 16 mars. Quand tes filles sont malades. Quand tu sens une menace. La nuit — elle veille quand tout dort.",
+ tabou:"Ne JAMAIS la confondre avec un esprit doux. Ne jamais l'invoquer pour des raisons futiles. Ne jamais l'appeler et ensuite négliger tes filles. Si tu promets devant elle, TIENS ta promesse. Ne pas mélanger sa bougie violette avec d'autres.",
+ priere:"Bòna Dama, garda los mainatges.\nTu que montères al fuòc per la fe,\ntorna-te ara per ma familha.\nGarda mas filhas, garda ma femna.\nGarda aquesta maison.\nCarn per tu, fuòc per tu, fòrça per tu.\nRes passarà — jo soi aquí, tu siás aquí.\n\n(Bonne Dame, garde les enfants. Toi qui es montée au feu pour la foi, reviens maintenant pour ma famille. Garde mes filles, garde ma femme. Garde cette maison. Viande pour toi, feu pour toi, force pour toi. Rien ne passera — je suis là, tu es là.)",
+ fete:"16 mars (bûcher de Montségur 1244)",salut:"Bòna Dama, garda los mainatges — garde les enfants sous ton manteau."},
+{nm:"L'Òme del Bòsc",oc:"L'Òme del Bòsc",ic:"🌳",co:"#2d5a27",dom:"Nature sauvage, forêt, plantes, guérison, initiation",
  masque:"Mi-homme, mi-arbre. Visage envahi de mousse et de lichen. Des branches poussent de ses cheveux. Pieds nus, noircis par la terre. Il sent la résine et la pluie. Ses yeux sont verts comme les feuilles de chêne. On ne le voit jamais — on sent sa présence.",
- histoire:"L'Homme Vert est présent dans tout le Midi depuis les Romains. Dans les forêts du Lauragais — entre Escalquens, Labège, Nailloux — les anciens ne coupaient jamais un arbre sans demander pardon. Les guérisseurs allaient chercher les plantes médicinales à l'aube en murmurant des prières. L'Òme del Bòsc est le gardien de ces bois — celui qui initie, qui guérit par la terre, et qui punit ceux qui détruisent sans respect.",
- lieu:"Forêt entre Escalquens et Labège, bois de Nailloux, ou tout lieu boisé isolé",
- jour:"Mercredi",
- couleurs:"Vert et brun terre",
- offrande:"Tabac naturel déposé au pied d'un vieux chêne + miel. Marcher pieds nus.",
- fete:"1er mai (Beltaine)",
- salut:"Òme del Bòsc, mostra-me lo camin de la tèrra — montre-moi le chemin de la terre."},
-{nm:"Lo Lauragués",oc:"Lo Lauragués",ic:"🌾",co:"#d4a017",dom:"Terre cultivée, récolte, travail, nourriture de la famille",
+ histoire:"L'Homme Vert est présent dans tout le Midi depuis les Romains. Dans les forêts du Lauragais les anciens ne coupaient jamais un arbre sans demander pardon. Les guérisseurs allaient chercher les plantes médicinales à l'aube en murmurant des prières. L'Òme del Bòsc est le gardien de ces bois — celui qui initie, qui guérit par la terre, et qui punit ceux qui détruisent sans respect.",
+ personnalite:"Sauvage, brut, non domestiqué. Parle à travers les feuilles, les oiseaux, les branches qui craquent. Connaît CHAQUE plante, racine, poison, remède. Guérisseur et initiateur — pour aller plus profond dans la voie, tu passes par lui. Peut être terrifiant en forêt la nuit — mais fondamentalement un professeur. Teste ton courage et ta sincérité avant de partager ses secrets.",
+ lieu:"Forêt Escalquens-Labège, bois de Nailloux, sentiers du Lac de Thésauque. Tout lieu boisé isolé. Aussi : ton jardin si tu y as des plantes.",
+ jour:"Mercredi",nombre:"4",element:"Terre",couleurs:"Vert et brun terre",
+ outils:"Branche de chêne, herbes séchées, pierres de rivière, sac de toile (jamais de plastique)",
+ offrande:"Tabac naturel au pied d'un vieux chêne + miel + une poignée de graines. Marcher pieds nus. Ne rien emballer dans du plastique.",
+ aime:"Le tabac naturel, le miel, l'hydromel, les aliments crus, les pieds nus, le respect des arbres, le silence en forêt, les herbes médicinales, les gens qui demandent avant de prendre, les animaux, la pluie, la terre mouillée",
+ deteste:"La pollution — plastique, pesticides, déchets. Couper des arbres sans demander. Les gens qui ont peur de la nature. Les choses artificielles. Les téléphones en forêt quand on cherche à le rencontrer.",
+ signes:"Se sentir observé en forêt sans voir personne. Animal sauvage qui te regarde sans fuir. Plante inhabituelle sur ton chemin. Branches qui craquent sans vent. Rêves de forêt immense. Envie soudaine de marcher pieds nus.",
+ approche:"Va en forêt seul. Téléphone dans la voiture. Pieds nus si possible. Trouve le plus vieux chêne. Main sur l'écorce. Yeux fermés. Tabac et miel au pied. Dis le salut. Assieds-toi dos au tronc, 20 minutes minimum en silence. Il viendra — tu ne le verras pas, tu le sentiras.",
+ aide:"Guérison par les plantes (écoute ton intuition après l'avoir appelé). Connexion à la terre et à l'instinct. Initiation spirituelle. Force de la nature au combat. Trouver des remèdes. Protéger un terrain. Renforcer les défenses du corps.",
+ quand_fort:"Le mercredi. Le 1er mai (Beltaine). À l'aube en forêt. Quand il pleut. Aux changements de saison.",
+ tabou:"JAMAIS prendre sans laisser. Jamais couper une branche vivante sans demander. Jamais entrer avec du plastique visible. Ne jamais tuer un animal inutilement. Ne jamais mentir en forêt. Si un romarin meurt chez toi sans raison — avertissement : purifie ta maison.",
+ priere:"Òme del Bòsc, mostra-me lo camin de la tèrra.\nTu que saps las èrbas e las racinòlas,\ntu que gardas los aures vièlhs,\nòbri-me los uòlhs.\nTabac per tu, mèl per tu, silenci per tu.\nJo marchi pè-descalç sus ta tèrra.\nEnsenha-me.\n\n(Homme du Bois, montre-moi le chemin de la terre. Toi qui connais les herbes et les racines, toi qui gardes les vieux arbres, ouvre-moi les yeux. Tabac pour toi, miel pour toi, silence pour toi. Je marche pieds nus sur ta terre. Enseigne-moi.)",
+ fete:"1er mai (Beltaine)",salut:"Òme del Bòsc, mostra-me lo camin de la tèrra — montre-moi le chemin de la terre."},
+{nm:"Lo Lauragués",oc:"Lo Lauragués",ic:"🌾",co:"#d4a017",dom:"Terre cultivée, récolte, travail honnête, abondance pour la famille",
  masque:"Paysan solide, large d'épaules. Chemise de lin ouverte, peau brûlée par le soleil. Chapeau de paille, faucille à la ceinture. Mains énormes — des mains qui ont touché chaque grain de blé du pays. Il rit fort et mange beaucoup. Généreux mais ne supporte pas le gaspillage.",
- histoire:"Le Lauragais est le grenier à blé de l'Occitanie depuis mille ans. Quand les seigneurs du Nord sont descendus écraser les Cathares, c'est la terre noire du Lauragais qui a nourri la résistance. Lo Lauragués est l'esprit de cette terre grasse entre Montgiscard et Castelnaudary — celui qui fait pousser le blé, le tournesol, le pastel. Il nourrit les familles et demande en retour le respect de la terre.",
- lieu:"Les champs autour de Montgiscard, Deyme, Baziège. Face aux tournesols.",
- jour:"Vendredi",
- couleurs:"Bleu travail et jaune paille",
- offrande:"Pain frais posé sur la terre + huile d'olive versée + un épi de blé ou tournesol",
- fete:"15 août (Fèsta de la Còlta — fête de la récolte)",
- salut:"Lauragués, nòirís ma familha — nourris ma famille, bénis cette terre."}
+ histoire:"Le Lauragais est le grenier à blé de l'Occitanie depuis mille ans. Quand les seigneurs du Nord sont descendus écraser les Cathares, c'est la terre noire du Lauragais qui a nourri la résistance. Lo Lauragués est l'esprit de cette terre grasse — celui qui fait pousser le blé, le tournesol, le pastel. Il nourrit les familles et demande en retour le respect de la terre.",
+ personnalite:"Le plus humain de tous. Simple, honnête, travailleur, généreux mais pratique. Rit facilement, mange bien, boit du café au lait. Se méfie des gens de la ville. Vêtements simples — chapeau de paille, chemise de travail. Parle sans détours. Ne comprend pas la paresse. Mais généreux avec ceux qui travaillent — sa table est toujours pleine.",
+ lieu:"Champs autour de Montgiscard, Deyme, Baziège. Face aux tournesols en été. Le marché de Nailloux.",
+ jour:"Vendredi",nombre:"6",element:"Terre (cultivée — la terre travaillée par l'homme)",couleurs:"Bleu travail et jaune paille",
+ outils:"Faucille, chapeau de paille, panier en osier, sac de jute",
+ offrande:"Pain frais (le plus important) + café au lait (pas noir) + fruits de saison + huile d'olive sur la terre. Le vendredi : un bol de cassoulet ou de haricots.",
+ aime:"Le pain frais, le café au lait, le cassoulet, les haricots, la terre, le blé, le tournesol, l'honnêteté, le travail manuel, les repas en famille, les marchés, les gens qui suent",
+ deteste:"Le gaspillage — surtout de nourriture (ne JAMAIS jeter de pain devant lui). La malhonnêteté. Les gens qui ne travaillent pas et se plaignent. Dépenser bêtement. L'orgueil. Le luxe ostentatoire.",
+ signes:"Abondance soudaine — argent inattendu, promotion, opportunité. Jardin qui pousse bien. Pièces de monnaie trouvées par terre (ramasse-les). Bonne chance financière après période difficile. Rêves de champs, de récolte, de blé doré.",
+ approche:"Simplement. Pas de cérémonie compliquée. Pain, café au lait, un fruit. Parle-lui comme à un voisin paysan — avec respect sans formalités. Dis-lui ce dont ta famille a besoin concrètement (pas des rêves abstraits — du concret : le loyer, la nourriture, le travail).",
+ aide:"Travail et emploi. Abondance à la maison — frigo toujours plein. Stabilité financière (pas la richesse, la STABILITÉ). Récolter ce qu'on a semé. Protéger les biens de la famille.",
+ quand_fort:"Le vendredi. Le 15 août. Au marché. Quand tu cuisines pour la famille. Quand tu travailles avec tes mains.",
+ tabou:"Ne JAMAIS gaspiller de nourriture devant lui. Ne jamais jeter du pain — le donner aux oiseaux ou sécher pour chapelure. Ne jamais l'invoquer pour de l'avidité. Ne jamais mentir sur ton travail. Ne jamais regarder de haut quelqu'un qui travaille la terre.",
+ priere:"Lauragués, nòirís ma familha.\nTu que fas créisser lo blat e lo solelh,\ntèrra negra del país, dona-nos ton pan.\nMas filhas devon manjar, mon tèit deu tener.\nPan per tu, cafè per tu, trabalh per tu.\nJo sèmi, tu fas créisser.\nGràcias, Lauragués.\n\n(Lauragais, nourris ma famille. Toi qui fais pousser le blé et le tournesol, terre noire du pays, donne-nous ton pain. Mes filles doivent manger, mon toit doit tenir. Pain pour toi, café pour toi, travail pour toi. Je sème, tu fais pousser. Merci, Lauragais.)",
+ fete:"15 août (Fèsta de la Còlta — fête de la récolte)",salut:"Lauragués, nòirís ma familha — nourris ma famille, bénis cette terre."}
 ];
 
 // ─── AUTEL & ANCÊTRES ───
@@ -1087,25 +1135,30 @@ function render(){
     }
 
     if(S.spiritTab==='masques'){
-      h+='<div class="sc">MASQUES OCCITANS — LÉGENDES DU LAURAGAIS</div>';
-      h+='<div style="font-size:15px;color:#888;margin-bottom:12px;line-height:1.6;font-style:italic">Les esprits du pays d\'oc — figures légendaires du Lauragais, de la Croisade cathare et du Canal du Midi. Folklore ancien transmis par les anciens.</div>';
+      h+='<div class="sc">LOS CAMINANTS — LES MARCHEURS DU LAURAGAIS</div>';
+      h+='<div style="font-size:15px;color:#888;margin-bottom:12px;line-height:1.6;font-style:italic">Les esprits du pays d\'oc — figures légendaires du Lauragais. Folklore ancien transmis par les anciens. L\'Esclusièr s\'appelle toujours en premier.</div>';
       LW.forEach(function(l){
         h+='<div class="cd" style="border-left:4px solid '+l.co+'"><div class="ch"><span style="font-size:20px;margin-right:8px">'+l.ic+'</span>'+l.nm+' <span style="color:#555;font-weight:400;font-size:15px">— '+l.dom+'</span></div><div class="cb">';
-        // Masque
         h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">LE MASQUE</div><div style="font-size:17px;color:#bbb;line-height:1.7;font-style:italic">'+l.masque+'</div></div>';
-        // Histoire
         h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">L\'HISTOIRE</div><div style="font-size:17px;color:#bbb;line-height:1.7">'+l.histoire+'</div></div>';
-        // Details grid
+        h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">PERSONNALITÉ</div><div style="font-size:17px;color:#bbb;line-height:1.7">'+l.personnalite+'</div></div>';
+        // Grid
         h+='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">';
         h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">JOUR</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.jour+'</div></div>';
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">FÊTE</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.fete+'</div></div>';
+        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">NOMBRE</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.nombre+'</div></div>';
+        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">ÉLÉMENT</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.element+'</div></div>';
         h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">COULEURS</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.couleurs+'</div></div>';
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">LIEU SACRÉ</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.lieu+'</div></div>';
         h+='</div>';
-        // Offrande
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px;margin-bottom:12px"><div style="font-size:12px;color:#555">OFFRANDE</div><div style="font-size:17px;color:#bbb;margin-top:4px;line-height:1.6">'+l.offrande+'</div></div>';
+        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px;margin-bottom:8px"><div style="font-size:12px;color:#555">LIEU SACRÉ</div><div style="font-size:16px;color:#e8e0d4;margin-top:2px">'+l.lieu+'</div></div>';
+        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px;margin-bottom:8px"><div style="font-size:12px;color:#555">OUTILS</div><div style="font-size:16px;color:#e8e0d4;margin-top:2px">'+l.outils+'</div></div>';
+        // Detailed sections
+        [{t:"OFFRANDE",k:"offrande"},{t:"CE QU'IL AIME",k:"aime"},{t:"CE QU'IL DÉTESTE",k:"deteste"},{t:"SIGNES QU'IL ENVOIE",k:"signes"},{t:"COMMENT L'APPROCHER",k:"approche"},{t:"IL AIDE POUR",k:"aide"},{t:"QUAND IL EST LE PLUS FORT",k:"quand_fort"},{t:"TABOUS — NE JAMAIS",k:"tabou"}].forEach(function(sec){
+          if(l[sec.k])h+='<div style="margin-bottom:10px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:3px;letter-spacing:1px">'+sec.t+'</div><div style="font-size:17px;color:#bbb;line-height:1.7">'+l[sec.k]+'</div></div>';
+        });
+        // Prière
+        if(l.priere){h+='<div style="margin:14px 0;padding:14px;border:1px solid '+l.co+'30;border-radius:10px;background:#0a0a0a"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:6px;letter-spacing:1px">PRIÈRE</div><div style="font-size:17px;color:#bbb;line-height:1.8;white-space:pre-line;font-style:italic">'+l.priere+'</div></div>';}
         // Salut
-        h+='<div style="padding:12px;border:1px solid '+l.co+'40;border-radius:8px;text-align:center"><div style="font-size:19px;color:'+l.co+';font-weight:600;font-style:italic;line-height:1.6">« '+l.salut+' »</div></div>';
+        h+='<div style="padding:12px;border:1px solid '+l.co+'40;border-radius:8px;text-align:center;margin-top:6px"><div style="font-size:14px;color:#555;margin-bottom:4px">FÊTE : '+l.fete+'</div><div style="font-size:19px;color:'+l.co+';font-weight:600;font-style:italic;line-height:1.6">« '+l.salut+' »</div></div>';
         h+='</div></div>';
       });
     }
