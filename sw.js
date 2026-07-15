@@ -1,4 +1,4 @@
-var CACHE = "lombra-v16";
+var CACHE = "lombra-v17";
 var URLS = [
   "./",
   "./index.html",

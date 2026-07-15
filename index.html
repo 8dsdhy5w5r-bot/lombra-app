@@ -848,7 +848,7 @@ var RIT={
 var LV=[{n:1,t:"Origines & Histoire",i:"⛩️",c:14,s:1},{n:2,t:"Spiritualité & Cosmologie",i:"🔮",c:17,s:15},{n:3,t:"Philosophie & Éthique",i:"☯️",c:10,s:32},{n:4,t:"Les Écoles (Ryūha)",i:"🏯",c:9,s:42},{n:5,t:"Taijutsu",i:"👊",c:10,s:51},{n:6,t:"Bukijutsu",i:"⚔️",c:8,s:61},{n:7,t:"Shinobi-iri",i:"🌙",c:7,s:69},{n:8,t:"Hensōjutsu",i:"🎭",c:5,s:76},{n:9,t:"Chihō",i:"👁️",c:5,s:81},{n:10,t:"Survie & Médecine",i:"🌿",c:5,s:86},{n:11,t:"Stratégie",i:"♟️",c:4,s:91},{n:12,t:"Cas historiques",i:"📜",c:4,s:95},{n:13,t:"Le Shinobi Européen",i:"🗡️",c:25,s:99}];
 
 // ─── STATE ───
-var S={tab:'home',ph:0,wi:-1,si:0,ki:0,ai:0,bi:0,livSel:null,chSel:null,streak:0,total:0,done:false,restOn:false,restSec:0,restMax:0,bOn:false,bSec:0,bPhase:0,bRound:0,ratings:{},checks:{},foodTab:'repas',testTab:'bench',spiritTab:'bible'};
+var S={tab:'home',ph:0,wi:-1,si:0,ki:0,ai:0,bi:0,livSel:null,chSel:null,streak:0,total:0,done:false,restOn:false,restSec:0,restMax:0,bOn:false,bSec:0,bPhase:0,bRound:0,ratings:{},checks:{},foodTab:'repas',testTab:'bench',spiritTab:'bible',bibleChap:null,bibleLiv:null,vieTab:'routine',ritTab:'bains'};
 try{var sv=JSON.parse(localStorage.getItem('ov10'));if(sv){for(var k in sv)if(S.hasOwnProperty(k))S[k]=sv[k];S.done=sv.lastDate===new Date().toISOString().slice(0,10);}}catch(e){}
 
 function save(){localStorage.setItem('ov10',JSON.stringify({streak:S.streak,total:S.total,phase:S.ph,lastDate:todayStr(),ratings:S.ratings,checks:S.checks}));}
@@ -1083,7 +1083,7 @@ function render(){
   // ══════ MODE VIE ══════
   if(S.tab==='vie'){
     h+='<div class="sc">生 MODE VIE — LE GUERRIER-PÈRE</div>';
-    if(S.vieTab===undefined)S.vieTab='routine';
+    
     h+='<div style="display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap">';
     ['routine','piliers','famille','mealprep'].forEach(function(t){
       var lb={routine:'⏰ Journée',piliers:'🎯 Piliers',famille:'👨‍👧‍👧 Famille',mealprep:'🍱 Meal Prep'}[t];
@@ -1173,9 +1173,6 @@ function render(){
     });h+='</div>';
 
     if(S.spiritTab==='bible'){
-      if(S.bibleChap===undefined)S.bibleChap=null;
-      if(S.bibleLiv===undefined)S.bibleLiv=null;
-      
       if(S.bibleChap!==null&&S.bibleLiv!==null){
         var liv=BCam[S.bibleLiv];var ch=liv.ch[S.bibleChap];
         h+='<button class="pl" onclick="S.bibleChap=null;render()" style="font-size:15px">← '+liv.t.split(' — ')[0]+'</button>';
@@ -1270,7 +1267,7 @@ function render(){
     }
 
     if(S.spiritTab==='rituels'){
-      if(S.ritTab===undefined)S.ritTab='bains';
+      
       h+='<div class="sc">RITUELS TRADITIONNELS D\'OCCITANIE</div>';
       h+='<div style="display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap">';
       ['bains','bougies','protections','poudres','signes'].forEach(function(t){
@@ -1412,7 +1409,7 @@ function render(){
 }
 
 // ─── ACTIONS ───
-function go(t){S.tab=t;S.wi=-1;S.livSel=null;S.chSel=null;render();window.scrollTo(0,0);}
+function go(t){S.tab=t;S.wi=-1;S.livSel=null;S.chSel=null;S.bibleLiv=null;S.bibleChap=null;render();window.scrollTo(0,0);}
 function testVoice(){try{var u=new SpeechSynthesisUtterance('Sensei IA activé. Prépare-toi, guerrier.');u.lang='fr-FR';u.rate=0.9;speechSynthesis.speak(u);}catch(e){alert('Synthèse vocale non supportée sur ce navigateur.');}}
 function setPh(i){S.ph=i;S.wi=-1;save();render();}
 function markDone(){if(S.done)return;var d=JSON.parse(localStorage.getItem('ov10')||'{}');var y=new Date(Date.now()-864e5).toISOString().slice(0,10);S.streak=(d.lastDate===y?(d.streak||0)+1:1);S.total=(d.total||0)+1;S.done=true;save();render();}
