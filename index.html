@@ -51,10 +51,10 @@ button{font-family:inherit;-webkit-tap-highlight-color:transparent;cursor:pointe
 /* ══ FOLD OUVERT (>600px) ══ */
 @media(min-width:600px){
   body{font-size:19px}
-  .w{max-width:860px;padding:0 20px 80px}
-  .hd{padding:28px 24px 20px;border-radius:0 0 16px 16px}
+  .w{padding:0 24px 80px}
+  .hd{padding:28px 24px 20px}
   .nv button{min-width:60px;padding:12px 6px 10px;font-size:15px}
-  .ct{padding:20px 8px}
+  .ct{padding:20px 12px}
   .sc{font-size:16px}
   .ch{font-size:20px;padding:16px 20px}
   .cb{padding:16px 20px}
@@ -1083,7 +1083,7 @@ function render(){
   // ══════ MODE VIE ══════
   if(S.tab==='vie'){
     h+='<div class="sc">生 MODE VIE — LE GUERRIER-PÈRE</div>';
-    if(!S.vieTab)S.vieTab='routine';
+    if(S.vieTab===undefined)S.vieTab='routine';
     h+='<div style="display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap">';
     ['routine','piliers','famille','mealprep'].forEach(function(t){
       var lb={routine:'⏰ Journée',piliers:'🎯 Piliers',famille:'👨‍👧‍👧 Famille',mealprep:'🍱 Meal Prep'}[t];
@@ -1173,10 +1173,10 @@ function render(){
     });h+='</div>';
 
     if(S.spiritTab==='bible'){
-      if(!S.bibleChap)S.bibleChap=null;
-      if(!S.bibleLiv)S.bibleLiv=null;
+      if(S.bibleChap===undefined)S.bibleChap=null;
+      if(S.bibleLiv===undefined)S.bibleLiv=null;
       
-      if(S.bibleChap!==null){
+      if(S.bibleChap!==null&&S.bibleLiv!==null){
         var liv=BCam[S.bibleLiv];var ch=liv.ch[S.bibleChap];
         h+='<button class="pl" onclick="S.bibleChap=null;render()" style="font-size:15px">← '+liv.t.split(' — ')[0]+'</button>';
         h+='<div class="cd" style="margin-top:12px"><div class="ch" style="font-size:20px">'+ch.t+'</div><div class="cb"><div style="font-size:17px;color:#4a3f30;line-height:1.85;white-space:pre-line">'+ch.x+'</div></div></div>';
@@ -1270,7 +1270,7 @@ function render(){
     }
 
     if(S.spiritTab==='rituels'){
-      if(!S.ritTab)S.ritTab='bains';
+      if(S.ritTab===undefined)S.ritTab='bains';
       h+='<div class="sc">RITUELS TRADITIONNELS D\'OCCITANIE</div>';
       h+='<div style="display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap">';
       ['bains','bougies','protections','poudres','signes'].forEach(function(t){
