@@ -1,7 +1,7 @@
 {
   "name": "L'Ombra — Bible du Shinobi",
   "short_name": "L'Ombra",
-  "description": "Encyclopédie shinobi + entraînement personnalisé",
+  "description": "Système opérationnel — Los Caminants del Lauragués",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

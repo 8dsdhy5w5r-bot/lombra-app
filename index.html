@@ -7,45 +7,46 @@
 <script src="chapters.js?v=2"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Georgia,serif;background:#0a0a0a;color:#e8e0d4;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.75}
+body{font-family:-apple-system,system-ui,'Segoe UI',sans-serif;background:#f5f0e6;color:#2d2215;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.75}
 button{font-family:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}
 ::-webkit-scrollbar{display:none}
 .w{max-width:540px;margin:0 auto;min-height:100vh;padding-bottom:80px}
-.hd{padding:22px 18px 16px;text-align:center;background:linear-gradient(135deg,#0a0a0a,#1a1a2e)}
-.nv{display:flex;background:#111;border-bottom:1px solid #222;position:sticky;top:0;z-index:9;overflow-x:auto}
-.nv button{flex:1;min-width:48px;padding:10px 3px 8px;border:none;background:none;color:#555;font-size:14px}
-.nv button.a{color:#B8860B;border-bottom:2px solid #B8860B}
+.hd{padding:22px 18px 16px;text-align:center;background:linear-gradient(135deg,#2d2215,#3a2e1c)}
+.nv{display:flex;background:#fff;border-bottom:1px solid #d4c9b5;position:sticky;top:0;z-index:9;overflow-x:auto}
+.nv button{flex:1;min-width:48px;padding:10px 3px 8px;border:none;background:none;color:#9a8d7a;font-size:14px}
+.nv button.a{color:#8B6914;border-bottom:2px solid #8B6914}
 .ct{padding:16px}
-.sc{font-size:14px;color:#B8860B;letter-spacing:2px;margin-bottom:12px;font-weight:700}
-.cd{background:#151518;border:1px solid #222;border-radius:12px;margin-bottom:12px;overflow:hidden}
-.ch{padding:14px 16px;background:linear-gradient(135deg,#1a1a2e,#0f0f1a);color:#B8860B;font-size:18px;font-weight:600}
+.sc{font-size:14px;color:#8B6914;letter-spacing:2px;margin-bottom:12px;font-weight:700}
+.cd{background:#fff;border:1px solid #e0d6c8;border-radius:12px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.ch{padding:14px 16px;background:linear-gradient(135deg,#f9f5ed,#f0ebe0);color:#6b4c1e;font-size:18px;font-weight:600;border-bottom:1px solid #e8dfd0}
 .cb{padding:14px 16px}
-.rw{padding:10px 16px;border-bottom:1px solid #1a1a1a;font-size:17px;display:flex;gap:12px;align-items:center}
+.rw{padding:10px 16px;border-bottom:1px solid #f0ebe0;font-size:17px;display:flex;gap:12px;align-items:center}
 .rw:last-child{border:none}
-.nm{width:28px;height:28px;border-radius:50%;border:2px solid #8B0F0F;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8B0F0F;flex-shrink:0}
-.pl{padding:9px 16px;border-radius:18px;border:1px solid #333;background:#111;color:#888;font-size:15px;cursor:pointer;display:inline-block}
-.pl.a{background:#8B0F0F;color:#fff;border-color:#8B0F0F}
-.ex{cursor:pointer;padding:14px 16px;background:#151518;border:1px solid #222;border-radius:10px;margin-bottom:8px}
-.ex:active{background:#1a1a20}
-.yt{display:inline-block;font-size:16px;color:#ff4444;text-decoration:none;margin-left:8px;vertical-align:middle}
+.nm{width:28px;height:28px;border-radius:50%;border:2px solid #8B6914;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8B6914;flex-shrink:0}
+.pl{padding:9px 16px;border-radius:18px;border:1px solid #d4c9b5;background:#faf7f0;color:#6b5e50;font-size:15px;cursor:pointer;display:inline-block}
+.pl.a{background:#8B6914;color:#2d2215;border-color:#8B6914}
+.ex{cursor:pointer;padding:14px 16px;background:#fff;border:1px solid #e0d6c8;border-radius:10px;margin-bottom:8px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ex:active{background:#f9f5ed}
+.yt{display:inline-block;font-size:16px;color:#cc4444;text-decoration:none;margin-left:8px;vertical-align:middle}
 .yt:hover{text-decoration:underline}
-.breath-circle{width:150px;height:150px;border-radius:50%;border:3px solid #B8860B;margin:20px auto;display:flex;align-items:center;justify-content:center;font-size:34px;color:#B8860B;transition:transform 4s ease-in-out}
+.breath-circle{width:150px;height:150px;border-radius:50%;border:3px solid #8B6914;margin:20px auto;display:flex;align-items:center;justify-content:center;font-size:34px;color:#8B6914;transition:transform 4s ease-in-out;background:#faf7f0}
 .breath-circle.expand{transform:scale(1.4)}
-.breath-circle.hold{transform:scale(1.4);border-color:#8B0F0F}
-.rest-bar{height:10px;background:#222;border-radius:5px;margin:10px 0;overflow:hidden}
-.rest-fill{height:100%;background:#B8860B;border-radius:5px;transition:width 1s linear}
+.breath-circle.hold{transform:scale(1.4);border-color:#8B2500}
+.rest-bar{height:10px;background:#e8dfd0;border-radius:5px;margin:10px 0;overflow:hidden}
+.rest-fill{height:100%;background:#8B6914;border-radius:5px;transition:width 1s linear}
 .star{cursor:pointer;font-size:28px;display:inline-block;padding:5px}
-.chk{width:28px;height:28px;border-radius:6px;border:2px solid #333;background:none;color:transparent;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;cursor:pointer;transition:all .2s}
-.chk.done{border-color:#4ade80;background:#4ade8030;color:#4ade80}
+.chk{width:28px;height:28px;border-radius:6px;border:2px solid #d4c9b5;background:none;color:transparent;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;cursor:pointer;transition:all .2s}
+.chk.done{border-color:#2d8a4e;background:#2d8a4e20;color:#2d8a4e}
 .exname{flex:1;font-size:17px;line-height:1.6}
 .exname.dk{opacity:.5;text-decoration:line-through}
-.detail{font-size:15px;color:#888;margin-top:3px}
+.detail{font-size:15px;color:#8a7d6c;margin-top:3px}
 .tbl{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}
-.tbl th{background:#1a1a2e;color:#B8860B;padding:10px;text-align:left;font-size:14px;border:1px solid #222}
-.tbl td{padding:10px;border:1px solid #222;color:#bbb}
-.tbl tr:nth-child(even) td{background:#111}
+.tbl th{background:#f0ebe0;color:#6b4c1e;padding:10px;text-align:left;font-size:14px;border:1px solid #e0d6c8}
+.tbl td{padding:10px;border:1px solid #e0d6c8;color:#4a3f30}
+.tbl tr:nth-child(even) td{background:#faf7f0}
 .badge{display:inline-block;padding:4px 10px;border-radius:10px;font-size:13px;font-weight:700;margin-right:6px}
-.sect{margin-top:18px;padding-top:12px;border-top:1px solid #222}
+.sect{margin-top:18px;padding-top:12px;border-top:1px solid #e0d6c8}
+.cimg{width:100%;border-radius:10px;margin-bottom:14px;border:1px solid #e0d6c8}
 </style></head><body><div class="w" id="app"></div>
 <script>
 // ─── QUOTES ───
@@ -72,7 +73,7 @@ var FT=[
 
 // ─── BREATHING ───
 var BR=[
-{nm:"Tactique 4-4-4",d:"Combat & stress. Inspire 4s, retiens 4s, expire 4s.",ph:[{a:"INSPIRE",s:4},{a:"RETIENS",s:4},{a:"EXPIRE",s:4}],rounds:10,co:"#8B0F0F"},
+{nm:"Tactique 4-4-4",d:"Combat & stress. Inspire 4s, retiens 4s, expire 4s.",ph:[{a:"INSPIRE",s:4},{a:"RETIENS",s:4},{a:"EXPIRE",s:4}],rounds:10,co:"#8B2500"},
 {nm:"Relaxation 4-7-8",d:"Récupération & sommeil. Inspire 4s, retiens 7s, expire 8s.",ph:[{a:"INSPIRE",s:4},{a:"RETIENS",s:7},{a:"EXPIRE",s:8}],rounds:6,co:"#2E5E8E"},
 {nm:"Wim Hof",d:"Endurcissement. 30 respirations rapides puis rétention max.",ph:[{a:"POWER BREATHE ×30",s:90},{a:"RÉTENTION MAX",s:60},{a:"INSPIRE + HOLD 15s",s:15}],rounds:3,co:"#4A7A5A"}
 ];
@@ -458,11 +459,11 @@ var NT={
 };
 
 // ─── ENTITIES ───
-var EN=[{nm:"Fudō Myōō 不動明王",rl:"Protecteur suprême",d:"Roi de Sagesse Immobile. Sabre de vérité et corde qui lie les passions. Son mudra est la base du fudōshin.",ic:"🔥",co:"#8B1A1A"},{nm:"Marishi-ten 摩利支天",rl:"Déesse des guerriers",d:"Déesse de l'invisibilité. Patronne des shinobi. Rend invisible celui qui la prie avec sincérité.",ic:"✨",co:"#B8860B"},{nm:"Tengu 天狗",rl:"Maîtres martiaux",d:"Esprits de montagne au long nez. Maîtres du kenjutsu. Yoshitsune apprit l'escrime d'un tengu du Mont Kurama.",ic:"👺",co:"#6B0F0F"},{nm:"Kitsune 狐",rl:"Archétype hensōjutsu",d:"Renard métamorphe. Les sanctuaires Inari étaient visités avant les missions de yo-nin.",ic:"🦊",co:"#D4760A"},{nm:"Oni 鬼",rl:"Forces à vaincre",d:"Démons — obstacles intérieurs (peur, colère, attachement). Le Oni Kudaki du kihon happō = briser le démon intérieur.",ic:"👹",co:"#8B0000"},{nm:"Ryūjin 龍神",rl:"Kami des eaux",d:"Dieu-dragon des rivières et mers. Protection pour la traversée des douves. Lié au Sui no kata.",ic:"🐉",co:"#2E5E8E"}];
+var EN=[{nm:"Fudō Myōō 不動明王",rl:"Protecteur suprême",d:"Roi de Sagesse Immobile. Sabre de vérité et corde qui lie les passions. Son mudra est la base du fudōshin.",ic:"🔥",co:"#8B1A1A"},{nm:"Marishi-ten 摩利支天",rl:"Déesse des guerriers",d:"Déesse de l'invisibilité. Patronne des shinobi. Rend invisible celui qui la prie avec sincérité.",ic:"✨",co:"#8B6914"},{nm:"Tengu 天狗",rl:"Maîtres martiaux",d:"Esprits de montagne au long nez. Maîtres du kenjutsu. Yoshitsune apprit l'escrime d'un tengu du Mont Kurama.",ic:"👺",co:"#6B0F0F"},{nm:"Kitsune 狐",rl:"Archétype hensōjutsu",d:"Renard métamorphe. Les sanctuaires Inari étaient visités avant les missions de yo-nin.",ic:"🦊",co:"#D4760A"},{nm:"Oni 鬼",rl:"Forces à vaincre",d:"Démons — obstacles intérieurs (peur, colère, attachement). Le Oni Kudaki du kihon happō = briser le démon intérieur.",ic:"👹",co:"#8B0000"},{nm:"Ryūjin 龍神",rl:"Kami des eaux",d:"Dieu-dragon des rivières et mers. Protection pour la traversée des douves. Lié au Sui no kata.",ic:"🐉",co:"#2E5E8E"}];
 
 // ─── LOS CAMINANTS — Les Marcheurs du Lauragais ───
 var LW=[
-{nm:"L'Esclusièr",oc:"Lo Esclusièr",ic:"🔑",co:"#8B0F0F",dom:"Gardien des passages — rien ne s'ouvre sans lui",
+{nm:"L'Esclusièr",oc:"Lo Esclusièr",ic:"🔑",co:"#8B2500",img:"icons/caminants/esclusier.png",dom:"Gardien des passages — rien ne s'ouvre sans lui",
  masque:"Visage de vieil homme buriné, peau tannée par le soleil du canal. Chapeau de paille usé, yeux vifs sous les rides. Une clé rouillée au cou. Il boite légèrement — sa canne est une manivelle d'écluse.",
  histoire:"On dit que les anciens éclusiers du Canal du Midi connaissaient les secrets de l'eau. Au carrefour des écluses, là où les eaux se séparent et se rejoignent, un vieil homme apparaissait à l'aube pour guider les voyageurs. Personne ne passait sans lui rendre ses respects.",
  personnalite:"Vieux, sage, patient, avec un humour sec. Il boite mais ne tombe jamais. Il parle en énigmes et en proverbes. Il adore les enfants — il les appelle 'mainatge'. Il teste ta patience avant de t'aider. Si tu passes son test, la porte s'ouvre grand.",
@@ -479,7 +480,7 @@ var LW=[
  tabou:"JAMAIS commencer un rituel sans l'appeler d'abord. Jamais fermer une porte en demandant d'en ouvrir une. Ne jamais l'invoquer en courant — respecter son rythme. Ne jamais oublier de le remercier APRÈS.",
  priere:"L'Esclusièr, òbri lo camin.\nVièlh del canal, tu que saps las aiguas,\nòbri la pòrta, mostra-me lo camin.\nJo te saludi lo primièr, coma es just.\nCafè per tu, pan per tu, fuòc per tu.\nGràcias, Esclusièr. Passa-me.\n\n(L'Esclusièr, ouvre le chemin. Vieux du canal, toi qui connais les eaux, ouvre la porte, montre-moi le chemin. Je te salue le premier, comme il se doit. Café pour toi, pain pour toi, feu pour toi. Merci, Esclusièr. Laisse-moi passer.)",
  fete:"17 février",salut:"L'Esclusièr, òbri lo camin — ouvre les chemins devant moi."},
-{nm:"Lo Forgèir",oc:"Lo Forgèir",ic:"⚔️",co:"#cc2200",dom:"Guerrier, fer, combat — protecteur par la force",
+{nm:"Lo Forgèir",oc:"Lo Forgèir",ic:"⚔️",co:"#cc2200",img:"icons/caminants/forgeir.png",dom:"Guerrier, fer, combat — protecteur par la force",
  masque:"Visage large aux traits durs, mâchoire carrée, regard de braise. Peau noircie par la fumée de la forge. Bras nus, marqués de brûlures anciennes. Tablier de cuir, marteau à la ceinture. Il ne sourit pas — il protège.",
  histoire:"Dans chaque village du Lauragais, le forgeron était le dernier à fuir et le premier à se battre. Pendant la Croisade des Albigeois, les forgerons cathares cachaient des armes dans les fondations de leurs ateliers. Lo Forgèir est leur mémoire — celui qui transforme le fer brut en lame et l'homme brut en guerrier.",
  personnalite:"Direct, féroce, loyal jusqu'à la mort. Ne ment jamais — la vérité est son marteau. Il boit du vin rouge, il fume. Il se bat pour ce qui est juste. Ne console pas — il forge. Si tu viens pleurer, il te mettra au travail. Si tu viens te battre, il sera à tes côtés. Patron des soldats, gendarmes, policiers, forgerons — tous ceux qui portent du fer pour protéger.",
@@ -496,7 +497,7 @@ var LW=[
  tabou:"JAMAIS le supplier — demander avec dignité. Jamais l'invoquer pour attaquer un innocent. Jamais fuir après l'avoir appelé. Jamais laisser une arme sale ou mal rangée.",
  priere:"Forgèir, dona-me lo fèrre.\nTu que fas las lamas e los escuds,\nfòrja mon còrs, fòrja mon esperit.\nJo non ai paur. Jo soi lo gardian de ma familha.\nVin per tu, fuòc per tu, fèrre per tu.\nDona-me la fòrça justa. Forgèir, gràcias.\n\n(Forgèir, donne-moi le fer. Toi qui fais les lames et les boucliers, forge mon corps, forge mon esprit. Je n'ai pas peur. Je suis le gardien de ma famille. Vin pour toi, feu pour toi, fer pour toi. Donne-moi la force juste. Forgèir, merci.)",
  fete:"24 juin (Sant Joan — nuit des feux)",salut:"Forgèir, dona-me lo fèrre — donne-moi le fer, forge ma lame."},
-{nm:"Lo Sèrp Blanc",oc:"Lo Sèrp Blanc",ic:"🐍",co:"#f0f0f0",dom:"Sagesse, paternité, pureté — le père cosmique",
+{nm:"Lo Sèrp Blanc",oc:"Lo Sèrp Blanc",ic:"🐍",co:"#f0f0f0",img:"icons/caminants/serp.png",dom:"Sagesse, paternité, pureté — le père cosmique",
  masque:"Pas de visage humain. Un grand serpent blanc immaculé, lent, silencieux, enroulé autour d'une source. Ses yeux sont deux pierres de lune. Il ne parle pas — il transmet par le silence et la présence.",
  histoire:"Les fontaines du Lauragais racontent qu'un serpent blanc vit au fond des sources les plus anciennes. Il ne sort qu'à l'équinoxe de printemps. Ceux qui le voient reçoivent la sagesse des anciens. C'est l'esprit du père qui veille sans bruit, qui tient la famille sans la serrer.",
  personnalite:"Le plus ancien de tous. Au-delà des mots humains. Il ne parle PAS — il communique par le silence, les sensations, les visions. Sa présence est une paix profonde, totale. Il est le père de tout. Quand il est là, le monde ralentit. Les pensées se clarifient. La vérité apparaît sans effort. La sagesse qui ne s'explique pas — elle se vit.",
@@ -513,7 +514,7 @@ var LW=[
  tabou:"JAMAIS l'invoquer mains sales. Jamais en criant ou en colère. Jamais tuer un serpent après l'avoir appelé. Jamais verser de sang en sa présence (pas de viande, pas de vin rouge — lait et œuf seulement). Jamais polluer une source d'eau. Ne pas mélanger avec Lo Forgèir — ils sont complémentaires mais ne se croisent pas.",
  priere:"(En silence, yeux fermés, paumes vers le ciel)\n\nSèrp Blanc, dona-me la sabiòrça.\nTu que saps tot e dises res,\nmostra-me dins lo silenci.\nJo soi lo pilòt de ma familha.\nLach per tu, blancor per tu, silenci per tu.\nFai-me lo paire que devi èsser.\n\n(Serpent Blanc, donne-moi la sagesse. Toi qui sais tout et ne dis rien, montre-moi dans le silence. Je suis le pilier de ma famille. Lait pour toi, blancheur pour toi, silence pour toi. Fais de moi le père que je dois être.)",
  fete:"21 mars (équinoxe de printemps)",salut:"Sèrp Blanc, dona-me la sabiòrça — donne-moi la sagesse silencieuse."},
-{nm:"La Bòna Dama",oc:"La Bòna Dama",ic:"💜",co:"#9333ea",dom:"Protection des enfants, amour féroce, force maternelle",
+{nm:"La Bòna Dama",oc:"La Bòna Dama",ic:"💜",co:"#9333ea",img:"icons/caminants/bona.png",dom:"Protection des enfants, amour féroce, force maternelle",
  masque:"Visage de femme jeune mais grave. Robe sombre, capuche relevée. Un poignard caché dans la ceinture, un chapelet dans l'autre main. Yeux doux avec les enfants, terrifiants pour quiconque les menace. Cicatrice sur la joue gauche — elle s'est battue.",
  histoire:"Les Bonnes Dames — les Parfaites cathares — marchaient à travers le Lauragais pour protéger les familles pendant la Croisade. Le 16 mars 1244, 225 d'entre elles montèrent au bûcher de Montségur plutôt que de renier leur foi. La Bòna Dama est leur mémoire vivante — la mère qui tue pour ses enfants.",
  personnalite:"FÉROCE. Ne joue pas. Parle peu — agit. Sa cicatrice raconte qu'elle s'est battue et qu'elle a survécu. Douce avec les enfants — mortelle avec ceux qui les menacent. Jalouse de la protection de TA famille — elle ne te partage pas avec les distractions. Mère qui fait TOUT seule. Elle comprend la fatigue, le sacrifice, le fait de porter le monde sur ses épaules.",
@@ -530,7 +531,7 @@ var LW=[
  tabou:"Ne JAMAIS la confondre avec un esprit doux. Ne jamais l'invoquer pour des raisons futiles. Ne jamais l'appeler et ensuite négliger tes filles. Si tu promets devant elle, TIENS ta promesse. Ne pas mélanger sa bougie violette avec d'autres.",
  priere:"Bòna Dama, garda los mainatges.\nTu que montères al fuòc per la fe,\ntorna-te ara per ma familha.\nGarda mas filhas, garda ma femna.\nGarda aquesta maison.\nCarn per tu, fuòc per tu, fòrça per tu.\nRes passarà — jo soi aquí, tu siás aquí.\n\n(Bonne Dame, garde les enfants. Toi qui es montée au feu pour la foi, reviens maintenant pour ma famille. Garde mes filles, garde ma femme. Garde cette maison. Viande pour toi, feu pour toi, force pour toi. Rien ne passera — je suis là, tu es là.)",
  fete:"16 mars (bûcher de Montségur 1244)",salut:"Bòna Dama, garda los mainatges — garde les enfants sous ton manteau."},
-{nm:"L'Òme del Bòsc",oc:"L'Òme del Bòsc",ic:"🌳",co:"#2d5a27",dom:"Nature sauvage, forêt, plantes, guérison, initiation",
+{nm:"L'Òme del Bòsc",oc:"L'Òme del Bòsc",ic:"🌳",co:"#2d5a27",img:"icons/caminants/ome.png",dom:"Nature sauvage, forêt, plantes, guérison, initiation",
  masque:"Mi-homme, mi-arbre. Visage envahi de mousse et de lichen. Des branches poussent de ses cheveux. Pieds nus, noircis par la terre. Il sent la résine et la pluie. Ses yeux sont verts comme les feuilles de chêne. On ne le voit jamais — on sent sa présence.",
  histoire:"L'Homme Vert est présent dans tout le Midi depuis les Romains. Dans les forêts du Lauragais les anciens ne coupaient jamais un arbre sans demander pardon. Les guérisseurs allaient chercher les plantes médicinales à l'aube en murmurant des prières. L'Òme del Bòsc est le gardien de ces bois — celui qui initie, qui guérit par la terre, et qui punit ceux qui détruisent sans respect.",
  personnalite:"Sauvage, brut, non domestiqué. Parle à travers les feuilles, les oiseaux, les branches qui craquent. Connaît CHAQUE plante, racine, poison, remède. Guérisseur et initiateur — pour aller plus profond dans la voie, tu passes par lui. Peut être terrifiant en forêt la nuit — mais fondamentalement un professeur. Teste ton courage et ta sincérité avant de partager ses secrets.",
@@ -547,7 +548,7 @@ var LW=[
  tabou:"JAMAIS prendre sans laisser. Jamais couper une branche vivante sans demander. Jamais entrer avec du plastique visible. Ne jamais tuer un animal inutilement. Ne jamais mentir en forêt. Si un romarin meurt chez toi sans raison — avertissement : purifie ta maison.",
  priere:"Òme del Bòsc, mostra-me lo camin de la tèrra.\nTu que saps las èrbas e las racinòlas,\ntu que gardas los aures vièlhs,\nòbri-me los uòlhs.\nTabac per tu, mèl per tu, silenci per tu.\nJo marchi pè-descalç sus ta tèrra.\nEnsenha-me.\n\n(Homme du Bois, montre-moi le chemin de la terre. Toi qui connais les herbes et les racines, toi qui gardes les vieux arbres, ouvre-moi les yeux. Tabac pour toi, miel pour toi, silence pour toi. Je marche pieds nus sur ta terre. Enseigne-moi.)",
  fete:"1er mai (Beltaine)",salut:"Òme del Bòsc, mostra-me lo camin de la tèrra — montre-moi le chemin de la terre."},
-{nm:"Lo Lauragués",oc:"Lo Lauragués",ic:"🌾",co:"#d4a017",dom:"Terre cultivée, récolte, travail honnête, abondance pour la famille",
+{nm:"Lo Lauragués",oc:"Lo Lauragués",ic:"🌾",co:"#d4a017",img:"icons/caminants/lauragues.png",dom:"Terre cultivée, récolte, travail honnête, abondance pour la famille",
  masque:"Paysan solide, large d'épaules. Chemise de lin ouverte, peau brûlée par le soleil. Chapeau de paille, faucille à la ceinture. Mains énormes — des mains qui ont touché chaque grain de blé du pays. Il rit fort et mange beaucoup. Généreux mais ne supporte pas le gaspillage.",
  histoire:"Le Lauragais est le grenier à blé de l'Occitanie depuis mille ans. Quand les seigneurs du Nord sont descendus écraser les Cathares, c'est la terre noire du Lauragais qui a nourri la résistance. Lo Lauragués est l'esprit de cette terre grasse — celui qui fait pousser le blé, le tournesol, le pastel. Il nourrit les familles et demande en retour le respect de la terre.",
  personnalite:"Le plus humain de tous. Simple, honnête, travailleur, généreux mais pratique. Rit facilement, mange bien, boit du café au lait. Se méfie des gens de la ville. Vêtements simples — chapeau de paille, chemise de travail. Parle sans détours. Ne comprend pas la paresse. Mais généreux avec ceux qui travaillent — sa table est toujours pleine.",
@@ -805,7 +806,7 @@ function getCh(n){if(typeof CH==='undefined'||!CH)return null;for(var i=0;i<CH.l
 function esc(s){if(!s)return '';return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function todayStr(){return new Date().toISOString().slice(0,10);}
 function weekKey(){var d=new Date();var w=Math.ceil(((d-new Date(d.getFullYear(),0,1))/86400000+1)/7);return d.getFullYear()+'-W'+w;}
-var catColors={E:'#555',F:'#B8860B',K:'#2E5E8E',B:'#8B0F0F',M:'#4A7A5A',C:'#D4760A',P:'#f97316',H:'#facc15',X:'#a855f7',A:'#8B6914',T:'#ff4444'};
+var catColors={E:'#555',F:'#8B6914',K:'#2E5E8E',B:'#8B2500',M:'#4A7A5A',C:'#D4760A',P:'#f97316',H:'#facc15',X:'#a855f7',A:'#8B6914',T:'#ff4444'};
 var catNames={E:'Échauff.',F:'Force',K:'Cardio',B:'Combat',M:'Mobilité',C:'Core',P:'Pliomét.',H:'HIIT',X:'Mental',A:'Armes/Kata',T:'Test'};
 
 // ─── REST TIMER ───
@@ -836,33 +837,33 @@ function dayProgress(phIdx,dayIdx){
 function render(){
   var ph=PH[S.ph];var td=new Date();var dn=["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"][td.getDay()];
   var mm=String(td.getMonth()+1).padStart(2,'0');var dd=String(td.getDate()).padStart(2,'0');var todayMD=mm+'-'+dd;
-  var h='<div class="hd"><div style="font-size:19px;letter-spacing:6px;color:#B8860B">L\'OMBRA</div><div style="font-size:17px;color:#fff;font-weight:300;margin-top:3px">Bible du Shinobi</div><div style="font-size:19px;color:#555;margin-top:2px">'+dn+' '+dd+'/'+mm+'/'+td.getFullYear()+' — Phase '+ph.ic+' '+ph.nm+'</div></div>';
+  var h='<div class="hd"><div style="font-size:11px;letter-spacing:6px;color:#d4a94a">L\'OMBRA</div><div style="font-size:18px;color:#f5f0e6;font-weight:300;margin-top:3px">Los Caminants del Lauragués</div><div style="font-size:13px;color:#b8a88a;margin-top:2px">'+dn+' '+dd+'/'+mm+'/'+td.getFullYear()+' — Phase '+ph.ic+' '+ph.nm+'</div></div>';
 
   // NAV
   h+='<div class="nv">';
-  [['home','家','Accueil'],['train','修','Train'],['sensei','先','Sensei'],['breath','息','Souffle'],['kata','型','Kata'],['armes','武','Armes'],['food','食','Nutri'],['vie','生','Vie'],['tests','試','Tests'],['spirit','神','Esprit'],['library','書','Biblio']].forEach(function(x){
+  [['home','⛰️','Accueil'],['train','💪','Séance'],['sensei','🎯','Sensei'],['vie','🏠','Vie'],['spirit','🎭','Caminants'],['breath','🌬️','Souffle'],['food','🍽️','Nutri'],['kata','🥋','Arts'],['armes','⚔️','Armes'],['tests','📊','Suivi'],['library','📜','Biblio']].forEach(function(x){
     h+='<button class="'+(S.tab===x[0]?'a':'')+'" onclick="go(\''+x[0]+'\')"><div style="font-size:20px">'+x[1]+'</div><div style="font-size:10px;margin-top:2px">'+x[2]+'</div></button>';});
   h+='</div><div class="ct">';
 
   // ══════ HOME ══════
   if(S.tab==='home'){
     var qi=Math.floor((td.getFullYear()*1000+td.getMonth()*31+td.getDate())%QT.length);
-    h+='<div style="text-align:center;padding:24px 0"><div style="font-size:72px;margin-bottom:10px">忍</div>';
-    h+='<div style="font-size:19px;color:#e8e0d4;font-weight:300">Projet Shinobi — Année 1</div>';
-    h+='<div style="font-size:19px;color:#888;margin-top:4px">'+ph.ic+' '+ph.nm+' — '+ph.sub+' — Objectif : '+ph.poids+'</div></div>';
-    h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="cb"><div style="font-size:19px;color:#B8860B;margin-bottom:6px">DICTON DU JOUR</div><div style="font-size:17px;color:#e8e0d4;line-height:1.7;font-style:italic">&laquo; '+QT[qi]+' &raquo;</div></div></div>';
+    h+='<div style="text-align:center;padding:24px 0"><div style="margin-bottom:10px"><img src="icons/caminants/symbole.png" alt="Los Caminants" style="width:180px;border-radius:12px;border:1px solid #e0d6c8"></div>';
+    h+='<div style="font-size:19px;color:#2d2215;font-weight:300">Système Opérationnel — Année 1</div>';
+    h+='<div style="font-size:19px;color:#8a7d6c;margin-top:4px">'+ph.ic+' '+ph.nm+' — '+ph.sub+' — Objectif : '+ph.poids+'</div></div>';
+    h+='<div class="cd" style="border-left:3px solid #8B6914"><div class="cb"><div style="font-size:19px;color:#8B6914;margin-bottom:6px">PRINCIPE DU JOUR</div><div style="font-size:17px;color:#2d2215;line-height:1.7;font-style:italic">&laquo; '+QT[qi]+' &raquo;</div></div></div>';
     // Next fete
     var nextF=null;FT.forEach(function(f){if(!nextF&&f.dt>=todayMD)nextF=f;});if(!nextF)nextF=FT[0];
-    h+='<div class="cd"><div class="cb"><div style="display:flex;align-items:center;gap:12px"><span style="font-size:32px">'+nextF.ic+'</span><div><div style="font-size:19px;color:#B8860B">PROCHAINE CÉLÉBRATION</div><div style="font-size:17px;font-weight:600;margin-top:2px">'+nextF.nm+'</div><div style="font-size:19px;color:#888;margin-top:2px">'+nextF.dt.replace('-','/')+'</div></div></div></div></div>';
+    h+='<div class="cd"><div class="cb"><div style="display:flex;align-items:center;gap:12px"><span style="font-size:32px">'+nextF.ic+'</span><div><div style="font-size:19px;color:#8B6914">PROCHAINE CÉLÉBRATION</div><div style="font-size:17px;font-weight:600;margin-top:2px">'+nextF.nm+'</div><div style="font-size:19px;color:#8a7d6c;margin-top:2px">'+nextF.dt.replace('-','/')+'</div></div></div></div></div>';
     // Stats
     h+='<div style="display:flex;gap:8px;margin-top:4px">';
-    [{l:'Streak',v:S.streak+'j'},{l:'Sessions',v:S.total},{l:'Phase',v:(S.ph+1)+'/4'}].forEach(function(s){h+='<div class="cd" style="flex:1;text-align:center"><div class="cb"><div style="font-size:22px;color:#8B0F0F">'+s.v+'</div><div style="font-size:17px;color:#888">'+s.l+'</div></div></div>';});
+    [{l:'Streak',v:S.streak+'j'},{l:'Sessions',v:S.total},{l:'Phase',v:(S.ph+1)+'/4'}].forEach(function(s){h+='<div class="cd" style="flex:1;text-align:center"><div class="cb"><div style="font-size:22px;color:#8B2500">'+s.v+'</div><div style="font-size:17px;color:#8a7d6c">'+s.l+'</div></div></div>';});
     h+='</div>';
     // Phase selector
     h+='<div class="sc" style="margin-top:12px">CHANGER DE PHASE</div><div style="display:flex;gap:4px">';PH.forEach(function(p,i){h+='<div onclick="setPh('+i+')" style="flex:1;padding:8px 4px;text-align:center;border-radius:8px;border:1px solid '+(i===S.ph?p.co:'#222')+';background:'+(i===S.ph?p.co+'20':'#111')+';cursor:pointer"><div style="font-size:17px">'+p.ic+'</div><div style="font-size:19px;color:'+(i===S.ph?p.co:'#555')+';margin-top:2px">'+p.nm+'</div></div>';});h+='</div>';
     // Week rating
     var wk=weekKey();var wr=S.ratings[wk]||0;
-    h+='<div class="cd" style="margin-top:10px"><div class="cb"><div style="font-size:19px;color:#B8860B;margin-bottom:4px">ÉVALUATION SEMAINE '+wk.split('-W')[1]+'</div><div style="text-align:center">';
+    h+='<div class="cd" style="margin-top:10px"><div class="cb"><div style="font-size:19px;color:#8B6914;margin-bottom:4px">ÉVALUATION SEMAINE '+wk.split('-W')[1]+'</div><div style="text-align:center">';
     for(var i=1;i<=5;i++){h+='<span class="star" onclick="rate('+i+')">'+(i<=wr?'⭐':'☆')+'</span>';}
     h+='</div></div></div>';
   }
@@ -870,21 +871,21 @@ function render(){
   // ══════ TRAIN ══════
   if(S.tab==='train'){
     h+='<div class="sc">'+ph.ic+' PHASE '+ph.nm+' — '+ph.sub+'</div>';
-    h+='<div style="font-size:19px;color:#bbb;margin-bottom:6px;line-height:1.6">'+ph.obj+'</div>';
-    h+='<div style="font-size:19px;color:#666;margin-bottom:12px">Poids cible : '+ph.poids+' | '+ph.kcal+'</div>';
+    h+='<div style="font-size:19px;color:#4a3f30;margin-bottom:6px;line-height:1.6">'+ph.obj+'</div>';
+    h+='<div style="font-size:19px;color:#8a7d6c;margin-bottom:12px">Poids cible : '+ph.poids+' | '+ph.kcal+'</div>';
     // Phase pills
     h+='<div style="display:flex;gap:4px;margin-bottom:12px">';PH.forEach(function(p,i){h+='<div onclick="setPh('+i+')" style="flex:1;height:10px;border-radius:5px;background:'+(i===S.ph?p.co:'#222')+';cursor:pointer"></div>';});h+='</div>';
     // Rest timer
-    if(S.restOn){h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="text-align:center"><div style="font-size:17px;color:#B8860B">⏱ REPOS</div><div style="font-size:48px;color:#e8e0d4;margin:6px 0">'+S.restSec+'s</div><div class="rest-bar"><div class="rest-fill" style="width:'+((S.restSec/S.restMax)*100)+'%"></div></div><button class="pl" onclick="S.restOn=false;clearInterval(restInt);render()" style="margin-top:6px">✕ Annuler</button></div></div>';}
+    if(S.restOn){h+='<div class="cd" style="border:1px solid #8B6914"><div class="cb" style="text-align:center"><div style="font-size:17px;color:#8B6914">⏱ REPOS</div><div style="font-size:48px;color:#2d2215;margin:6px 0">'+S.restSec+'s</div><div class="rest-bar"><div class="rest-fill" style="width:'+((S.restSec/S.restMax)*100)+'%"></div></div><button class="pl" onclick="S.restOn=false;clearInterval(restInt);render()" style="margin-top:6px">✕ Annuler</button></div></div>';}
     // Days
     ph.sem.forEach(function(d,di){
       var prog=dayProgress(S.ph,di);var pct=prog.total?Math.round(prog.done/prog.total*100):0;
       h+='<div class="ex" onclick="S.wi='+(S.wi===di?-1:di)+';render()">';
-      h+='<div style="display:flex;justify-content:space-between;align-items:center"><div><span style="color:'+ph.co+';font-weight:700;font-size:19px">'+d.j+'</span> <span style="color:#888;font-size:19px">'+d.t+'</span></div><span style="color:#555;font-size:19px">'+d.du+' '+(S.wi===di?'▲':'▼')+'</span></div>';
-      h+='<div style="display:flex;align-items:center;gap:8px;margin-top:4px"><div style="flex:1;height:4px;background:#222;border-radius:2px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+ph.co+';border-radius:2px"></div></div><span style="font-size:17px;color:#555">'+prog.done+'/'+prog.total+'</span></div>';
-      if(d.fo)h+='<div style="font-size:19px;color:#555;margin-top:3px">Focus : '+d.fo+'</div>';
+      h+='<div style="display:flex;justify-content:space-between;align-items:center"><div><span style="color:'+ph.co+';font-weight:700;font-size:19px">'+d.j+'</span> <span style="color:#8a7d6c;font-size:19px">'+d.t+'</span></div><span style="color:#9a8d7a;font-size:19px">'+d.du+' '+(S.wi===di?'▲':'▼')+'</span></div>';
+      h+='<div style="display:flex;align-items:center;gap:8px;margin-top:4px"><div style="flex:1;height:4px;background:#222;border-radius:2px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+ph.co+';border-radius:2px"></div></div><span style="font-size:17px;color:#9a8d7a">'+prog.done+'/'+prog.total+'</span></div>';
+      if(d.fo)h+='<div style="font-size:19px;color:#9a8d7a;margin-top:3px">Focus : '+d.fo+'</div>';
       if(S.wi===di){
-        h+='<div style="margin-top:10px;border-top:1px solid #222;padding-top:8px">';
+        h+='<div style="margin-top:10px;border-top:1px solid #e0d6c8;padding-top:8px">';
         d.ex.forEach(function(e,ei){
           var chk=isChecked(S.ph,di,ei);
           var cc=catColors[e.cat]||'#555';
@@ -892,7 +893,7 @@ function render(){
           h+='<div class="chk'+(chk?' done':'')+'" onclick="event.stopPropagation();toggleCheck('+S.ph+','+di+','+ei+')">'+(chk?'✓':'')+'</div>';
           h+='<div class="exname'+(chk?' dk':'')+'">'+e.n;
           if(e.s)h+=' <span style="color:'+cc+';font-weight:600">'+e.s+'</span>';
-          if(e.r)h+=' <span style="color:#666;font-size:19px">R'+e.r+'</span>';
+          if(e.r)h+=' <span style="color:#8a7d6c;font-size:19px">R'+e.r+'</span>';
           if(e.note)h+='<div class="detail">ℹ '+e.note+'</div>';
           h+='</div>';
           if(e.y)h+='<a class="yt" href="'+yt(e.y)+'" target="_blank" onclick="event.stopPropagation()">▶</a>';
@@ -904,26 +905,26 @@ function render(){
       }
       h+='</div>';
     });
-    h+='<button onclick="markDone()" style="width:100%;margin-top:12px;padding:14px;border:none;border-radius:10px;font-size:17px;font-weight:600;color:#fff;background:'+(S.done?'#4a7a5a':'linear-gradient(135deg,#8B0F0F,#6B0F0F)')+';">'+(S.done?'✅ Session complétée aujourd\'hui':'Marquer session complétée')+'</button>';
+    h+='<button onclick="markDone()" style="width:100%;margin-top:12px;padding:14px;border:none;border-radius:10px;font-size:17px;font-weight:600;color:#2d2215;background:'+(S.done?'#4a7a5a':'linear-gradient(135deg,#8B2500,#6B0F0F)')+';">'+(S.done?'✅ Session complétée aujourd\'hui':'Marquer session complétée')+'</button>';
   }
 
   // ══════ SENSEI IA ══════
   if(S.tab==='sensei'){
     h+='<div class="sc">先生 SENSEI IA — CORRECTIONS TECHNIQUES</div>';
-    h+='<div style="font-size:15px;color:#888;margin-bottom:14px;line-height:1.6;font-style:italic">Ton maître virtuel. Chaque mouvement a des points clés non négociables et des erreurs qui blessent. Consulte AVANT chaque séance.</div>';
+    h+='<div style="font-size:15px;color:#8a7d6c;margin-bottom:14px;line-height:1.6;font-style:italic">Ton maître virtuel. Chaque mouvement a des points clés non négociables et des erreurs qui blessent. Consulte AVANT chaque séance.</div>';
     SENSEI.form.forEach(function(f){
       h+='<div class="cd"><div class="ch">'+f.ic+' '+f.cat+' <a class="yt" href="'+yt(f.y)+'" target="_blank" style="float:right">▶</a></div><div class="cb">';
-      h+='<div style="font-size:14px;color:#4ade80;font-weight:700;margin-bottom:6px;letter-spacing:1px">✓ POINTS CLÉS</div>';
-      f.cles.forEach(function(c){h+='<div style="font-size:17px;color:#bbb;padding:4px 0;line-height:1.6">✓ '+c+'</div>';});
-      h+='<div style="font-size:14px;color:#ff6666;font-weight:700;margin:12px 0 6px;letter-spacing:1px">✗ ERREURS FRÉQUENTES</div>';
-      f.erreurs.forEach(function(e){h+='<div style="font-size:17px;color:#bbb;padding:4px 0;line-height:1.6">✗ '+e+'</div>';});
+      h+='<div style="font-size:14px;color:#2d8a4e;font-weight:700;margin-bottom:6px;letter-spacing:1px">✓ POINTS CLÉS</div>';
+      f.cles.forEach(function(c){h+='<div style="font-size:17px;color:#4a3f30;padding:4px 0;line-height:1.6">✓ '+c+'</div>';});
+      h+='<div style="font-size:14px;color:#cc3333;font-weight:700;margin:12px 0 6px;letter-spacing:1px">✗ ERREURS FRÉQUENTES</div>';
+      f.erreurs.forEach(function(e){h+='<div style="font-size:17px;color:#4a3f30;padding:4px 0;line-height:1.6">✗ '+e+'</div>';});
       h+='</div></div>';
     });
     // Voice timer
-    h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="ch">🎙️ '+SENSEI.voix.titre+'</div><div class="cb">';
-    h+='<div style="font-size:17px;color:#888;margin-bottom:10px;line-height:1.6">'+SENSEI.voix.desc+'</div>';
+    h+='<div class="cd" style="border-left:3px solid #8B6914"><div class="ch">🎙️ '+SENSEI.voix.titre+'</div><div class="cb">';
+    h+='<div style="font-size:17px;color:#8a7d6c;margin-bottom:10px;line-height:1.6">'+SENSEI.voix.desc+'</div>';
     SENSEI.voix.modes.forEach(function(m){
-      h+='<div style="padding:8px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:17px;font-weight:600;color:#B8860B">'+m.nm+'</div><div style="font-size:16px;color:#bbb;margin-top:3px">'+m.d+'</div></div>';
+      h+='<div style="padding:8px 0;border-bottom:1px solid #f0ebe0"><div style="font-size:17px;font-weight:600;color:#8B6914">'+m.nm+'</div><div style="font-size:16px;color:#4a3f30;margin-top:3px">'+m.d+'</div></div>';
     });
     h+='<button class="pl a" onclick="testVoice()" style="margin-top:12px;font-size:16px">🔊 Tester la voix</button>';
     h+='</div></div>';
@@ -934,12 +935,12 @@ function render(){
     h+='<div class="sc">RESPIRATIONS GUIDÉES — 息</div>';
     h+='<div style="display:flex;gap:6px;margin-bottom:14px">';BR.forEach(function(b,i){h+='<button class="pl'+(S.bi===i?' a':'')+'" style="flex:1;font-size:19px;'+(S.bi===i?'background:'+b.co+';border-color:'+b.co:'')+';" onclick="S.bi='+i+';stopBreath();render()">'+b.nm.split(' ')[0]+'</button>';});h+='</div>';
     var b=BR[S.bi];
-    h+='<div class="cd" style="border-left:3px solid '+b.co+'"><div class="cb"><div style="font-size:19px;font-weight:600;color:'+b.co+'">'+b.nm+'</div><div style="font-size:19px;color:#888;margin-top:5px">'+b.d+'</div><div style="font-size:19px;color:#555;margin-top:4px">'+b.rounds+' rounds</div></div></div>';
+    h+='<div class="cd" style="border-left:3px solid '+b.co+'"><div class="cb"><div style="font-size:19px;font-weight:600;color:'+b.co+'">'+b.nm+'</div><div style="font-size:19px;color:#8a7d6c;margin-top:5px">'+b.d+'</div><div style="font-size:19px;color:#9a8d7a;margin-top:4px">'+b.rounds+' rounds</div></div></div>';
     if(S.bOn){
       var cp=b.ph[S.bPhase];var isExp=cp.a.indexOf('INSPIRE')>=0;var isHold=cp.a.indexOf('RETIEN')>=0||cp.a.indexOf('HOLD')>=0;
       h+='<div style="text-align:center;padding:24px"><div class="breath-circle'+(isExp?' expand':'')+(isHold?' hold':'')+'" style="border-color:'+b.co+'">'+S.bSec+'</div>';
       h+='<div style="font-size:19px;color:'+b.co+';font-weight:600;margin:10px 0">'+cp.a+'</div>';
-      h+='<div style="font-size:19px;color:#888">Round '+S.bRound+'/'+b.rounds+'</div>';
+      h+='<div style="font-size:19px;color:#8a7d6c">Round '+S.bRound+'/'+b.rounds+'</div>';
       h+='<button class="pl" onclick="stopBreath()" style="margin-top:14px;font-size:19px">⏹ Stop</button></div>';
     } else {
       h+='<div style="text-align:center;padding:24px"><div class="breath-circle" style="border-color:'+b.co+'">息</div>';
@@ -953,10 +954,10 @@ function render(){
   if(S.tab==='kata'){
     h+='<div class="sc">SAN SHIN NO KATA — 三心の型</div>';
     h+='<div style="display:flex;gap:5px;margin-bottom:12px">';SS.forEach(function(s,i){h+='<button style="flex:1;padding:8px;border:'+(S.si===i?'2px solid '+s.co:'1px solid #333')+';border-radius:10px;background:'+(S.si===i?s.co+'15':'#111')+';color:'+s.co+';text-align:center" onclick="S.si='+i+';render()"><div style="font-size:20px">'+s.k+'</div><div style="font-size:19px;font-weight:700;margin-top:2px">'+s.el+'</div></button>';});h+='</div>';
-    var s=SS[S.si];h+='<div class="cd" style="border-left:3px solid '+s.co+'"><div class="cb"><div style="font-size:19px;font-weight:600;color:'+s.co+'">'+s.nm+' no Kata</div><div style="font-size:19px;color:#888;margin-top:6px;line-height:1.7">'+s.d+'</div><a class="yt" href="'+yt('san shin no kata '+s.nm+' bujinkan')+'" target="_blank" style="display:block;margin-top:10px;font-size:19px;color:#ff4444">▶ Voir sur YouTube</a></div></div>';
+    var s=SS[S.si];h+='<div class="cd" style="border-left:3px solid '+s.co+'"><div class="cb"><div style="font-size:19px;font-weight:600;color:'+s.co+'">'+s.nm+' no Kata</div><div style="font-size:19px;color:#8a7d6c;margin-top:6px;line-height:1.7">'+s.d+'</div><a class="yt" href="'+yt('san shin no kata '+s.nm+' bujinkan')+'" target="_blank" style="display:block;margin-top:10px;font-size:19px;color:#cc3333">▶ Voir sur YouTube</a></div></div>';
     h+='<div class="sc" style="margin-top:16px">KIHON HAPPŌ — 基本八法</div>';
     h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">';KH.forEach(function(k,i){h+='<button class="pl'+(S.ki===i?' a':'')+'" style="font-size:19px" onclick="S.ki='+i+';render()">'+(i+1)+'</button>';});h+='</div>';
-    var k=KH[S.ki];h+='<div class="cd"><div class="cb"><div style="font-size:17px;color:#B8860B">'+k.t+'</div><div style="font-size:19px;font-weight:600;color:#8B0F0F;margin-top:3px">'+k.nm+'</div><div style="font-size:19px;color:#888;margin-top:6px;line-height:1.7">'+k.d+'</div><a class="yt" href="'+yt(k.nm+' bujinkan technique')+'" target="_blank" style="display:block;margin-top:10px;font-size:19px;color:#ff4444">▶ Voir sur YouTube</a></div></div>';
+    var k=KH[S.ki];h+='<div class="cd"><div class="cb"><div style="font-size:17px;color:#8B6914">'+k.t+'</div><div style="font-size:19px;font-weight:600;color:#8B2500;margin-top:3px">'+k.nm+'</div><div style="font-size:19px;color:#8a7d6c;margin-top:6px;line-height:1.7">'+k.d+'</div><a class="yt" href="'+yt(k.nm+' bujinkan technique')+'" target="_blank" style="display:block;margin-top:10px;font-size:19px;color:#cc3333">▶ Voir sur YouTube</a></div></div>';
     // Shotokan kata links
     h+='<div class="sc" style="margin-top:16px">KATA SHOTOKAN — 空手の型</div>';
     var shotoKata=["Heian Shodan","Heian Nidan","Heian Sandan","Heian Yondan","Heian Godan","Tekki Shodan","Bassai Dai","Kanku Dai","Jion","Empi"];
@@ -971,7 +972,7 @@ function render(){
     h+='<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">';AR.forEach(function(a,i){h+='<button class="pl'+(S.ai===i?' a':'')+'" style="font-size:19px" onclick="S.ai='+i+';render()">'+a.ic+' '+a.nm.replace('jutsu','')+'</button>';});h+='</div>';
     var a=AR[S.ai];h+='<div class="cd"><div class="ch">'+a.ic+' '+a.nm+'</div><div class="cb"><div style="font-size:19px;margin-bottom:10px"><b>Arme :</b> '+a.wp+'</div>';
     h+='<div class="sc">KATA & TECHNIQUES</div>';a.kt.forEach(function(k,i){h+='<div class="rw"><div class="nm">'+(i+1)+'</div><div style="flex:1;font-size:19px">'+k+'</div><a class="yt" href="'+yt(a.nm+' '+k)+'" target="_blank">▶</a></div>';});
-    h+='<div class="sc" style="margin-top:12px">DRILL TYPE</div><div style="padding:10px;background:#0a0a0a;border-radius:6px;font-size:19px;line-height:1.7;border-left:2px solid #8B0F0F">'+a.dr+'</div>';
+    h+='<div class="sc" style="margin-top:12px">DRILL TYPE</div><div style="padding:10px;background:#f5f0e6;border-radius:6px;font-size:19px;line-height:1.7;border-left:2px solid #8B2500">'+a.dr+'</div>';
     h+='<a class="yt" href="'+yt(a.vy)+'" target="_blank" style="display:block;margin-top:12px;font-size:19px">▶ Toutes les vidéos sur YouTube</a>';
     h+='</div></div>';
   }
@@ -986,46 +987,46 @@ function render(){
     });h+='</div>';
 
     if(S.foodTab==='repas'){
-      h+='<div class="cd"><div class="cb" style="text-align:center"><div style="font-size:17px;font-weight:600;color:#B8860B">~2400 kcal | 190g P | 155g G | 65g L</div><div style="font-size:19px;color:#555;margin-top:4px">Déficit ~300-500kcal → recomposition progressive</div></div></div>';
+      h+='<div class="cd"><div class="cb" style="text-align:center"><div style="font-size:17px;font-weight:600;color:#8B6914">~2400 kcal | 190g P | 155g G | 65g L</div><div style="font-size:19px;color:#9a8d7a;margin-top:4px">Déficit ~300-500kcal → recomposition progressive</div></div></div>';
       // Principes
       h+='<div class="cd"><div class="ch">📋 Principes fondamentaux</div><div class="cb">';
-      NT.principes.forEach(function(p){h+='<div style="font-size:19px;color:#bbb;padding:4px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+p+'</div>';});
+      NT.principes.forEach(function(p){h+='<div style="font-size:19px;color:#4a3f30;padding:4px 0;border-bottom:1px solid #f0ebe0;line-height:1.6">• '+p+'</div>';});
       h+='</div></div>';
       // Repas
       NT.repas.forEach(function(r){
-        h+='<div class="cd"><div class="cb"><div style="display:flex;gap:10px;align-items:flex-start"><span style="font-size:20px;flex-shrink:0">'+r.ic+'</span><div style="flex:1"><div style="font-size:17px;font-weight:600">'+r.m+' <span style="color:#555;font-weight:400">('+r.h+')</span></div><div style="font-size:19px;color:#bbb;margin-top:5px;white-space:pre-wrap;line-height:1.6">'+r.mn+'</div>';
-        if(r.cal>0)h+='<div style="display:flex;gap:10px;margin-top:8px;font-size:17px"><span style="color:#B8860B">'+r.cal+' kcal</span><span style="color:#8B0F0F">P:'+r.p+'g</span><span style="color:#4a7a5a">G:'+r.g+'g</span><span style="color:#facc15">L:'+r.l+'g</span></div>';
+        h+='<div class="cd"><div class="cb"><div style="display:flex;gap:10px;align-items:flex-start"><span style="font-size:20px;flex-shrink:0">'+r.ic+'</span><div style="flex:1"><div style="font-size:17px;font-weight:600">'+r.m+' <span style="color:#9a8d7a;font-weight:400">('+r.h+')</span></div><div style="font-size:19px;color:#4a3f30;margin-top:5px;white-space:pre-wrap;line-height:1.6">'+r.mn+'</div>';
+        if(r.cal>0)h+='<div style="display:flex;gap:10px;margin-top:8px;font-size:17px"><span style="color:#8B6914">'+r.cal+' kcal</span><span style="color:#8B2500">P:'+r.p+'g</span><span style="color:#4a7a5a">G:'+r.g+'g</span><span style="color:#facc15">L:'+r.l+'g</span></div>';
         h+='</div></div></div></div>';
       });
       // Evolution
       h+='<div class="cd"><div class="ch">📈 Évolution par phase</div><div class="cb">';
-      NT.evolution.forEach(function(e){h+='<div style="padding:6px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:19px;font-weight:600;color:#B8860B">'+e.phase+' — '+e.cal+'</div><div style="font-size:19px;color:#888;margin-top:2px">'+e.desc+'</div></div>';});
+      NT.evolution.forEach(function(e){h+='<div style="padding:6px 0;border-bottom:1px solid #f0ebe0"><div style="font-size:19px;font-weight:600;color:#8B6914">'+e.phase+' — '+e.cal+'</div><div style="font-size:19px;color:#8a7d6c;margin-top:2px">'+e.desc+'</div></div>';});
       h+='</div></div>';
     }
 
     if(S.foodTab==='aliments'){
       [{t:'🥩 Protéines',l:NT.aliments.proteines},{t:'🍚 Glucides',l:NT.aliments.glucides},{t:'🥑 Lipides',l:NT.aliments.lipides},{t:'🥬 Légumes',l:NT.aliments.legumes}].forEach(function(cat){
         h+='<div class="cd"><div class="ch">'+cat.t+'</div><div class="cb" style="display:flex;flex-wrap:wrap;gap:6px">';
-        cat.l.forEach(function(a){h+='<span style="display:inline-block;padding:5px 10px;background:#0a0a0a;border:1px solid #222;border-radius:16px;font-size:19px;color:#bbb">'+a+'</span>';});
+        cat.l.forEach(function(a){h+='<span style="display:inline-block;padding:5px 10px;background:#f5f0e6;border:1px solid #e0d6c8;border-radius:16px;font-size:19px;color:#4a3f30">'+a+'</span>';});
         h+='</div></div>';
       });
     }
 
     if(S.foodTab==='recettes'){
       NT.aliments.recettes.forEach(function(r){
-        h+='<div class="cd"><div class="ch">🍳 '+r.nm+'</div><div class="cb"><div style="font-size:19px;color:#bbb;line-height:1.7">'+r.desc+'</div></div></div>';
+        h+='<div class="cd"><div class="ch">🍳 '+r.nm+'</div><div class="cb"><div style="font-size:19px;color:#4a3f30;line-height:1.7">'+r.desc+'</div></div></div>';
       });
     }
 
     if(S.foodTab==='suppl'){
       h+='<div class="sc">SUPPLÉMENTS RECOMMANDÉS</div>';
       NT.supplements.forEach(function(s){
-        h+='<div class="cd"><div class="cb"><div style="font-size:17px;font-weight:600;color:#B8860B">'+s.nm+'</div><div style="display:flex;gap:12px;margin-top:6px;font-size:19px"><span style="color:#8B0F0F">'+s.dose+'</span><span style="color:#555">'+s.quand+'</span></div><div style="font-size:19px;color:#888;margin-top:4px">'+s.why+'</div></div></div>';
+        h+='<div class="cd"><div class="cb"><div style="font-size:17px;font-weight:600;color:#8B6914">'+s.nm+'</div><div style="display:flex;gap:12px;margin-top:6px;font-size:19px"><span style="color:#8B2500">'+s.dose+'</span><span style="color:#9a8d7a">'+s.quand+'</span></div><div style="font-size:19px;color:#8a7d6c;margin-top:4px">'+s.why+'</div></div></div>';
       });
     }
 
     if(S.foodTab==='courses'){
-      h+='<div class="cd"><div class="ch">🛒 LISTE DE COURSES SEMAINE</div><div class="cb"><div style="font-size:19px;color:#bbb;line-height:2">'+NT.courses.split(', ').join('<br>• ')+'</div></div></div>';
+      h+='<div class="cd"><div class="ch">🛒 LISTE DE COURSES SEMAINE</div><div class="cb"><div style="font-size:19px;color:#4a3f30;line-height:2">'+NT.courses.split(', ').join('<br>• ')+'</div></div></div>';
     }
   }
 
@@ -1042,14 +1043,14 @@ function render(){
     if(S.vieTab==='routine'){
       h+='<div class="sc">'+VIE.routine.titre.toUpperCase()+'</div>';
       VIE.routine.blocs.forEach(function(b){
-        h+='<div class="rw" style="align-items:flex-start"><div style="font-size:15px;color:#B8860B;font-weight:700;min-width:42px">'+b.h+'</div><span style="font-size:18px;flex-shrink:0">'+b.ic+'</span><div style="flex:1"><div style="font-size:17px;font-weight:600">'+b.nm+'</div><div style="font-size:16px;color:#888;margin-top:2px;line-height:1.6">'+b.d+'</div></div></div>';
+        h+='<div class="rw" style="align-items:flex-start"><div style="font-size:15px;color:#8B6914;font-weight:700;min-width:42px">'+b.h+'</div><span style="font-size:18px;flex-shrink:0">'+b.ic+'</span><div style="flex:1"><div style="font-size:17px;font-weight:600">'+b.nm+'</div><div style="font-size:16px;color:#8a7d6c;margin-top:2px;line-height:1.6">'+b.d+'</div></div></div>';
       });
     }
 
     if(S.vieTab==='piliers'){
       h+='<div class="sc">7 PILIERS DE VIE</div>';
       VIE.piliers.forEach(function(p){
-        h+='<div class="cd"><div class="ch">'+p.ic+' '+p.nm+' <span style="color:#555;font-weight:400;font-size:15px">'+p.or+'</span></div><div class="cb"><div style="font-size:17px;color:#bbb;line-height:1.7">'+p.d+'</div></div></div>';
+        h+='<div class="cd"><div class="ch">'+p.ic+' '+p.nm+' <span style="color:#9a8d7a;font-weight:400;font-size:15px">'+p.or+'</span></div><div class="cb"><div style="font-size:17px;color:#4a3f30;line-height:1.7">'+p.d+'</div></div></div>';
       });
     }
 
@@ -1057,16 +1058,16 @@ function render(){
       h+='<div class="sc">'+VIE.famille.titre.toUpperCase()+'</div>';
       VIE.famille.saisons.forEach(function(s){
         h+='<div class="cd"><div class="ch">'+s.s+'</div><div class="cb">';
-        s.act.forEach(function(a){h+='<div style="font-size:17px;color:#bbb;padding:5px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+a+'</div>';});
+        s.act.forEach(function(a){h+='<div style="font-size:17px;color:#4a3f30;padding:5px 0;border-bottom:1px solid #f0ebe0;line-height:1.6">• '+a+'</div>';});
         h+='</div></div>';
       });
     }
 
     if(S.vieTab==='mealprep'){
       h+='<div class="sc">'+VIE.mealprep.titre.toUpperCase()+'</div>';
-      h+='<div style="font-size:16px;color:#888;margin-bottom:12px;font-style:italic">'+VIE.mealprep.duree+'</div>';
+      h+='<div style="font-size:16px;color:#8a7d6c;margin-bottom:12px;font-style:italic">'+VIE.mealprep.duree+'</div>';
       VIE.mealprep.etapes.forEach(function(e,i){
-        h+='<div class="rw" style="align-items:flex-start"><div class="nm" style="border-color:#B8860B;color:#B8860B">'+(i+1)+'</div><div style="flex:1;font-size:17px;line-height:1.6">'+e+'</div></div>';
+        h+='<div class="rw" style="align-items:flex-start"><div class="nm" style="border-color:#8B6914;color:#8B6914">'+(i+1)+'</div><div style="flex:1;font-size:17px;line-height:1.6">'+e+'</div></div>';
       });
     }
   }
@@ -1083,17 +1084,17 @@ function render(){
     if(S.testTab==='bench'){
       h+='<div style="overflow-x:auto"><table class="tbl"><tr><th>Test</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th></tr>';
       TESTS.benchmarks.forEach(function(b){
-        h+='<tr><td style="font-weight:600;color:#e8e0d4">'+b.nm+' <span style="color:#555;font-size:17px">('+b.u+')</span></td><td style="color:#4ade80">'+b.p1+'</td><td style="color:#facc15">'+b.p2+'</td><td style="color:#f97316">'+b.p3+'</td><td style="color:#a855f7">'+b.p4+'</td></tr>';
+        h+='<tr><td style="font-weight:600;color:#2d2215">'+b.nm+' <span style="color:#9a8d7a;font-size:17px">('+b.u+')</span></td><td style="color:#2d8a4e">'+b.p1+'</td><td style="color:#facc15">'+b.p2+'</td><td style="color:#f97316">'+b.p3+'</td><td style="color:#a855f7">'+b.p4+'</td></tr>';
       });h+='</table></div>';
-      h+='<div style="font-size:19px;color:#555;margin-top:6px">Mesures hebdo : poids à jeun, tour de taille, photos mensuelles (front/profil/dos).</div>';
-      h+='<div style="font-size:19px;color:#555;margin-top:4px">Semaines de décharge : toutes les 4 semaines, -40% volume, charges réduites.</div>';
+      h+='<div style="font-size:19px;color:#9a8d7a;margin-top:6px">Mesures hebdo : poids à jeun, tour de taille, photos mensuelles (front/profil/dos).</div>';
+      h+='<div style="font-size:19px;color:#9a8d7a;margin-top:4px">Semaines de décharge : toutes les 4 semaines, -40% volume, charges réduites.</div>';
     }
 
     if(S.testTab==='parcours'){
       [TESTS.parcours3,TESTS.parcours4].forEach(function(p){
-        h+='<div class="cd"><div class="ch">🏃 '+p.title+'</div><div class="cb"><div style="font-size:19px;color:#B8860B;margin-bottom:8px">Objectif : '+p.objectif+'</div>';
-        p.steps.forEach(function(s,i){h+='<div class="rw"><div class="nm" style="border-color:#ff4444;color:#ff4444">'+(i+1)+'</div><div style="flex:1;font-size:19px">'+s+'</div></div>';});
-        h+='<div style="font-size:19px;color:#555;margin-top:8px;font-style:italic">Circuit chronométré sans repos — à réaliser 1× par mois.</div></div></div>';
+        h+='<div class="cd"><div class="ch">🏃 '+p.title+'</div><div class="cb"><div style="font-size:19px;color:#8B6914;margin-bottom:8px">Objectif : '+p.objectif+'</div>';
+        p.steps.forEach(function(s,i){h+='<div class="rw"><div class="nm" style="border-color:#cc3333;color:#cc3333">'+(i+1)+'</div><div style="flex:1;font-size:19px">'+s+'</div></div>';});
+        h+='<div style="font-size:19px;color:#9a8d7a;margin-top:8px;font-style:italic">Circuit chronométré sans repos — à réaliser 1× par mois.</div></div></div>';
       });
     }
 
@@ -1104,11 +1105,11 @@ function render(){
         {s:"Sommeil < 6h pendant 3+ nuits",a:"→ Remplacer séance par mobilité + méditation"},
         {s:"Motivation en chute > 1 semaine",a:"→ Semaine de décharge (volume -40%, intensité -20%)"},
         {s:"Blessure",a:"→ Arrêt immédiat zone concernée, continuer le reste si possible"}
-      ].forEach(function(x){h+='<div style="padding:8px 0;border-bottom:1px solid #1a1a1a"><div style="font-size:19px;color:#ff6666;font-weight:600">'+x.s+'</div><div style="font-size:19px;color:#888;margin-top:3px">'+x.a+'</div></div>';});
+      ].forEach(function(x){h+='<div style="padding:8px 0;border-bottom:1px solid #f0ebe0"><div style="font-size:19px;color:#cc3333;font-weight:600">'+x.s+'</div><div style="font-size:19px;color:#8a7d6c;margin-top:3px">'+x.a+'</div></div>';});
       h+='</div></div>';
       h+='<div class="cd"><div class="ch">😴 Protocole sommeil</div><div class="cb">';
       ["Coucher : 21h30-22h00 ferme, 7j/7","Écrans coupés à 21h00","Chambre : 18-19°C, obscurité totale","Dernier repas : 19h30-20h00 max","Magnésium bisglycinate 400mg à 21h","Si insomnie : respiration 4-7-8 au lit"].forEach(function(s){
-        h+='<div style="font-size:19px;color:#bbb;padding:4px 0;line-height:1.5">• '+s+'</div>';});
+        h+='<div style="font-size:19px;color:#4a3f30;padding:4px 0;line-height:1.5">• '+s+'</div>';});
       h+='</div></div>';
     }
   }
@@ -1123,42 +1124,43 @@ function render(){
 
     if(S.spiritTab==='fetes'){
       h+='<div class="sc">CALENDRIER SACRÉ DU LAURAGAIS</div>';
-      h+='<div style="font-size:15px;color:#555;margin-bottom:12px;font-style:italic">'+FT.length+' célébrations — shinobi et traditions du pays d\'oc fusionnées</div>';
+      h+='<div style="font-size:15px;color:#9a8d7a;margin-bottom:12px;font-style:italic">'+FT.length+' célébrations — shinobi et traditions du pays d\'oc fusionnées</div>';
       FT.forEach(function(f){
         var isOc=f.nm.indexOf('Jorn')===0||f.nm.indexOf('Fèsta')>=0;
-        h+='<div class="cd" style="'+(isOc?'border-left:3px solid #B8860B':'')+'"><div class="ch"><span style="font-size:17px;margin-right:8px">'+f.ic+'</span>'+f.nm+' <span style="color:#555;font-weight:400;font-size:15px">'+f.dt.replace('-','/')+'</span>'+(isOc?' <span style="font-size:12px;background:#B8860B30;color:#B8860B;padding:2px 6px;border-radius:8px;margin-left:6px">ÒC</span>':'')+'</div><div class="cb">';
-        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#8B0F0F30;color:#ff6666">Pourquoi</span><span style="font-size:17px;color:#bbb;line-height:1.6">'+f.why+'</span></div>';
-        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#2E5E8E30;color:#6ba8e0">Où</span><span style="font-size:17px;color:#bbb;line-height:1.6">'+f.where+'</span></div>';
-        h+='<div><span class="badge" style="background:#4A7A5A30;color:#6bbb80">Comment</span><span style="font-size:17px;color:#bbb;line-height:1.6">'+f.how+'</span></div>';
+        h+='<div class="cd" style="'+(isOc?'border-left:3px solid #8B6914':'')+'"><div class="ch"><span style="font-size:17px;margin-right:8px">'+f.ic+'</span>'+f.nm+' <span style="color:#9a8d7a;font-weight:400;font-size:15px">'+f.dt.replace('-','/')+'</span>'+(isOc?' <span style="font-size:12px;background:#8B691430;color:#8B6914;padding:2px 6px;border-radius:8px;margin-left:6px">ÒC</span>':'')+'</div><div class="cb">';
+        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#8B250030;color:#cc3333">Pourquoi</span><span style="font-size:17px;color:#4a3f30;line-height:1.6">'+f.why+'</span></div>';
+        h+='<div style="margin-bottom:8px"><span class="badge" style="background:#2E5E8E30;color:#2E5E8E">Où</span><span style="font-size:17px;color:#4a3f30;line-height:1.6">'+f.where+'</span></div>';
+        h+='<div><span class="badge" style="background:#4A7A5A30;color:#2d7a3e">Comment</span><span style="font-size:17px;color:#4a3f30;line-height:1.6">'+f.how+'</span></div>';
         h+='</div></div>';
       });
     }
 
     if(S.spiritTab==='masques'){
       h+='<div class="sc">LOS CAMINANTS — LES MARCHEURS DU LAURAGAIS</div>';
-      h+='<div style="font-size:15px;color:#888;margin-bottom:12px;line-height:1.6;font-style:italic">Les esprits du pays d\'oc — figures légendaires du Lauragais. Folklore ancien transmis par les anciens. L\'Esclusièr s\'appelle toujours en premier.</div>';
+      h+='<div style="font-size:15px;color:#8a7d6c;margin-bottom:12px;line-height:1.6;font-style:italic">Les esprits du pays d\'oc — figures légendaires du Lauragais. Folklore ancien transmis par les anciens. L\'Esclusièr s\'appelle toujours en premier.</div>';
       LW.forEach(function(l){
-        h+='<div class="cd" style="border-left:4px solid '+l.co+'"><div class="ch"><span style="font-size:20px;margin-right:8px">'+l.ic+'</span>'+l.nm+' <span style="color:#555;font-weight:400;font-size:15px">— '+l.dom+'</span></div><div class="cb">';
-        h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">LE MASQUE</div><div style="font-size:17px;color:#bbb;line-height:1.7;font-style:italic">'+l.masque+'</div></div>';
-        h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">L\'HISTOIRE</div><div style="font-size:17px;color:#bbb;line-height:1.7">'+l.histoire+'</div></div>';
-        h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">PERSONNALITÉ</div><div style="font-size:17px;color:#bbb;line-height:1.7">'+l.personnalite+'</div></div>';
+        h+='<div class="cd" style="border-left:4px solid '+l.co+'"><div class="ch"><span style="font-size:20px;margin-right:8px">'+l.ic+'</span>'+l.nm+' <span style="color:#9a8d7a;font-weight:400;font-size:15px">— '+l.dom+'</span></div><div class="cb">';
+        if(l.img){h+='<div style="text-align:center;margin-bottom:14px"><img src="'+l.img+'" alt="'+l.nm+'" class="cimg"></div>';}
+        h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">LE MASQUE</div><div style="font-size:17px;color:#4a3f30;line-height:1.7;font-style:italic">'+l.masque+'</div></div>';
+        h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">L\'HISTOIRE</div><div style="font-size:17px;color:#4a3f30;line-height:1.7">'+l.histoire+'</div></div>';
+        h+='<div style="margin-bottom:12px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:4px;letter-spacing:1px">PERSONNALITÉ</div><div style="font-size:17px;color:#4a3f30;line-height:1.7">'+l.personnalite+'</div></div>';
         // Grid
         h+='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">';
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">JOUR</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.jour+'</div></div>';
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">NOMBRE</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.nombre+'</div></div>';
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">ÉLÉMENT</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.element+'</div></div>';
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px"><div style="font-size:12px;color:#555">COULEURS</div><div style="font-size:17px;color:#e8e0d4;margin-top:2px">'+l.couleurs+'</div></div>';
+        h+='<div style="background:#f5f0e6;padding:10px;border-radius:8px"><div style="font-size:12px;color:#9a8d7a">JOUR</div><div style="font-size:17px;color:#2d2215;margin-top:2px">'+l.jour+'</div></div>';
+        h+='<div style="background:#f5f0e6;padding:10px;border-radius:8px"><div style="font-size:12px;color:#9a8d7a">NOMBRE</div><div style="font-size:17px;color:#2d2215;margin-top:2px">'+l.nombre+'</div></div>';
+        h+='<div style="background:#f5f0e6;padding:10px;border-radius:8px"><div style="font-size:12px;color:#9a8d7a">ÉLÉMENT</div><div style="font-size:17px;color:#2d2215;margin-top:2px">'+l.element+'</div></div>';
+        h+='<div style="background:#f5f0e6;padding:10px;border-radius:8px"><div style="font-size:12px;color:#9a8d7a">COULEURS</div><div style="font-size:17px;color:#2d2215;margin-top:2px">'+l.couleurs+'</div></div>';
         h+='</div>';
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px;margin-bottom:8px"><div style="font-size:12px;color:#555">LIEU SACRÉ</div><div style="font-size:16px;color:#e8e0d4;margin-top:2px">'+l.lieu+'</div></div>';
-        h+='<div style="background:#0a0a0a;padding:10px;border-radius:8px;margin-bottom:8px"><div style="font-size:12px;color:#555">OUTILS</div><div style="font-size:16px;color:#e8e0d4;margin-top:2px">'+l.outils+'</div></div>';
+        h+='<div style="background:#f5f0e6;padding:10px;border-radius:8px;margin-bottom:8px"><div style="font-size:12px;color:#9a8d7a">LIEU SACRÉ</div><div style="font-size:16px;color:#2d2215;margin-top:2px">'+l.lieu+'</div></div>';
+        h+='<div style="background:#f5f0e6;padding:10px;border-radius:8px;margin-bottom:8px"><div style="font-size:12px;color:#9a8d7a">OUTILS</div><div style="font-size:16px;color:#2d2215;margin-top:2px">'+l.outils+'</div></div>';
         // Detailed sections
         [{t:"OFFRANDE",k:"offrande"},{t:"CE QU'IL AIME",k:"aime"},{t:"CE QU'IL DÉTESTE",k:"deteste"},{t:"SIGNES QU'IL ENVOIE",k:"signes"},{t:"COMMENT L'APPROCHER",k:"approche"},{t:"IL AIDE POUR",k:"aide"},{t:"QUAND IL EST LE PLUS FORT",k:"quand_fort"},{t:"TABOUS — NE JAMAIS",k:"tabou"}].forEach(function(sec){
-          if(l[sec.k])h+='<div style="margin-bottom:10px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:3px;letter-spacing:1px">'+sec.t+'</div><div style="font-size:17px;color:#bbb;line-height:1.7">'+l[sec.k]+'</div></div>';
+          if(l[sec.k])h+='<div style="margin-bottom:10px"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:3px;letter-spacing:1px">'+sec.t+'</div><div style="font-size:17px;color:#4a3f30;line-height:1.7">'+l[sec.k]+'</div></div>';
         });
         // Prière
-        if(l.priere){h+='<div style="margin:14px 0;padding:14px;border:1px solid '+l.co+'30;border-radius:10px;background:#0a0a0a"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:6px;letter-spacing:1px">PRIÈRE</div><div style="font-size:17px;color:#bbb;line-height:1.8;white-space:pre-line;font-style:italic">'+l.priere+'</div></div>';}
+        if(l.priere){h+='<div style="margin:14px 0;padding:14px;border:1px solid '+l.co+'30;border-radius:10px;background:#f5f0e6"><div style="font-size:13px;color:'+l.co+';font-weight:700;margin-bottom:6px;letter-spacing:1px">PRIÈRE</div><div style="font-size:17px;color:#4a3f30;line-height:1.8;white-space:pre-line;font-style:italic">'+l.priere+'</div></div>';}
         // Salut
-        h+='<div style="padding:12px;border:1px solid '+l.co+'40;border-radius:8px;text-align:center;margin-top:6px"><div style="font-size:14px;color:#555;margin-bottom:4px">FÊTE : '+l.fete+'</div><div style="font-size:19px;color:'+l.co+';font-weight:600;font-style:italic;line-height:1.6">« '+l.salut+' »</div></div>';
+        h+='<div style="padding:12px;border:1px solid '+l.co+'40;border-radius:8px;text-align:center;margin-top:6px"><div style="font-size:14px;color:#9a8d7a;margin-bottom:4px">FÊTE : '+l.fete+'</div><div style="font-size:19px;color:'+l.co+';font-weight:600;font-style:italic;line-height:1.6">« '+l.salut+' »</div></div>';
         h+='</div></div>';
       });
     }
@@ -1166,29 +1168,29 @@ function render(){
     if(S.spiritTab==='autel'){
       // AUTEL SECTION
       h+='<div class="sc">'+ANC.autel.titre.toUpperCase()+'</div>';
-      h+='<div style="font-size:17px;color:#888;margin-bottom:14px;line-height:1.7;font-style:italic">'+ANC.autel.intro+'</div>';
+      h+='<div style="font-size:17px;color:#8a7d6c;margin-bottom:14px;line-height:1.7;font-style:italic">'+ANC.autel.intro+'</div>';
       h+='<div class="cd"><div class="ch">🕯️ Éléments du coin</div><div class="cb">';
       ANC.autel.elements.forEach(function(e){
-        h+='<div style="padding:10px 0;border-bottom:1px solid #1a1a1a;display:flex;gap:12px;align-items:flex-start"><span style="font-size:22px;flex-shrink:0">'+e.ic+'</span><div><div style="font-size:17px;font-weight:600;color:#B8860B">'+e.nm+'</div><div style="font-size:17px;color:#bbb;margin-top:4px;line-height:1.7">'+e.d+'</div></div></div>';
+        h+='<div style="padding:10px 0;border-bottom:1px solid #f0ebe0;display:flex;gap:12px;align-items:flex-start"><span style="font-size:22px;flex-shrink:0">'+e.ic+'</span><div><div style="font-size:17px;font-weight:600;color:#8B6914">'+e.nm+'</div><div style="font-size:17px;color:#4a3f30;margin-top:4px;line-height:1.7">'+e.d+'</div></div></div>';
       });
       h+='</div></div>';
       // PRIERE QUOTIDIENNE
-      h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="ch">🙏 '+ANC.priere_quotidienne.titre+'</div><div class="cb">';
-      h+='<div style="font-size:15px;color:#B8860B;margin-bottom:8px">'+ANC.priere_quotidienne.quand+'</div>';
+      h+='<div class="cd" style="border-left:3px solid #8B6914"><div class="ch">🙏 '+ANC.priere_quotidienne.titre+'</div><div class="cb">';
+      h+='<div style="font-size:15px;color:#8B6914;margin-bottom:8px">'+ANC.priere_quotidienne.quand+'</div>';
       ANC.priere_quotidienne.etapes.forEach(function(e,i){
-        h+='<div class="rw" style="align-items:flex-start"><div class="nm" style="border-color:#B8860B;color:#B8860B">'+(i+1)+'</div><div style="flex:1;font-size:17px;line-height:1.7">'+e+'</div></div>';
+        h+='<div class="rw" style="align-items:flex-start"><div class="nm" style="border-color:#8B6914;color:#8B6914">'+(i+1)+'</div><div style="flex:1;font-size:17px;line-height:1.7">'+e+'</div></div>';
       });
       h+='</div></div>';
       // HONORER LES ANCETRES
       h+='<div class="sc" style="margin-top:16px">'+ANC.ancetres.titre.toUpperCase()+'</div>';
       ANC.ancetres.pratiques.forEach(function(p){
-        h+='<div class="cd"><div class="ch">'+p.nm+' <span style="color:#555;font-weight:400;font-size:15px">— '+p.fr+'</span></div><div class="cb"><div style="font-size:17px;color:#bbb;line-height:1.7">'+p.d+'</div></div></div>';
+        h+='<div class="cd"><div class="ch">'+p.nm+' <span style="color:#9a8d7a;font-weight:400;font-size:15px">— '+p.fr+'</span></div><div class="cb"><div style="font-size:17px;color:#4a3f30;line-height:1.7">'+p.d+'</div></div></div>';
       });
       // ESPRITS DE LA NATURE
       h+='<div class="sc" style="margin-top:16px">'+ANC.nature.titre.toUpperCase()+'</div>';
-      h+='<div style="font-size:17px;color:#888;margin-bottom:14px;line-height:1.7;font-style:italic">'+ANC.nature.intro+'</div>';
+      h+='<div style="font-size:17px;color:#8a7d6c;margin-bottom:14px;line-height:1.7;font-style:italic">'+ANC.nature.intro+'</div>';
       ANC.nature.pratiques.forEach(function(p){
-        h+='<div class="cd" style="border-left:3px solid #4A7A5A"><div class="cb"><div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="font-size:22px">'+p.ic+'</span><div style="font-size:17px;font-weight:600;color:#4A7A5A">'+p.nm+'</div></div><div style="font-size:17px;color:#bbb;line-height:1.7">'+p.d+'</div></div></div>';
+        h+='<div class="cd" style="border-left:3px solid #4A7A5A"><div class="cb"><div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="font-size:22px">'+p.ic+'</span><div style="font-size:17px;font-weight:600;color:#4A7A5A">'+p.nm+'</div></div><div style="font-size:17px;color:#4a3f30;line-height:1.7">'+p.d+'</div></div></div>';
       });
     }
 
@@ -1202,26 +1204,26 @@ function render(){
       });h+='</div>';
 
       if(S.ritTab==='bains'){
-        h+='<div style="font-size:15px;color:#888;margin-bottom:12px;font-style:italic;line-height:1.6">Bains de plantes du Lauragais — traditions anciennes de purification et de renforcement transmises par les guérisseurs du Midi.</div>';
+        h+='<div style="font-size:15px;color:#8a7d6c;margin-bottom:12px;font-style:italic;line-height:1.6">Bains de plantes du Lauragais — traditions anciennes de purification et de renforcement transmises par les guérisseurs du Midi.</div>';
         RIT.bains.forEach(function(b){
           h+='<div class="cd" style="border-left:3px solid #2E5E8E"><div class="ch">'+b.ic+' '+b.nm+'</div><div class="cb">';
-          h+='<div style="font-size:16px;color:#B8860B;font-weight:600;margin-bottom:6px">'+b.but+'</div>';
-          h+='<div style="font-size:15px;color:#555;margin-bottom:8px">Quand : '+b.quand+'</div>';
-          h+='<div style="margin-bottom:8px"><span style="font-size:13px;color:#4A7A5A;font-weight:700">INGRÉDIENTS : </span><span style="font-size:17px;color:#bbb;line-height:1.6">'+b.ingredients+'</span></div>';
-          h+='<div style="margin-bottom:8px"><span style="font-size:13px;color:#8B0F0F;font-weight:700">MÉTHODE : </span><span style="font-size:17px;color:#bbb;line-height:1.7">'+b.methode+'</span></div>';
-          h+='<div style="padding:8px;background:#0a0a0a;border-radius:6px;font-size:16px;color:#888;line-height:1.6">⚠️ '+b.note+'</div>';
+          h+='<div style="font-size:16px;color:#8B6914;font-weight:600;margin-bottom:6px">'+b.but+'</div>';
+          h+='<div style="font-size:15px;color:#9a8d7a;margin-bottom:8px">Quand : '+b.quand+'</div>';
+          h+='<div style="margin-bottom:8px"><span style="font-size:13px;color:#4A7A5A;font-weight:700">INGRÉDIENTS : </span><span style="font-size:17px;color:#4a3f30;line-height:1.6">'+b.ingredients+'</span></div>';
+          h+='<div style="margin-bottom:8px"><span style="font-size:13px;color:#8B2500;font-weight:700">MÉTHODE : </span><span style="font-size:17px;color:#4a3f30;line-height:1.7">'+b.methode+'</span></div>';
+          h+='<div style="padding:8px;background:#f5f0e6;border-radius:6px;font-size:16px;color:#8a7d6c;line-height:1.6">⚠️ '+b.note+'</div>';
           h+='</div></div>';
         });
       }
 
       if(S.ritTab==='bougies'){
         RIT.bougies.forEach(function(b){
-          h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="ch">'+b.ic+' '+b.nm+'</div><div class="cb">';
-          h+='<div style="font-size:17px;color:#bbb;line-height:1.7;margin-bottom:10px">'+b.methode+'</div>';
+          h+='<div class="cd" style="border-left:3px solid #8B6914"><div class="ch">'+b.ic+' '+b.nm+'</div><div class="cb">';
+          h+='<div style="font-size:17px;color:#4a3f30;line-height:1.7;margin-bottom:10px">'+b.methode+'</div>';
           if(b.couleurs.length>0){
-            h+='<div style="font-size:14px;color:#B8860B;font-weight:700;margin-bottom:6px;letter-spacing:1px">COULEURS & INTENTIONS</div>';
+            h+='<div style="font-size:14px;color:#8B6914;font-weight:700;margin-bottom:6px;letter-spacing:1px">COULEURS & INTENTIONS</div>';
             b.couleurs.forEach(function(c){
-              h+='<div style="padding:6px 0;border-bottom:1px solid #1a1a1a;display:flex;gap:10px;align-items:center"><div style="width:16px;height:16px;border-radius:50%;flex-shrink:0;border:1px solid #333;background:'+(c.co==="Blanche"?"#fff":c.co==="Rouge"?"#cc2200":c.co==="Violette"?"#9333ea":c.co==="Verte"?"#2d5a27":c.co.indexOf("Jaune")>=0?"#d4a017":c.co==="Noire"?"#000":c.co==="Bleue"?"#2E5E8E":"#888")+'"></div><div><span style="font-size:17px;font-weight:600;color:#e8e0d4">'+c.co+'</span> <span style="font-size:16px;color:#888">— '+c.but+'</span></div></div>';
+              h+='<div style="padding:6px 0;border-bottom:1px solid #f0ebe0;display:flex;gap:10px;align-items:center"><div style="width:16px;height:16px;border-radius:50%;flex-shrink:0;border:1px solid #333;background:'+(c.co==="Blanche"?"#fff":c.co==="Rouge"?"#cc2200":c.co==="Violette"?"#9333ea":c.co==="Verte"?"#2d5a27":c.co.indexOf("Jaune")>=0?"#d4a017":c.co==="Noire"?"#000":c.co==="Bleue"?"#2E5E8E":"#888")+'"></div><div><span style="font-size:17px;font-weight:600;color:#2d2215">'+c.co+'</span> <span style="font-size:16px;color:#8a7d6c">— '+c.but+'</span></div></div>';
             });
           }
           h+='</div></div>';
@@ -1229,62 +1231,62 @@ function render(){
       }
 
       if(S.ritTab==='protections'){
-        h+='<div style="font-size:15px;color:#888;margin-bottom:12px;font-style:italic;line-height:1.6">Protections du foyer — traditions anciennes du pays cathare. Discrètes, invisibles pour les visiteurs. Personne ne pose de questions.</div>';
+        h+='<div style="font-size:15px;color:#8a7d6c;margin-bottom:12px;font-style:italic;line-height:1.6">Protections du foyer — traditions anciennes du pays cathare. Discrètes, invisibles pour les visiteurs. Personne ne pose de questions.</div>';
         RIT.protections.forEach(function(p){
-          h+='<div class="cd"><div class="cb"><div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="font-size:22px">'+p.ic+'</span><div style="font-size:17px;font-weight:600;color:#B8860B">'+p.nm+'</div></div><div style="font-size:17px;color:#bbb;line-height:1.7">'+p.d+'</div></div></div>';
+          h+='<div class="cd"><div class="cb"><div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="font-size:22px">'+p.ic+'</span><div style="font-size:17px;font-weight:600;color:#8B6914">'+p.nm+'</div></div><div style="font-size:17px;color:#4a3f30;line-height:1.7">'+p.d+'</div></div></div>';
         });
       }
 
       if(S.ritTab==='poudres'){
-        h+='<div style="font-size:15px;color:#888;margin-bottom:12px;font-style:italic;line-height:1.6">Poudres et eaux préparées — recettes d\'herboristerie du Midi transmises de génération en génération.</div>';
+        h+='<div style="font-size:15px;color:#8a7d6c;margin-bottom:12px;font-style:italic;line-height:1.6">Poudres et eaux préparées — recettes d\'herboristerie du Midi transmises de génération en génération.</div>';
         RIT.poudres.forEach(function(p){
           h+='<div class="cd" style="border-left:3px solid #D4760A"><div class="cb"><div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="font-size:22px">'+p.ic+'</span><div style="font-size:17px;font-weight:600;color:#D4760A">'+p.nm+'</div></div>';
-          h+='<div style="margin-bottom:6px"><span style="font-size:13px;color:#4A7A5A;font-weight:700">COMPOSITION : </span><span style="font-size:17px;color:#bbb">'+p.comp+'</span></div>';
-          h+='<div><span style="font-size:13px;color:#2E5E8E;font-weight:700">USAGE : </span><span style="font-size:17px;color:#bbb;line-height:1.6">'+p.usage+'</span></div>';
+          h+='<div style="margin-bottom:6px"><span style="font-size:13px;color:#4A7A5A;font-weight:700">COMPOSITION : </span><span style="font-size:17px;color:#4a3f30">'+p.comp+'</span></div>';
+          h+='<div><span style="font-size:13px;color:#2E5E8E;font-weight:700">USAGE : </span><span style="font-size:17px;color:#4a3f30;line-height:1.6">'+p.usage+'</span></div>';
           h+='</div></div>';
         });
       }
 
       if(S.ritTab==='signes'){
-        h+='<div style="font-size:15px;color:#888;margin-bottom:12px;font-style:italic;line-height:1.6">Les anciens du Lauragais savaient lire les signes. La nature parle à celui qui écoute.</div>';
+        h+='<div style="font-size:15px;color:#8a7d6c;margin-bottom:12px;font-style:italic;line-height:1.6">Les anciens du Lauragais savaient lire les signes. La nature parle à celui qui écoute.</div>';
         RIT.signes.forEach(function(s){
-          h+='<div class="cd"><div class="cb"><div style="font-size:17px;font-weight:600;color:#B8860B;margin-bottom:6px">'+s.signe+'</div><div style="font-size:17px;color:#bbb;line-height:1.7">'+s.sens+'</div></div></div>';
+          h+='<div class="cd"><div class="cb"><div style="font-size:17px;font-weight:600;color:#8B6914;margin-bottom:6px">'+s.signe+'</div><div style="font-size:17px;color:#4a3f30;line-height:1.7">'+s.sens+'</div></div></div>';
         });
       }
     }
 
     if(S.spiritTab==='lune'){
       h+='<div class="sc">CALENDRIER LUNAIRE DU LAURAGAIS</div>';
-      h+='<div style="font-size:15px;color:#888;margin-bottom:14px;font-style:italic;line-height:1.6">Les anciens ne plantaient rien, ne coupaient rien, ne commençaient rien sans regarder la lune. Le guerrier non plus.</div>';
+      h+='<div style="font-size:15px;color:#8a7d6c;margin-bottom:14px;font-style:italic;line-height:1.6">Les anciens ne plantaient rien, ne coupaient rien, ne commençaient rien sans regarder la lune. Le guerrier non plus.</div>';
       RIT.lune.forEach(function(l){
-        h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="ch" style="font-size:20px">'+l.ph+'</div><div class="cb">';
-        h+='<div style="font-size:17px;color:#bbb;line-height:1.7;margin-bottom:10px">'+l.d+'</div>';
-        h+='<div style="padding:10px;background:#0a0a0a;border-radius:8px"><div style="font-size:13px;color:#B8860B;font-weight:700;margin-bottom:4px">PRATIQUE</div><div style="font-size:17px;color:#bbb;line-height:1.6">'+l.quoi+'</div></div>';
+        h+='<div class="cd" style="border-left:3px solid #8B6914"><div class="ch" style="font-size:20px">'+l.ph+'</div><div class="cb">';
+        h+='<div style="font-size:17px;color:#4a3f30;line-height:1.7;margin-bottom:10px">'+l.d+'</div>';
+        h+='<div style="padding:10px;background:#f5f0e6;border-radius:8px"><div style="font-size:13px;color:#8B6914;font-weight:700;margin-bottom:4px">PRATIQUE</div><div style="font-size:17px;color:#4a3f30;line-height:1.6">'+l.quoi+'</div></div>';
         h+='</div></div>';
       });
     }
 
     if(S.spiritTab==='remedes'){
       h+='<div class="sc">REMÈDES NATURELS DU LAURAGAIS</div>';
-      h+='<div style="font-size:15px;color:#888;margin-bottom:14px;line-height:1.6;font-style:italic">Plantes, préparations et recettes anciennes. Le shinobi est son propre médecin. Le Lauragais offre tout ce qu\'il faut — thym, romarin, lavande, miel, argile.</div>';
+      h+='<div style="font-size:15px;color:#8a7d6c;margin-bottom:14px;line-height:1.6;font-style:italic">Plantes, préparations et recettes anciennes. Le shinobi est son propre médecin. Le Lauragais offre tout ce qu\'il faut — thym, romarin, lavande, miel, argile.</div>';
       REM.forEach(function(cat){
         h+='<div class="cd"><div class="ch">'+cat.ic+' '+cat.cat+'</div><div class="cb">';
         cat.remedes.forEach(function(r,ri){
-          h+='<div style="'+(ri>0?'margin-top:14px;padding-top:14px;border-top:1px solid #222':'')+'">';
+          h+='<div style="'+(ri>0?'margin-top:14px;padding-top:14px;border-top:1px solid #e0d6c8':'')+'">';
           h+='<div style="font-size:18px;font-weight:600;color:#4A7A5A">'+r.nm+'</div>';
-          h+='<div style="margin-top:6px"><span style="font-size:13px;color:#B8860B;font-weight:700">PLANTE : </span><span style="font-size:16px;color:#bbb">'+r.pl+'</span></div>';
-          h+='<div style="margin-top:4px"><span style="font-size:13px;color:#8B0F0F;font-weight:700">PRÉPARATION : </span><span style="font-size:16px;color:#bbb;line-height:1.6">'+r.pr+'</span></div>';
-          h+='<div style="margin-top:4px"><span style="font-size:13px;color:#2E5E8E;font-weight:700">USAGE : </span><span style="font-size:16px;color:#bbb;line-height:1.6">'+r.us+'</span></div>';
+          h+='<div style="margin-top:6px"><span style="font-size:13px;color:#8B6914;font-weight:700">PLANTE : </span><span style="font-size:16px;color:#4a3f30">'+r.pl+'</span></div>';
+          h+='<div style="margin-top:4px"><span style="font-size:13px;color:#8B2500;font-weight:700">PRÉPARATION : </span><span style="font-size:16px;color:#4a3f30;line-height:1.6">'+r.pr+'</span></div>';
+          h+='<div style="margin-top:4px"><span style="font-size:13px;color:#2E5E8E;font-weight:700">USAGE : </span><span style="font-size:16px;color:#4a3f30;line-height:1.6">'+r.us+'</span></div>';
           h+='</div>';
         });
         h+='</div></div>';
       });
-      h+='<div class="cd" style="border-left:3px solid #ff4444"><div class="ch">⚠️ Avertissement</div><div class="cb"><div style="font-size:17px;color:#bbb;line-height:1.7">Ces remèdes sont des compléments, pas des substituts à la médecine. En cas de blessure grave, infection, fièvre persistante, ou douleur intense → médecin. Les huiles essentielles sont interdites pour les enfants de moins de 6 ans et les femmes enceintes sans avis médical. Ne jamais ingérer une HE sans conseil d\'un professionnel.</div></div></div>';
+      h+='<div class="cd" style="border-left:3px solid #ff4444"><div class="ch">⚠️ Avertissement</div><div class="cb"><div style="font-size:17px;color:#4a3f30;line-height:1.7">Ces remèdes sont des compléments, pas des substituts à la médecine. En cas de blessure grave, infection, fièvre persistante, ou douleur intense → médecin. Les huiles essentielles sont interdites pour les enfants de moins de 6 ans et les femmes enceintes sans avis médical. Ne jamais ingérer une HE sans conseil d\'un professionnel.</div></div></div>';
     }
 
     if(S.spiritTab==='entites'){
       h+='<div class="sc">ENTITÉS & DIVINITÉS SHINOBI</div>';
-      EN.forEach(function(e){h+='<div class="cd" style="border-left:3px solid '+e.co+'"><div class="cb"><div style="display:flex;gap:10px;align-items:center"><span style="font-size:22px">'+e.ic+'</span><div><div style="font-size:17px;font-weight:600;color:'+e.co+'">'+e.nm+'</div><div style="font-size:15px;color:#B8860B">'+e.rl+'</div></div></div><div style="font-size:17px;color:#888;margin-top:8px;line-height:1.7">'+e.d+'</div></div></div>';});
+      EN.forEach(function(e){h+='<div class="cd" style="border-left:3px solid '+e.co+'"><div class="cb"><div style="display:flex;gap:10px;align-items:center"><span style="font-size:22px">'+e.ic+'</span><div><div style="font-size:17px;font-weight:600;color:'+e.co+'">'+e.nm+'</div><div style="font-size:15px;color:#8B6914">'+e.rl+'</div></div></div><div style="font-size:17px;color:#8a7d6c;margin-top:8px;line-height:1.7">'+e.d+'</div></div></div>';});
     }
 
     if(S.spiritTab==='mental'){
@@ -1295,15 +1297,15 @@ function render(){
        {ph:"Phase 4 — INTÉGRATION",ic:"🐉",items:["Méditation : 20-30 min/jour. Dimanches : 45-60 min.","Entraînement sous stress : musique forte OU silence total.","Décision rapide : choix en moins de 3 secondes au quotidien.","Revue hebdo : Corps / Combat / Esprit — note /10."]}
       ].forEach(function(p){
         h+='<div class="cd"><div class="ch">'+p.ic+' '+p.ph+'</div><div class="cb">';
-        p.items.forEach(function(it){h+='<div style="font-size:19px;color:#bbb;padding:5px 0;border-bottom:1px solid #1a1a1a;line-height:1.6">• '+it+'</div>';});
+        p.items.forEach(function(it){h+='<div style="font-size:19px;color:#4a3f30;padding:5px 0;border-bottom:1px solid #f0ebe0;line-height:1.6">• '+it+'</div>';});
         h+='</div></div>';
       });
       // Routine quotidienne
-      h+='<div class="cd" style="border-left:3px solid #B8860B"><div class="ch">🧘 Routine mentale quotidienne</div><div class="cb">';
-      h+='<div style="font-size:19px;color:#B8860B;margin-bottom:6px;font-weight:600">AVANT chaque séance (5 min)</div>';
-      ["Respiration tactique : 10 cycles box breathing (4-4-4-4)","Intention : formuler l'objectif en une phrase","Visualisation : 1 min yeux fermés — se voir réussir"].forEach(function(s){h+='<div style="font-size:19px;color:#bbb;padding:3px 0">• '+s+'</div>';});
-      h+='<div style="font-size:19px;color:#B8860B;margin:10px 0 6px;font-weight:600">APRÈS chaque séance (3 min)</div>';
-      ["3 respirations profondes de transition","Gratitude : nommer une chose","Scanner mental : colère, frustration, ego ?"].forEach(function(s){h+='<div style="font-size:19px;color:#bbb;padding:3px 0">• '+s+'</div>';});
+      h+='<div class="cd" style="border-left:3px solid #8B6914"><div class="ch">🧘 Routine mentale quotidienne</div><div class="cb">';
+      h+='<div style="font-size:19px;color:#8B6914;margin-bottom:6px;font-weight:600">AVANT chaque séance (5 min)</div>';
+      ["Respiration tactique : 10 cycles box breathing (4-4-4-4)","Intention : formuler l'objectif en une phrase","Visualisation : 1 min yeux fermés — se voir réussir"].forEach(function(s){h+='<div style="font-size:19px;color:#4a3f30;padding:3px 0">• '+s+'</div>';});
+      h+='<div style="font-size:19px;color:#8B6914;margin:10px 0 6px;font-weight:600">APRÈS chaque séance (3 min)</div>';
+      ["3 respirations profondes de transition","Gratitude : nommer une chose","Scanner mental : colère, frustration, ego ?"].forEach(function(s){h+='<div style="font-size:19px;color:#4a3f30;padding:3px 0">• '+s+'</div>';});
       h+='</div></div>';
     }
   }
@@ -1313,20 +1315,20 @@ function render(){
     if(S.chSel!==null){
       var ch=getCh(S.chSel);
       h+='<button class="pl" onclick="S.chSel=null;render()" style="font-size:19px">← Retour</button>';
-      if(ch){h+='<div class="sc" style="margin-top:12px">CHAPITRE '+ch.n+'</div><div class="cd"><div class="ch" style="font-size:20px">'+esc(ch.t)+'</div><div class="cb"><div style="font-size:18px;color:#bbb;line-height:1.85;white-space:pre-wrap">'+esc(ch.x)+'</div></div></div>';}
-      else{h+='<div style="color:#888;padding:20px;font-size:19px;text-align:center">Chapitre non trouvé.<br><br>Lance <code style="color:#B8860B">node build-chapters.js</code> dans lombra-pwa/ puis git push.</div>';}
+      if(ch){h+='<div class="sc" style="margin-top:12px">CHAPITRE '+ch.n+'</div><div class="cd"><div class="ch" style="font-size:20px">'+esc(ch.t)+'</div><div class="cb"><div style="font-size:18px;color:#4a3f30;line-height:1.85;white-space:pre-wrap">'+esc(ch.x)+'</div></div></div>';}
+      else{h+='<div style="color:#8a7d6c;padding:20px;font-size:19px;text-align:center">Chapitre non trouvé.<br><br>Lance <code style="color:#8B6914">node build-chapters.js</code> dans lombra-pwa/ puis git push.</div>';}
     } else if(S.livSel!==null){
       var lv=LV[S.livSel];
       h+='<button class="pl" onclick="S.livSel=null;render()" style="font-size:19px">← Livres</button>';
       h+='<div class="sc" style="margin-top:12px">LIVRE '+lv.n+' — '+lv.t.toUpperCase()+'</div>';
       for(var i=0;i<lv.c;i++){var cn=lv.s+i;var ch=getCh(cn);
-        h+='<div class="ex" onclick="S.chSel='+cn+';render();window.scrollTo(0,0)"><span style="color:#8B0F0F;font-weight:600;font-size:19px">Ch.'+cn+'</span>';
-        if(ch)h+=' <span style="color:#666;font-size:19px">— '+esc(ch.t)+'</span>';
+        h+='<div class="ex" onclick="S.chSel='+cn+';render();window.scrollTo(0,0)"><span style="color:#8B2500;font-weight:600;font-size:19px">Ch.'+cn+'</span>';
+        if(ch)h+=' <span style="color:#8a7d6c;font-size:19px">— '+esc(ch.t)+'</span>';
         h+='</div>';}
     } else {
       h+='<div class="sc">XIII LIVRES • 123 CHAPITRES</div>';
-      if(typeof CH==='undefined'||!CH||CH.length===0)h+='<div class="cd" style="border:1px solid #B8860B"><div class="cb" style="font-size:19px;color:#B8860B">⚠️ chapters.js non chargé. Lance <code>node build-chapters.js</code> puis git push.</div></div>';
-      LV.forEach(function(l,idx){h+='<div class="ex" onclick="S.livSel='+idx+';render()"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">'+l.i+'</span><div style="flex:1"><div style="font-size:19px;color:#8B0F0F">LIVRE '+l.n+'</div><div style="font-size:19px;font-weight:600;margin-top:2px">'+l.t+'</div></div><span style="font-size:19px;color:#555">'+l.c+' ch.</span></div></div>';});
+      if(typeof CH==='undefined'||!CH||CH.length===0)h+='<div class="cd" style="border:1px solid #8B6914"><div class="cb" style="font-size:19px;color:#8B6914">⚠️ chapters.js non chargé. Lance <code>node build-chapters.js</code> puis git push.</div></div>';
+      LV.forEach(function(l,idx){h+='<div class="ex" onclick="S.livSel='+idx+';render()"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:20px">'+l.i+'</span><div style="flex:1"><div style="font-size:19px;color:#8B2500">LIVRE '+l.n+'</div><div style="font-size:19px;font-weight:600;margin-top:2px">'+l.t+'</div></div><span style="font-size:19px;color:#9a8d7a">'+l.c+' ch.</span></div></div>';});
     }
   }
 
